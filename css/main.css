@@ -1,4 +1,4 @@
-.floater:after, nav.main:after, nav.main .contact:after, .main-menu .navnav:after, footer .footer-container:after, .bricks-container:after, .team-container:after, article:after {
+.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, .bricks-container:after, .team-container:after, article:after {
   clear: left;
   content: "";
   display: table; }
@@ -155,17 +155,17 @@ ul {
       margin-right: 16px; }
 
 /* LAYOUT */
-.row, nav.main, .banner, .banner .slogan-box, .oferta, .wyposazenie, .zespol, .piotr, .map, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, footer .footer-container, .bricks-container, .team-container {
+.row, .banner, .banner .slogan-box, .oferta, .wyposazenie, .zespol, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
   overflow: auto; }
 
-.floater > *, nav.main > *, nav.main .contact > *, .main-menu .navnav > *, footer .footer-container > *, .bricks-container > *, .team-container > * {
+.floater > *, .main-menu .navnav > *, nav.main > *, nav.main .contact > *, footer .footer-container > *, .bricks-container > *, .team-container > * {
   float: left;
   margin-right: 30px; }
-  .floater > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, .main-menu .navnav > *:last-child, footer .footer-container > *:last-child, .bricks-container > *:last-child, .team-container > *:last-child {
+  .floater > *:last-child, .main-menu .navnav > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, footer .footer-container > *:last-child, .bricks-container > *:last-child, .team-container > *:last-child {
     margin-right: 0; }
 
 html {
@@ -194,47 +194,6 @@ article {
   article ul {
     list-style: disc; }
 
-.nav {
-  background-color: white;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-nav.main {
-  font-size: 18px;
-  margin-top: 12px;
-  margin-bottom: 12px; }
-  nav.main a {
-    border-bottom: none; }
-    nav.main a:hover {
-      color: #55dca8; }
-  nav.main .logo {
-    width: 384.1665px;
-    margin-right: 30px; }
-    nav.main .logo a {
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-      width: 216px;
-      height: 40px;
-      background-image: url("../images/logo.png");
-      background-repeat: no-repeat; }
-  nav.main .contact {
-    text-align: center; }
-    nav.main .contact li {
-      width: 218.4999px;
-      margin-right: 30px;
-      line-height: 40px;
-      height: 40px; }
-  nav.main .menu-trigger {
-    width: 52.8333px;
-    text-align: center;
-    line-height: 40px;
-    height: 40px;
-    font-size: 28px; }
-
 nav.breadcrumbs {
   color: #55dca8;
   font-size: 14px;
@@ -257,12 +216,12 @@ nav.breadcrumbs {
     margin-top: 45vh;
     overflow: visible; }
 
-.oferta, .wyposazenie, .zespol, .piotr, .map, .kontakt {
+.oferta, .wyposazenie, .zespol, .piotr, .kontakt {
   margin-top: 100px; }
-  .oferta article, .wyposazenie article, .zespol article, .piotr article, .map article, .kontakt article {
+  .oferta article, .wyposazenie article, .zespol article, .piotr article, .kontakt article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .oferta article h1, .wyposazenie article h1, .zespol article h1, .piotr article h1, .map article h1, .kontakt article h1 {
+    .oferta article h1, .wyposazenie article h1, .zespol article h1, .piotr article h1, .kontakt article h1 {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
@@ -281,25 +240,8 @@ nav.breadcrumbs {
       margin-bottom: 2px;
       max-width: 340px; }
 
-.kontakt article h1 {
-  float: none; }
-
-.kontakt article ul {
-  float: left;
-  width: 301.3332px;
-  margin-right: 30px;
-  list-style: none; }
-  .kontakt article ul:last-of-type {
-    margin-right: 0; }
-  .kontakt article ul li.address, .kontakt article ul li.label {
-    font-size: 24px; }
-    .kontakt article ul li.address .icon, .kontakt article ul li.label .icon {
-      width: 20px; }
-
-.kontakt article table {
-  width: 50%;
-  float: left; }
-
+/* Utilities */
+/*** MAIN MENU ***/
 .main-menu {
   background-color: white;
   position: fixed;
@@ -342,6 +284,48 @@ nav.breadcrumbs {
   bottom: 4px;
   pointer-events: none; }
 
+.nav {
+  background-color: white;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+nav.main {
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+  nav.main a {
+    border-bottom: none; }
+    nav.main a:hover {
+      color: #55dca8; }
+  nav.main .logo {
+    width: 384.1665px;
+    margin-right: 30px; }
+    nav.main .logo a {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 216px;
+      height: 40px;
+      background-image: url("../images/logo.png");
+      background-repeat: no-repeat; }
+  nav.main .contact {
+    text-align: center; }
+    nav.main .contact li {
+      width: 218.4999px;
+      margin-right: 30px;
+      line-height: 40px;
+      height: 40px; }
+  nav.main .menu-trigger {
+    width: 52.8333px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    font-size: 28px; }
+
+/* FOOTER */
 footer {
   background-color: lightgrey;
   width: 100%;
@@ -353,7 +337,7 @@ footer {
     border-bottom: none; }
   footer .footer {
     background-color: white;
-    padding-top: 24px; }
+    line-height: 50px; }
     footer .footer .footer-container div {
       width: 301.3332px;
       text-align: center; }
@@ -373,7 +357,9 @@ footer {
       width: 25px;
       height: 25px;
       background-image: url("../images/sygnet.png");
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      position: relative;
+      top: 7px; }
       footer .footer .footer-container .logo a:hover {
         background-position: 0 -25px; }
   footer .extended-footer {
@@ -388,7 +374,6 @@ footer {
       footer .extended-footer .footer-container ul li.label {
         font-weight: bold; }
 
-/* Utilities */
 /*** BRICK & BRICKS-CONTAINER ***/
 .bricks-container .brick {
   width: 301.3332px; }
@@ -433,5 +418,48 @@ footer {
   margin-bottom: 2px; }
 
 /*** EQUIPMENT PAGE ***/
+/*** CONTACT PAGE ***/
+#map {
+  background-color: lightgrey;
+  height: 500px;
+  margin-top: 0; }
+
+.kontakt {
+  margin-top: -60px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  background-color: white; }
+  .kontakt article h1 {
+    float: none; }
+  .kontakt article ul {
+    float: left;
+    width: 301.3332px;
+    margin-right: 30px;
+    list-style: none; }
+    .kontakt article ul:last-of-type {
+      margin-right: 0; }
+    .kontakt article ul li.address, .kontakt article ul li.label {
+      font-size: 24px; }
+      .kontakt article ul li.address .icon, .kontakt article ul li.label .icon {
+        width: 20px; }
+  .kontakt article table {
+    width: 50%;
+    margin-top: 50px;
+    float: left; }
+    .kontakt article table td.icon {
+      width: 50px;
+      font-size: 24px;
+      line-height: 1.5; }
+    .kontakt article table.details {
+      font-size: 24px;
+      line-height: 1.5; }
+      .kontakt article table.details tr {
+        height: 65px; }
+    .kontakt article table.hours tr.label {
+      font-size: 24px;
+      line-height: 1.5;
+      height: 50px; }
+    .kontakt article table.hours tr td:nth-of-type(2) {
+      width: 140px; }
 
 /*# sourceMappingURL=main.css.map */

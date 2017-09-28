@@ -1,0 +1,72 @@
+/*** CONTACT PAGE ***/
+
+#map {
+	background-color: lightgrey;
+	height: 500px;
+	margin-top: 0;
+}
+
+//klasa sekcji .kontakt, bo .contact już jest w górnej belce → uporządkować
+.kontakt {
+	margin-top: -60px;
+	margin-bottom: 100px;
+	padding-top: 20px;
+	background-color: white;
+
+	article {
+		h1 {
+			float: none;
+		}
+		ul {
+			float: left;
+			width: column-width(4);
+			margin-right: $gutter;
+			list-style: none;
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			li.address, li.label {
+				font-size: 24px;
+
+				.icon {
+					width: 20px;
+				}
+			}
+		}
+		table {
+			width: 50%;
+			margin-top: 50px;
+			float: left;
+
+			td.icon {
+				width: 50px;
+				font-size: 24px;
+				line-height: $global-line-height;
+			}
+			
+			&.details {
+				font-size: 24px;
+				line-height: $global-line-height;
+
+				tr {
+					height: 65px;
+				}
+			}
+			
+			&.hours {
+				tr {
+					&.label {
+						font-size: 24px;
+						line-height: $global-line-height;
+						height: 50px;
+					}
+
+					td:nth-of-type(2) {
+						width: 140px;
+					}
+				}
+			}
+		}
+	}
+}

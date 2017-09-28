@@ -1,0 +1,57 @@
+.nav {
+	background-color: white;
+	overflow: auto;
+	
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+nav {
+	&.main {
+		@extend .row;
+		@extend .floater;
+
+		font-size: 18px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+
+		a {
+			border-bottom: none;
+			&:hover {
+				color: $green;
+			}
+		}
+
+		.logo {
+			width: column-width(5);
+			margin-right: $gutter;
+			a {
+				@include hide-text;
+				display: inline-block;
+				width: 216px;
+				height: 40px;
+				background-image: url($css-images-path + 'logo.png');
+				background-repeat: no-repeat;
+			}
+		}
+
+		.contact {
+			@extend .floater;
+			text-align: center;
+			li {
+				width: column-width(3);
+				margin-right: $gutter;
+				line-height: 40px;
+				height: 40px;
+			}
+		}
+
+		.menu-trigger {
+			width: column-width(1);
+			text-align: center;
+			line-height: 40px;
+			height: 40px;
+			font-size: 28px;
+		}
+	}
+}

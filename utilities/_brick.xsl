@@ -7,7 +7,7 @@
 		<xsl:param name="lang" select="//fl-languages/current-language/@language" />
 
 		<article class="brick">
-			<a href="#">
+			<a href="{$root}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/tytul-artykulu/">
 				<img src="http://via.placeholder.com/350x225" alt=""/>
 				<h4>Stomatologia estetyczna</h4>
 			</a>

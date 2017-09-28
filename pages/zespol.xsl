@@ -24,6 +24,20 @@
 <xsl:include href="../utilities/master.xsl" />
 
 <xsl:template match="data">
+
+	<xsl:choose>
+		<xsl:when test="$page = ''">
+			<xsl:call-template name="team" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="sub-page" />
+		</xsl:otherwise>
+	</xsl:choose>
+
+</xsl:template>
+
+<xsl:template name="team">
+
 	<section class="zespol">
 		<article>
 			<h1>Zespół</h1>
@@ -74,6 +88,17 @@
 			</a>
 		</div>
 	</section>
+
+</xsl:template>
+
+<xsl:template name="sub-page">
+	
+	<section class="zespol"> <!-- zmineić klasę -->
+		<article>
+			<h1>Subpage</h1>
+		</article>
+	</section>
+
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">

@@ -7,6 +7,20 @@
 <xsl:include href="../utilities/_brick.xsl" />
 
 <xsl:template match="data">
+
+	<xsl:choose>
+		<xsl:when test="$page = ''">
+			<xsl:call-template name="offer" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="sub-page" />
+		</xsl:otherwise>
+	</xsl:choose>
+
+</xsl:template>
+
+<xsl:template name="offer">
+
 	<section class="oferta">
 		<article>
 			<h1>Oferta</h1>
@@ -20,6 +34,20 @@
 		<xsl:call-template name="brick" />
 	</section>
 
+</xsl:template>
+
+<xsl:template name="sub-page">
+	
+	<section class="oferta"> <!-- zmineić klasę -->
+		<article>
+			<h1>Subpage</h1>
+		</article>
+	</section>
+
+</xsl:template>
+
+<xsl:template match="data" mode="page-title">
+	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
 
 </xsl:stylesheet>
