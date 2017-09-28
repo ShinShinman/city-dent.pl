@@ -1,0 +1,194 @@
+// .sticky-nav, .main-menu
+
+.floater { //używany też w _footer.scss, przenieść jako globalne
+	> * {
+		float: left;
+	}
+	&:after {
+		clear: left;
+		content: "";
+		display: table;
+	}
+}
+
+.nav-stripes {
+	@extend .row;
+	@extend .floater;
+
+	margin-bottom: 0px !important;
+
+	.first {
+		@extend .stripe;
+		width: columns-width(10);
+		margin-right: $gutter;
+	}
+	.second {
+		@extend .stripe;
+		width: columns-width(2);
+	}
+}
+
+.sticky-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 30px;
+	z-index: 1000;
+	background-color: white;
+	//@include defaulf-transition(background-color);
+
+	.icon {
+		font-size: 18px;
+	}
+
+	nav {
+		@extend .row;
+	@extend .floater;
+
+		//color: white;
+
+		.logo {
+			//width: columns-width(1);
+			width: 48px;
+			height: 48px;
+			font-size: 24px;
+			line-height: 48px;
+			text-align: center;
+			margin-right: $gutter + columns-width(1) - 48; /* * 2 + columns-width(9); */
+			//@include hide-text;
+			//background: url($css-images-path + 'ma-logo.svg') no-repeat center;
+			&:hover {
+				color: white;
+		    background-color: black;
+				opacity: 1;
+			}
+		}
+
+		.cart {
+			a {
+				.tmp-icon {
+					@include hide-text;
+					display: block;
+					width: 16px;
+					height: 16px;
+					margin: 16px;
+					background-repeat: no-repeat;
+					background-position: center 0;
+					background-size: 100%;
+				}
+				&:hover .tmp-icon {
+					background-position: center -16px;
+				}
+				.quantity {
+					position: relative;
+					top: -64px;
+					left: -1px;
+					font-size: 12px;
+					font-weight: bold;
+					color: magenta;
+				}
+			}
+		}
+
+		form {
+
+			opacity: 0;
+			@include defaulf-transition(opacity);
+
+			margin-right: $gutter;
+			width: columns-width(9);
+
+			input {
+				height: 48px;
+				margin: 0;
+				padding: 0;
+				border: 1px solid black;
+				outline: none;
+				background-color: white;
+				float: left;
+			}
+
+			input[type = text] {
+				width: columns-width(9)-59;
+				border-right: none;
+				height: 46px;
+				padding: 0 5px;
+			}
+		}
+
+		input[type = submit] {
+			width: 48px;
+			border-left: none;
+
+			&:hover {
+				color: white;
+				background-color: black;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: columns-width(2);
+
+			a {
+				width: 48px;
+				height: 48px;
+				margin-right: 1px;
+				display: block;
+				float: left;
+				text-align: center;
+				line-height: 48px;
+				cursor: pointer;
+				&:hover {
+					color: white;
+					background-color: black;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.main-menu {
+		@extend .row;
+		@extend .floater;
+
+		position: relative;
+		display: none;
+		padding: 0 $gutter;
+
+		.left {
+			margin-left: columns-width(1) + $gutter;
+			margin-right: $gutter;
+			width: columns-width(6);
+			ul > li > a {
+				@extend h2;
+				display: block;
+				margin-bottom: 24px;
+			}
+		}
+
+		.right {
+			width: columns-width(5);
+			padding-bottom: 100px;
+		}
+	}
+	&.extended {
+		background-color: black;
+		color: white;
+		nav ul a:hover {
+			color: black;
+			background-color: white;
+		}
+		a.logo:hover {
+			color: black;
+			background-color: white;
+		}
+
+		ul {
+			margin-bottom: $global-margin;
+		}
+	}
+}

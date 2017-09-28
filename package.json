@@ -1,0 +1,24 @@
+{
+  "name": "city-dent.pl",
+  "version": "0.0.1",
+  "description": "City-Dent workspace for Symphony 2.7.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olaf Schindler",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-coffee": "^2.3.2",
+    "gulp-include": "^2.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglyfly": "^1.4.2",
+    "normalize-scss": "^7.0.0"
+  }
+}

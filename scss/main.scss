@@ -1,0 +1,356 @@
+//partials
+
+@import '../node_modules/normalize-scss/sass/normalize';
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	background-color: transparent;
+	color: $text-color;
+	font-family: $font-stack;
+	line-height: $global-line-height;
+	margin-bottom: 50px; // wysokość małego footera
+}
+
+.icon {
+	font-family: 'Social';
+	//@include hide-text;
+}
+
+.slogan {
+	font-family: 'Borgia', serif;
+	font-size: 48px;
+	color: white;
+	width: column-width(8);
+	line-height: 1;
+}
+
+
+
+article {
+	margin-bottom: 50px;
+	@extend %clear-floats;
+
+	ul {
+		list-style: disc;
+	}
+}
+
+
+.nav {
+	background-color: white;
+	overflow: auto;
+	
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+nav {
+	&.main {
+		@extend .row;
+		@extend .floater;
+
+		font-size: 18px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+
+		a {
+			border-bottom: none;
+			&:hover {
+				color: $green;
+			}
+		}
+
+		.logo {
+			width: column-width(5);
+			margin-right: $gutter;
+			a {
+				@include hide-text;
+				display: inline-block;
+				width: 216px;
+				height: 40px;
+				background-image: url($css-images-path + 'logo.png');
+				background-repeat: no-repeat;
+			}
+		}
+
+		.contact {
+			@extend .floater;
+			text-align: center;
+			li {
+				width: column-width(3);
+				margin-right: $gutter;
+				line-height: 40px;
+				height: 40px;
+			}
+		}
+
+		.menu-trigger {
+			width: column-width(1);
+			text-align: center;
+			line-height: 40px;
+			height: 40px;
+			font-size: 28px;
+		}
+	}
+}
+
+nav {
+	&.breadcrumbs {
+		color: $green;
+		font-size: 14px;
+		margin-bottom: 25px;
+		a {
+			border-bottom: none;
+			&:hover {
+				color: $navy;
+			}
+		}
+	}
+}
+
+.banner {
+	@extend .row;
+	background-image: url($css-images-path + 'front.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	z-index: -999;
+
+	margin-bottom: 0;
+
+	.slogan-box {
+		@extend .row;
+		margin-top: 45vh;
+		overflow: visible;
+		//dodać drop shadow
+	}
+}
+
+
+///// OFERTA ///// --> to wszystko do LAYOUTu
+.oferta, .wyposazenie, .zespol, .piotr, .map, .kontakt {
+	@extend .row;
+	margin-top: 100px;
+
+	article {
+		width: column-width(8);
+		margin-left: column-width(2) + $gutter;
+		h1 {
+			float: left;
+			margin-left: -(column-width(1) + $gutter);
+			margin-right: 30px;
+			margin-bottom: 2px;
+			max-width: 340px;
+		}
+	}
+}
+
+
+///// OFERTA • Stomatologia zachowawcza /////
+.stomatologia-zachowawcza {
+	@extend .row;
+	margin-top: 100px;
+
+	article {
+		width: column-width(8);
+		margin-left: column-width(2) + $gutter;
+		h1 {
+			float: left;
+			margin-left: -(column-width(1) + $gutter);
+			margin-right: 30px;
+			margin-bottom: 2px;
+			max-width: 340px;
+		}
+	}
+}
+
+///// KONTAKT /////
+//klasa sekcji .kontakt, bo .contact już jest w górnej belce → uporządkować
+.kontakt {
+	article {
+		h1 {
+			float: none;
+		}
+		ul {
+			float: left;
+			width: column-width(4);
+			margin-right: $gutter;
+			list-style: none;
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			li.address, li.label {
+				font-size: 24px;
+
+				.icon {
+					width: 20px;
+				}
+			}
+		}
+		table {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+
+.main-menu {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90%;
+	height: 70vh;
+	z-index: 100;
+
+	margin: 10vh 5%;
+	padding-top: 50px;
+
+	display: none;
+
+	header {
+		@extend .row;
+		h1, nav {
+			margin-left: column-width(1);
+		}
+		h1 {
+			margin-bottom: 2px;
+		}
+	}
+
+	.navnav {
+		@extend .row, .floater;
+
+		a {
+			border: none;
+		}
+
+		li.label {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		height: 100%;
+
+		ul {
+
+			&:nth-of-type(1) {
+				width: column-width(3);
+				margin-left: column-width(2);
+			}
+			&:nth-of-type(2) {
+				width: column-width(4);
+			}
+			&:nth-of-type(3) {
+				width: column-width(2);
+			}
+		}
+	}
+}
+
+.main-menu:before {
+	background: none;
+	border: 2px solid red;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	right: 4px;
+	bottom: 4px;
+	pointer-events: none;
+}
+
+
+footer {
+	background-color: lightgrey;
+	width:  100%;
+
+	position: absolute;
+	bottom: -300px; // wysokość .extended-footer
+	left: 0;
+	overflow: hidden;
+
+	a {
+		border-bottom: none;
+	}
+
+	.footer-container {
+		@extend .row, .floater;
+	}
+
+	.footer {
+		background-color: white;
+		padding-top:  $vertical-margin;
+
+		.footer-container {
+			div {
+				width: column-width(4);
+				text-align: center;
+				.social {
+					width: 85px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.links {
+					width: 145px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			.logo {
+				a {
+					@include hide-text;
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					background-image: url($css-images-path + 'sygnet.png');
+					background-repeat: no-repeat;
+					&:hover {
+						background-position: 0 -25px;
+					}
+				}
+			}
+		}
+	}
+
+	.extended-footer {
+		padding-top: $vertical-margin;
+		margin-bottom: 0;
+		height: 250px;
+		
+		.footer-container {
+			div {
+				width: column-width(4);
+				text-align: center;
+			}
+
+			ul {
+				li {
+					text-align: center;
+					&.label {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+@import 'utilities';
+@import 'pages';
+//@import 'vendor/normalize';
+//
+//
+//
+//@import 'media-queries';
+//@import 'vendor';

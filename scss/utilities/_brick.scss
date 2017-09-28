@@ -1,0 +1,18 @@
+/*** BRICK & BRICKS-CONTAINER ***/
+
+.bricks-container {
+	@extend .row, .floater; // usunąć .floater po zainstalowaniu MASONRY
+
+	.brick {
+		width: column-width(4);
+
+		a {
+			display: block;
+			border-bottom: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/* LISTS */
+
+
+ul {
+	list-style: none;
+
+	&.inline-list {
+		overflow: hidden;
+		list-style: none;
+
+		li {
+			float: left;
+			margin-right: $global-font-size;
+		}
+	}
+}

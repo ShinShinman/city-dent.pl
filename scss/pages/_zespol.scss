@@ -1,0 +1,50 @@
+/*** TEAM PAGE ***/
+
+.team-container {
+	@extend .row, .floater; //usunąć .floater po dodaniu MASONRY
+
+	a {
+		display: block;
+		border-bottom: none;
+		
+		&:hover {
+			color: $navy;
+			h2 {
+				color: $green;
+			}
+			img {
+				//opacity: 0.7;
+			}
+		}
+	}
+}
+.team {
+	width: column-width(4);
+	margin-right: $gutter;
+	header {
+		margin-bottom: 25px;
+		.avatar {
+			text-align: center;
+			img {
+				width: column-width(3);
+				border-radius: column-width(3);
+				-webkit-border-radius: column-width(3);
+				-moz-border-radius: column-width(3);
+			}
+		}
+	}
+}
+
+.piotr {
+
+	img {
+		width: column-width(3);
+		border-radius: column-width(3);
+		-webkit-border-radius: column-width(3);
+		-moz-border-radius: column-width(3);
+		float: left;
+		margin-left: -(column-width(1) + $gutter);
+		margin-right: 30px;
+		margin-bottom: 2px;
+	}
+}

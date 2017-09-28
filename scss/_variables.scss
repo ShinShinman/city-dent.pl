@@ -1,0 +1,24 @@
+//ROZBIĆ NA OSOBNE PLIKI: GRIS.SCSS, COLORS.SCSS ITD.
+
+//FONTS
+$font-stack: 'Lato', sans-serif;
+$global-font-size: 16px;
+$global-line-height: 1.5;
+
+//GRID
+$column-width: 52.8333px;
+$gutter: 30px;
+$vertical-margin: $global-line-height * $global-font-size;
+$horizontal-margin: 30px;
+
+//IMAGES
+$css-images-path: '../images/';
+
+//COLORS
+$navy: rgb(38, 38, 73);
+$blue: rgb(33, 137, 255);
+$red: rgb(253, 18, 85);
+$green: rgb(85, 220, 168);
+$yellow: rgb(255, 242, 100);
+
+$text-color: $navy;
