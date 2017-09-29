@@ -7,7 +7,7 @@
 		<section class="nav">
 			<nav class="main">
 				<div class="logo">
-					<a href="#">City Dent</a>
+					<a href="{$root}/">City Dent</a>
 				</div>
 				<ul class="contact">
 						<li><span class="icon">t</span> +48 516 925 690</li>

@@ -47,7 +47,7 @@ gulp.task('coffee', function() {
 	.pipe(sourcemaps.init())
 	.pipe(coffee().on('error', console.log))
 	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('coffee/js/'))
+	.pipe(gulp.dest('coffee/components/'))
 	/*
 	.pipe(browserSync.reload({
 		stream: true
@@ -60,9 +60,12 @@ gulp.task('scripts', function() {
 	.pipe(sourcemaps.init())
 	.pipe(include()).on('error', console.log)
 	.pipe(uglyfly())
-	.pipe(rename('main.js'))
+	.pipe(rename('main.min.js'))
 	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('./js/'));
+	.pipe(gulp.dest('./js/'))
+	.pipe(browserSync.reload({
+		stream: true
+	}));
 });
 
 

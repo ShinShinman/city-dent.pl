@@ -19,6 +19,9 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglyfly": "^1.4.2",
-    "normalize-scss": "^7.0.0"
+    "jquery": "^3.2.1",
+    "masonry-layout": "^4.2.0",
+    "normalize-scss": "^7.0.0",
+    "npm": "^5.4.2"
   }
 }

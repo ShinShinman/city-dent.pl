@@ -1,7 +1,8 @@
 /*** TEAM PAGE ***/
 
 .team-container {
-	@extend .row, .floater; //usunąć .floater po dodaniu MASONRY
+	@extend .row;
+	overflow: hidden;
 
 	a {
 		display: block;
@@ -20,7 +21,6 @@
 }
 .team {
 	width: column-width(4);
-	margin-right: $gutter;
 	header {
 		margin-bottom: 25px;
 		.avatar {
@@ -35,7 +35,7 @@
 	}
 }
 
-.piotr {
+.piotr { // zmienić nazwę klasy na uniwersalną
 
 	img {
 		width: column-width(3);

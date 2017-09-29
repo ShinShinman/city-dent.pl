@@ -73,4 +73,15 @@
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
 
+<xsl:template match="data" mode="js">
+	<script>
+		window.onload = function () {
+			var msnry = new Masonry( '.bricks-container', {
+				itemSelector: '.brick',
+				gutter: 30
+			});
+		}
+	</script>
+</xsl:template>
+
 </xsl:stylesheet>

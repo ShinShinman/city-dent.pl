@@ -10,10 +10,11 @@
 	<section id="map"></section>
 
 	<script>
+		
 		function initMap() {
-			var uluru = {lat: 50, lng: 25};
+			var uluru = {lat: 51.097717, lng: 17.013523};
 			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 4,
+				zoom: 17,
 				center: uluru
 			});
 			var marker = new google.maps.Marker({
@@ -21,9 +22,47 @@
 				map: map
 			});
 		}
+
+		function initInit() {
+			console.log("JEST");
+			console.log(result)
+		}
+		
+/*
+		function initMap() {
+			var map, service, infoWindow;
+
+			var mapOpt = {
+				zoom: 17,
+				center: {lat: 51.097717, lng: 17.013523}
+			};
+
+			map = new google.maps.Map(document.getElementById('map'), mapOpt);
+
+			console.log(new google.maps.places.PlacesService(map));
+			service = new google.maps.places.PlacesService(map);
+			service.getDetails({
+				placeID: 'ChIJ26ACbBTCD0cRS__-CRgxX3o'
+			}, function (result, status) {
+				if (status != google.maps.places.PlacesServiceStatus.OK) {
+					console.log(status);
+					return;
+				}
+				var marker = new google.maps.Marker({
+					position: result.geometry.location,
+					map: map
+				});
+				console.log(result);
+			})
+		}
+*/
+
+	</script>
+	
+	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initMap">
 	</script>
 	<!--
-	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initMap">
+	<script async="" defer="" src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ26ACbBTCD0cRS__-CRgxX3o&amp;key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initInit">
 	</script>
 	-->
 

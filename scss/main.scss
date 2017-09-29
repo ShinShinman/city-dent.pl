@@ -58,7 +58,7 @@ nav {
 	}
 }
 
-.banner {
+.banner { // --> przenieś do pages/home.scss
 	@extend .row;
 	background-image: url($css-images-path + 'front.png');
 	background-repeat: no-repeat;
