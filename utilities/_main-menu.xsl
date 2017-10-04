@@ -7,41 +7,60 @@
 		<section class="main-menu">
 			<header>
 				<h1>Menu</h1>
-				<nav class="breadcrumbs"><a href="#">Strona główna</a> / <a href="#">Wyposażenie</a> / Menu</nav>
+				<xsl:call-template name="breadcrumbs" />
 			</header>
 			
 			<div class="navnav">
 				<ul>
-					<li class="label"><a href="#">Oferta</a></li>
-					<li><a href="#">Stomatologia estetyczna</a></li>
-					<li><a href="#">Stomatologia zachowawcza</a></li>
-					<li><a href="#">Endodoncja</a></li>
-					<li><a href="#">Periodontologia</a></li>
-					<li><a href="#">Protetyka</a></li>
-					<li><a href="#">Implanty</a></li>
-					<li><a href="#">Chirurgia stomatologiczna</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/">Oferta</a></li>
+					<xsl:apply-templates select="//menu-oferta/entry" />
 				</ul>
 				<ul>
-					<li class="label"><a href="#">Wposażenie</a></li>
-					<li><a href="#">Unit a-dec 300/500</a></li>
-					<li><a href="#">Rentgen z radiowizjografią sirona</a></li>
-					<li><a href="#">Endometr raypex 5</a></li>
-					<li><a href="#">Mikrosilnik endodontyczny x-smart</a></li>
-					<li><a href="#">Kamera wewnątrzustna</a></li>
-					<li><a href="#">Koferdam</a></li>
-					<li><a href="#">Autoklaw getinge k3+</a></li>
-					<li><a href="#">Mikroskop zabiegowy smartoptic</a></li>
-					<li><a href="#">Nóż elektrochirurgiczny surtron 50d</a></li>
-					<li><a href="#">Strzykawka bezigłowa injex</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wposażenie</a></li>
+					<xsl:apply-templates select="//menu-wyposazenie/entry" />
 				</ul>
 				<ul>
-					<li class="label"><a href="#">O nas</a></li>
-					<li class="label"><a href="#">zespół</a></li>
-					<li class="label"><a href="#">kontakt</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">zespół</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">kontakt</a></li>
 				</ul>
 			</div>
 		</section>
 		
+	</xsl:template>
+
+	<xsl:template name="breadcrumbs">
+		<xsl:choose>
+			<xsl:when test="//params/page != ''">
+				<nav class="breadcrumbs"><a href="{$root}">Strona główna</a> / <a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a><xsl:apply-templates select="//menu-oferta/entry/name[@handle = $page]" /><xsl:apply-templates select="//menu-wyposazenie/entry/name[@handle = $page]" /><xsl:apply-templates select="//zespol/entry/name[@handle = $page]" /> / Menu</nav>
+			</xsl:when>
+			<xsl:otherwise>
+				<nav class="breadcrumbs"><a href="{$root}">Strona główna</a> / <a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a> / Menu</nav>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="menu-oferta/entry/name">
+		<xsl:text> / </xsl:text>
+		<a href=""><xsl:value-of select="." /></a>
+	</xsl:template>
+
+	<xsl:template match="menu-wyposazenie/entry/name">
+		<xsl:text> / </xsl:text>
+		<a href=""><xsl:value-of select="." /></a>
+	</xsl:template>
+
+	<xsl:template match="zespol/entry/name">
+		<xsl:text> / </xsl:text>
+		<a href=""><xsl:value-of select="." /></a>
+	</xsl:template>
+
+	<xsl:template match="menu-oferta/entry">
+		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/"><xsl:value-of select="name/p" /></a></li>
+	</xsl:template>
+
+	<xsl:template match="menu-wyposazenie/entry">
+		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/#{name/@handle}"><xsl:value-of select="name/p" /></a></li>
 	</xsl:template>
 
 

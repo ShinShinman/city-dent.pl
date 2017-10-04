@@ -25,10 +25,8 @@
 
 <xsl:template match="data">
 	
-	<section class="banner">
-		<div class="slogan-box">
-			<p class="slogan">City Dent to nowoczesny gabinet stomatologiczny umiejscowiony w centrum Wrocławia. Zapraszamy do zapoznania się z naszą <a href="#">ofertą</a>.</p>
-		</div>
+	<section class="owl-carousel">
+		<xsl:apply-templates select="baner/entry" />
 	</section>
 
 <!--
@@ -41,13 +39,29 @@
 
 </xsl:template>
 
-<xsl:template match="highlight/entry">
-	<xsl:call-template name="highlight" />
+<xsl:template match="baner/entry">
+	<div class="banner" style="background-image: url('{$workspace}/{image/@path}/{image/filename}');">
+		<div class="slogan-box">
+			<xsl:copy-of select="slogan/node()" />
+		</div>
+	</div>
 </xsl:template>
 
 <xsl:template match="data" mode="js">
 	<script>
 		console.log('City Dent first run');
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				items: 1,
+				dots: true,
+				smartSpeed: 1000,
+				autoplay: true,
+				autoplayTimeout: 7000,
+				smartSpeed: 800
+			})
+		});
+
 	</script>
 </xsl:template>
 

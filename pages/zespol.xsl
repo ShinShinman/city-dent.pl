@@ -30,7 +30,7 @@
 			<xsl:call-template name="team" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template name="sub-page" />
+			<xsl:apply-templates select="zespol/entry" />
 		</xsl:otherwise>
 	</xsl:choose>
 
@@ -45,57 +45,34 @@
 	</section>
 
 	<section class="team-container">
-		<div class="team">
-			<a href="#">
-				<header>
-					<div class="avatar">
-						<img src="{$workspace}/images/piotrek.png" alt="Piotrek" />
-					</div>
-					<h2>Piotr Ptak</h2>
-					<h6>lekarz dentysta</h6>
-				</header>
-				<article>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perferendis adipisci omnis et ab voluptatum similique optio doloribus quas labore voluptatem inventore odit assumenda, odio incidunt non eum est magnam.</p>
-				</article>
-			</a>
-		</div>
-		<div class="team">
-			<a href="#">
-				<header>
-					<div class="avatar">
-						<img src="{$workspace}/images/sylwia.png" alt="Sylwia" />
-					</div>
-					<h2>Sylwia Sylwia</h2>
-					<h6>lekarz dentysta</h6>
-				</header>
-				<article>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perferendis adipisci omnis et ab voluptatum similique optio doloribus quas labore voluptatem inventore odit assumenda, odio incidunt non eum est magnam.</p>
-				</article>
-			</a>
-		</div>
-		<div class="team">
-			<a href="#">
-				<header>
-					<div class="avatar">
-						<img src="{$workspace}/images/piotrek.png" alt="Piotrek" />
-					</div>
-					<h2>Piotr Ptak</h2>
-					<h6>lekarz dentysta</h6>
-				</header>
-				<article>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perferendis adipisci omnis et ab voluptatum similique optio doloribus quas labore voluptatem inventore odit assumenda, odio incidunt non eum est magnam.</p>
-				</article>
-			</a>
-		</div>
+		<xsl:apply-templates select="bricks-zespol/entry" />
 	</section>
 
 </xsl:template>
 
-<xsl:template name="sub-page">
+<xsl:template match="bricks-zespol/entry">
+	<article class="team">
+		<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/">
+			<header>
+				<div class="avatar">
+					<img src="{$workspace}/{image/@path}/{image/filename}" alt="Piotrek" />
+				</div>
+				<h2><xsl:value-of select="name/p" /></h2>
+				<h6><xsl:value-of select="position/p" /></h6>
+			</header>
+			<xsl:value-of select="lead" />
+		</a>
+	</article>
+</xsl:template>
+
+<xsl:template match="zespol/entry">
 	
 	<section class="zespol"> <!-- zmineić klasę -->
 		<article>
-			<h1>Subpage</h1>
+			<img src="{$workspace}/{image/@path}/{image/filename}" alt="" />
+			<h2><xsl:value-of select="name/p" /></h2>
+			<h6><xsl:value-of select="position/p" /></h6>
+			<xsl:value-of select="biography" />
 		</article>
 	</section>
 

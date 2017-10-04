@@ -13,7 +13,7 @@
 			<xsl:call-template name="offer" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template name="sub-page" />
+			<xsl:apply-templates select="oferta/entry" />
 		</xsl:otherwise>
 	</xsl:choose>
 
@@ -21,26 +21,32 @@
 
 <xsl:template name="offer">
 
-	<section class="oferta">
+	<section class="offer">
 		<article>
-			<h1>Oferta</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi libero accusamus, culpa animi non soluta consectetur nemo voluptatibus eius aut provident dolorem, omnis velit accusantium pariatur saepe ipsam a optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi libero accusamus, culpa animi non soluta consectetur nemo voluptatibus eius aut provident dolorem, omnis velit accusantium pariatur saepe ipsam a optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi libero accusamus, culpa animi non soluta consectetur nemo voluptatibus eius aut provident dolorem, omnis velit accusantium pariatur saepe ipsam a optio.</p>
+			<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
+			<xsl:copy-of select="oferta-tekst/entry/offer" />
 		</article>
 	</section>
 
 	<section class="bricks-container">
-		<xsl:call-template name="brick" />
-		<xsl:call-template name="brick" />
-		<xsl:call-template name="brick" />
+		<xsl:apply-templates select="bricks-oferta/entry" />
 	</section>
 
 </xsl:template>
 
-<xsl:template name="sub-page">
+<xsl:template match="bricks-oferta/entry">
+	<xsl:call-template name="brick" />
+</xsl:template>
+
+<xsl:template match="oferta/entry">
 	
+	<section class="main-image" style="background-image: url('{$workspace}/{main-image/@path}/{main-image/filename}');">
+	</section>
+
 	<section class="oferta"> <!-- zmineić klasę -->
 		<article>
-			<h1>Subpage</h1>
+			<h1><xsl:value-of select="name/p" /></h1>
+			<xsl:value-of select="description" />
 		</article>
 	</section>
 

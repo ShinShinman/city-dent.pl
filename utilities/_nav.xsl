@@ -10,8 +10,8 @@
 					<a href="{$root}/">City Dent</a>
 				</div>
 				<ul class="contact">
-						<li><span class="icon">t</span> +48 516 925 690</li>
-						<li><a href="mailto:kontakt@city-dent.pl"><span class="icon">&#xe802;</span> kontakt@city-dent.pl</a></li>
+						<li><span class="icon">t </span><xsl:value-of select="//kontakt/entry/phone" /></li>
+						<li><a href="mailto:kontakt@city-dent.pl"><span class="icon">&#xe802; </span><xsl:value-of select="//kontakt/entry/e-mail" /></a></li>
 				</ul>
 				<div class="menu-trigger"><a href="#" class="icon">&#x4d;</a></div>
 			</nav>

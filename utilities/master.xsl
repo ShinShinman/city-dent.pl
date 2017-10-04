@@ -78,13 +78,29 @@
 				<script src="{$workspace}/js/main.min.js" ></script>
 				<script>
 					$(function() {
+
 						var menuTrigger = $('.menu-trigger a');
 						var mainMenu = $('.main-menu');
+						var mainMenuExtended = false;
 						menuTrigger.click(function(e) {
 							e.preventDefault();
+							if (mainMenuExtended) {
+								mainMenuExtended = false;
+								$(this).text('&#x4d;');
+							} else {
+								mainMenuExtended = true;
+								$(this).text('&#x58;');
+							}
 							//mainMenu.toggle();
 							mainMenu.fadeToggle();
 						})
+						/*
+						$('body').click(function(e) {
+							if (!$(e.target).parents().hasClass('main-menu') <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> mainMenuExtended) {
+								mainMenu.fadeOut();
+							}
+						})
+						*/
 					})
 				</script>
 				<xsl:apply-templates mode="js"/>

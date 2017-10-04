@@ -9,18 +9,18 @@
 				<div class="footer-container">
 					<div>
 						<ul class="inline-list social">
-							<li><a href="#" class="icon">f</a></li>
-							<li><a href="#" class="icon">i</a></li>
-							<li><a href="#" class="icon">l</a></li>
+							<li><a href="{//social-media/entry/facebook}" class="icon">f</a></li>
+							<li><a href="{//social-media/entry/instagram}" class="icon">i</a></li>
+							<li><a href="{//social-media/entry/linkedin}" class="icon">l</a></li>
 						</ul>
 					</div>
 					<div class="logo">
-					 <a href="#">Logo</a>
+					 <a href="{$root}/">Logo</a>
 				 </div>
 					<div>
 						<ul class="inline-list links">
-							<li><a href="#">Kontakt</a></li>
-							<li><a href="#">Oferta</a></li>
+							<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
+							<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></a></li>
 						</ul>
 					</div>
 				</div>
@@ -29,41 +29,37 @@
 				<div class="footer-container">
 					<div>
 						<ul>
-							<li class="label"><a href="#">Usługi</a></li>
-							<li><a href="#">Stomatologia estetyczna</a></li>
-							<li><a href="#">Stomatologia zachowawcza</a></li>
-							<li><a href="#">Endodoncja</a></li>
-							<li><a href="#">Periodontologia</a></li>
-							<li><a href="#">Protetyka</a></li>
-							<li><a href="#">Chirurgia stomatologiczna</a></li>
-							<li><a href="#">Implanty</a></li>
+							<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></a></li>
+							<xsl:apply-templates select="//menu-oferta/entry" />
 						</ul>
 					</div>
 					<div>
 						<ul>
-							<li class="label"><a href="#">Wyposażenie</a></li>
-							<li><a href="#">Unit a-dec 300/500</a></li>
-							<li><a href="#">Rentgen z radiowizjografią sirona</a></li>
-							<li><a href="#">Endometr raypex 5</a></li>
-							<li><a href="#">Mikrosilnik endodontyczny x-smart</a></li>
-							<li><a href="#">Kamera wewnątrzustna</a></li>
-							<li><a href="#">Koferdam</a></li>
-							<li><a href="#">Autoklaw getinge k3+</a></li>
-							<li><a href="">zobacz więcej…</a></li>
+							<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]" /></a></li>
+							<xsl:apply-templates select="//menu-wyposazenie/entry" />
+							<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">zobacz więcej…</a></li>
 						</ul>
 					</div>
 					<div>
 						<ul>
-							<li class="label"><a href="#">Kontakt</a></li>
-							<li><span class="icon">t</span> +48 516 925 690</li>
-							<li><span class="icon"></span> <a href="mailto:kontakt@city-dent.pl">kontakt@city-dent.pl</a></li>
-							<li><span class="icon">p</span> ul. Zaporoska 39a</li>
-							<li>53 - 519 Wrocław</li>
+							<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
+							<li><span class="icon">t </span><xsl:value-of select="//kontakt/entry/phone" /></li>
+							<li><span class="icon"> </span> <a href="mailto:kontakt@city-dent.pl"><xsl:value-of select="//kontakt/entry/e-mail" /></a></li>
+							<li><span class="icon">p </span><xsl:value-of select="//kontakt/entry/street-no" /></li>
+							<li><xsl:value-of select="//kontakt/entry/postal-code" /></li>
 						</ul>
 					</div>
 				</div>
 			</section>
 		</footer>
+	</xsl:template>
+
+	<xsl:template match="menu-oferta/entry">
+		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/"><xsl:value-of select="name/p" /></a></li>
+	</xsl:template>
+
+	<xsl:template match="menu-wyposazenie/entry">
+		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/#{name/@handle}"><xsl:value-of select="name/p" /></a></li>
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -26,14 +26,18 @@
 
 <xsl:template match="data">
 
+	<xsl:call-template name="equipment" />
+
+<!--
 	<xsl:choose>
 		<xsl:when test="$page = ''">
 			<xsl:call-template name="equipment" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template name="sub-page" />
+			<xsl:apply-templates select="wyposazenie/entry" />
 		</xsl:otherwise>
 	</xsl:choose>
+-->
 
 </xsl:template>
 
@@ -46,27 +50,26 @@
 
 			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
 		</article>
-		<article>
+	</section>
+
+	<section class="equipment-list">
+		<header>
 			<h1>Wyposażenie</h1>
-		</article>
-	</section>
+		</header>
+		
+		<xsl:apply-templates select="wyposazenie/entry" />
 
-	<section class="bricks-container">
-		<xsl:call-template name="brick" />
-		<xsl:call-template name="brick" />
-		<xsl:call-template name="brick" />
 	</section>
-
 </xsl:template>
 
-<xsl:template name="sub-page">
-	
-	<section class="oferta"> <!-- zmineić klasę -->
-		<article>
-			<h1>Subpage</h1>
-		</article>
-	</section>
-
+<xsl:template match="wyposazenie/entry">
+	<article id="{name/@handle}">
+		<h2><a href="javascript:void(0);" data-anchor="{name/@handle}"><xsl:value-of select="name/p" /></a></h2>
+		<div class="description">
+			<xsl:copy-of select="description/node()" />
+			<img src="{$workspace}/{main-image/@path}/{main-image/filename}" />
+		</div>
+	</article>
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">
@@ -76,10 +79,14 @@
 <xsl:template match="data" mode="js">
 	<script>
 		window.onload = function () {
-			var msnry = new Masonry( '.bricks-container', {
-				itemSelector: '.brick',
-				gutter: 30
-			});
+			var eqTrigger = $('.equipment-list article a');
+			eqTrigger.each(function() {
+				$(this).click(function(e) {
+					e.preventDefault();
+					//window.location.hash = $(this).data('anchor');
+					$('article#' + $(this).data('anchor')).find('.description').slideToggle();
+				})
+			})
 		}
 	</script>
 </xsl:template>

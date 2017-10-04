@@ -58,15 +58,17 @@ nav {
 	}
 }
 
+
+.owl-carousel {
+}
 .banner { // --> przenieś do pages/home.scss
 	@extend .row;
-	background-image: url($css-images-path + 'front.png');
+	background-color: lightgrey;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	height: 100vh;
-	z-index: -999;
 
 	margin-bottom: 0;
 
@@ -75,13 +77,18 @@ nav {
 		margin-top: 45vh;
 		overflow: visible;
 		//dodać drop shadow
+
+		p {
+			@extend .slogan;
+		}
 	}
 }
 
 
 ///// OFERTA ///// --> to wszystko do LAYOUTu
-.oferta, .wyposazenie, .zespol, .piotr, .kontakt {
+.offer, .oferta, .wyposazenie, .zespol, .piotr, .kontakt {
 	@extend .row;
+
 	margin-top: 100px;
 
 	article {
@@ -123,9 +130,10 @@ nav {
 
 @import 'utilities';
 @import 'pages';
+@import 'vendor';
 //@import 'vendor/normalize';
 //
 //
 //
 //@import 'media-queries';
-//@import 'vendor';
+//

@@ -1,1 +1,52 @@
 /*** EQUIPMENT PAGE ***/
+
+.equipment-list {
+	@extend .row;
+
+	margin-bottom: 100px;
+
+	article {
+		margin-bottom: 0;
+	}
+
+	header {
+		margin-bottom: 50px;
+		@extend %clear-floats;
+	}
+
+	header, article {
+		width: column-width(8);
+		margin-left: column-width(2) + $gutter;
+		h1 {
+			float: left;
+			margin-left: -(column-width(1) + $gutter);
+			margin-right: 30px;
+			margin-bottom: 2px;
+			max-width: 340px;
+		}
+
+		h2 {
+			margin-bottom: 12px;
+
+			a {
+				border-bottom: none;
+				
+				&:hover {
+					color: inherit;
+					border-bottom: 6px solid $green;
+				}
+			}
+		}
+
+		.description {
+			display: none;
+
+			img {
+				display: block;
+				width: column-width(4);
+				margin-right: $gutter;
+				margin-bottom: $horizontal-margin;
+			}
+		}
+	}
+}

@@ -72,57 +72,61 @@
 			<table class="details">
 				<tr>
 					<td class="icon">t</td>
-					<td>+48 516 925 690</td>
+					<td><xsl:value-of select="//kontakt/entry/phone" /></td>
 				</tr>
 				<tr>
 					<td class="icon">&#xf0e0;</td>
-					<td>kontakt@city-dent.pl</td>
+					<td><xsl:value-of select="//kontakt/entry/e-mail" /></td>
 				</tr>
 				<tr>
 					<td class="icon">&#x0070;</td>
-					<td>Zaporoska 39a, <br />
-					53 - 519 Wrocław</td>
+					<td><xsl:value-of select="//kontakt/entry/street-no" /><br />
+					<xsl:value-of select="//kontakt/entry/postal-code" /></td>
 				</tr>
 			</table>
-			<table class="hours">
-				<tr class="label">
-					<td class="icon">&#xe801;</td>
-					<td colspan="2">Godziny przyjęć</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>poniedziałek</td>
-					<td>14.00–21.00</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>wtorek</td>
-					<td>9.00–15.00</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>środa</td>
-					<td>14.00–21.00</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>czwartek</td>
-					<td>14.00–21.00</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>piątek</td>
-					<td>9.00–15.00</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>sobota</td>
-					<td>po uzgodnieniu</td>
-				</tr>
-			</table>
+			<xsl:apply-templates select="godziny-przyjec/entry" />
 		</article>
 	</section>
 
+</xsl:template>
+
+<xsl:template match="godziny-przyjec/entry">
+	<table class="hours">
+		<tr class="label">
+			<td class="icon">&#xe801;</td>
+			<td colspan="2">Godziny przyjęć</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>poniedziałek</td>
+			<td><xsl:value-of select="monday" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>wtorek</td>
+			<td><xsl:value-of select="tuesday" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>środa</td>
+			<td><xsl:value-of select="wednesday" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>czwartek</td>
+			<td><xsl:value-of select="thursday" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>piątek</td>
+			<td><xsl:value-of select="friday" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>sobota</td>
+			<td><xsl:value-of select="saturday" /></td>
+		</tr>
+	</table>
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">

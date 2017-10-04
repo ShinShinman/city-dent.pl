@@ -7,16 +7,12 @@
 		<xsl:param name="lang" select="//fl-languages/current-language/@language" />
 
 		<article class="brick">
-			<a href="{$root}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/tytul-artykulu/">
-				<img src="http://via.placeholder.com/350x225" alt=""/>
-				<h4>Stomatologia estetyczna</h4>
+			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/">
+				<img src="{$workspace}/{cover-image/@path}/{cover-image/filename}" />
+				<h4><xsl:value-of select="name/p" /></h4>
 			</a>
 		</article>
 
-	</xsl:template>
-
-	<xsl:template match="brick-image">
-		<img src="{$root}/image/post-thumbnail{@path}/{filename}" />
 	</xsl:template>
 
 	<xsl:template match="entry/subtitle">
