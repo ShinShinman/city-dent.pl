@@ -7,6 +7,10 @@
 	.brick {
 		width: column-width(4);
 
+		h4 {
+			font-weight: normal;
+		}
+
 		a {
 			display: block;
 			border-bottom: none;

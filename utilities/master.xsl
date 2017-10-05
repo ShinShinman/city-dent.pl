@@ -82,25 +82,35 @@
 						var menuTrigger = $('.menu-trigger a');
 						var mainMenu = $('.main-menu');
 						var mainMenuExtended = false;
-						menuTrigger.click(function(e) {
-							e.preventDefault();
+
+						function mainMenuToggle() {
 							if (mainMenuExtended) {
 								mainMenuExtended = false;
-								$(this).text('&#x4d;');
+								menuTrigger.text('&#x4d;');
+								mainMenu.fadeOut();
+								$('body').off('click');
 							} else {
 								mainMenuExtended = true;
-								$(this).text('&#x58;');
+								menuTrigger.text('&#x58;');
+								mainMenu.fadeIn(function() {
+									$('body').click(function(e) {
+										if(!$(e.target).parents().hasClass('main-menu') <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> mainMenuExtended) {
+											mainMenuExtended = false;
+											menuTrigger.text('&#x4d;');
+											mainMenu.fadeOut();
+											$('body').off('click');
+										};
+									});
+								});
 							}
-							//mainMenu.toggle();
-							mainMenu.fadeToggle();
+							
+						}
+
+						menuTrigger.click(function(e) {
+							e.preventDefault();
+							mainMenuToggle();
 						})
-						/*
-						$('body').click(function(e) {
-							if (!$(e.target).parents().hasClass('main-menu') <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> mainMenuExtended) {
-								mainMenu.fadeOut();
-							}
-						})
-						*/
+
 					})
 				</script>
 				<xsl:apply-templates mode="js"/>

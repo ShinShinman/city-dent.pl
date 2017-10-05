@@ -379,6 +379,8 @@ footer {
   overflow: hidden; }
   .bricks-container .brick {
     width: 301.3332px; }
+    .bricks-container .brick h4 {
+      font-weight: normal; }
     .bricks-container .brick a {
       display: block;
       border-bottom: none; }
@@ -388,7 +390,7 @@ footer {
 /* Pages */
 /*** OFFER PAGE ***/
 .main-image {
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   width: 100%;
   height: 500px;

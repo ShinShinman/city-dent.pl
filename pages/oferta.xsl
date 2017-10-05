@@ -24,7 +24,7 @@
 	<section class="offer">
 		<article>
 			<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
-			<xsl:copy-of select="oferta-tekst/entry/offer" />
+			<xsl:copy-of select="oferta-tekst/entry/offer/node()" />
 		</article>
 	</section>
 
@@ -46,7 +46,7 @@
 	<section class="oferta"> <!-- zmineić klasę -->
 		<article>
 			<h1><xsl:value-of select="name/p" /></h1>
-			<xsl:value-of select="description" />
+			<xsl:copy-of select="description/node()" />
 		</article>
 	</section>
 
