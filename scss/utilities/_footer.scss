@@ -8,6 +8,7 @@ footer {
 	bottom: -300px; // wysokość .extended-footer
 	left: 0;
 	overflow: hidden;
+	z-index: 10;
 
 	a {
 		border-bottom: none;
@@ -31,7 +32,7 @@ footer {
 					margin-right: auto;
 				}
 				.links {
-					width: 145px;
+					width: 165px;
 					margin-left: auto;
 					margin-right: auto;
 				}

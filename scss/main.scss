@@ -22,6 +22,10 @@ body {
 	//@include hide-text;
 }
 
+.green {
+	color: $green;
+}
+
 .slogan {
 	font-family: 'Borgia', serif;
 	font-size: 48px;
@@ -58,7 +62,7 @@ nav {
 	}
 }
 
-
+// TO WSZYSTKO DO HOME.SCSS //
 .owl-carousel {
 }
 .banner { // --> przenieś do pages/home.scss

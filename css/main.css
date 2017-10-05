@@ -182,6 +182,9 @@ body {
 .icon {
   font-family: 'Social'; }
 
+.green {
+  color: #55dca8; }
+
 .slogan, .banner .slogan-box p {
   font-family: 'Borgia', serif;
   font-size: 48px;
@@ -332,7 +335,8 @@ footer {
   position: absolute;
   bottom: -300px;
   left: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 10; }
   footer a {
     border-bottom: none; }
   footer .footer {
@@ -346,7 +350,7 @@ footer {
         margin-left: auto;
         margin-right: auto; }
       footer .footer .footer-container div .links {
-        width: 145px;
+        width: 165px;
         margin-left: auto;
         margin-right: auto; }
     footer .footer .footer-container .logo a {
