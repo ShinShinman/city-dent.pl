@@ -60,7 +60,7 @@
 				<h2><xsl:value-of select="name/p" /></h2>
 				<h6><xsl:value-of select="position/p" /></h6>
 			</header>
-			<xsl:value-of select="lead" />
+			<xsl:copy-of select="lead/node()" />
 		</a>
 	</article>
 </xsl:template>
@@ -72,7 +72,7 @@
 			<img src="{$workspace}/{image/@path}/{image/filename}" alt="" />
 			<h2><xsl:value-of select="name/p" /></h2>
 			<h6><xsl:value-of select="position/p" /></h6>
-			<xsl:value-of select="biography" />
+			<xsl:copy-of select="biography/node()" />
 		</article>
 	</section>
 

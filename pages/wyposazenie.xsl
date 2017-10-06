@@ -80,13 +80,21 @@
 	<script>
 		window.onload = function () {
 			var eqTrigger = $('.equipment-list article a');
+
 			eqTrigger.each(function() {
 				$(this).click(function(e) {
 					e.preventDefault();
-					//window.location.hash = $(this).data('anchor');
-					$('article#' + $(this).data('anchor')).find('.description').slideToggle();
+					var anchor = $(this).data('anchor');
+					$('article#' + anchor).find('.description').slideToggle();
+					history.pushState('', '', '#' + anchor);
 				})
 			})
+
+			var hash = window.location.hash;
+			if (hash != '') {
+				$(hash).find('.description').slideDown();
+			}
+
 		}
 	</script>
 </xsl:template>
