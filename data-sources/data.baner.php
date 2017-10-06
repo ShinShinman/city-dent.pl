@@ -3,25 +3,21 @@
 class datasourcebaner extends SectionDatasource
 {
     public $dsParamROOTELEMENT = 'baner';
-    public $dsParamORDER = 'desc';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-    
-
-    
 
     public $dsParamINCLUDEDELEMENTS = array(
         'image',
         'slogan: formatted'
     );
-    
 
     public function __construct($env = null, $process_params = true)
     {
@@ -35,10 +31,10 @@ class datasourcebaner extends SectionDatasource
             'name' => 'Baner',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://localhost/city-dent.pl',
+                'website' => 'http://orkana39.pl/clients/www.city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-04T13:30:13+00:00'
+            'release-date' => '2017-10-05T17:57:59+00:00'
         );
     }
 
