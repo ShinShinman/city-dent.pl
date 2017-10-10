@@ -38,6 +38,10 @@
 
 <xsl:template name="team">
 
+	<section class="about-us">
+		<xsl:apply-templates select="o-nas/entry" />
+	</section>
+
 	<section class="zespol">
 		<article>
 			<h1>Zespół</h1>
@@ -48,6 +52,13 @@
 		<xsl:apply-templates select="bricks-zespol/entry" />
 	</section>
 
+</xsl:template>
+
+<xsl:template match="o-nas/entry">
+	<article>
+		<h1><xsl:value-of select="../section" /></h1>
+		<xsl:copy-of select="about-us" />
+	</article>
 </xsl:template>
 
 <xsl:template match="bricks-zespol/entry">

@@ -155,7 +155,7 @@ ul {
       margin-right: 16px; }
 
 /* LAYOUT */
-.row, .banner, .banner .slogan-box, .offer, .oferta, .wyposazenie, .zespol, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .team-container, .equipment-list {
+.row, .banner, .banner .slogan-box, .offer, .oferta, .equipment-list, .about-us, .zespol, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
@@ -218,12 +218,12 @@ nav.breadcrumbs {
     margin-top: 45vh;
     overflow: visible; }
 
-.offer, .oferta, .wyposazenie, .zespol, .piotr, .kontakt {
+.offer, .oferta, .equipment-list, .about-us, .zespol, .piotr, .kontakt {
   margin-top: 100px; }
-  .offer article, .oferta article, .wyposazenie article, .zespol article, .piotr article, .kontakt article {
+  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .piotr article, .kontakt article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .offer article h1, .oferta article h1, .wyposazenie article h1, .zespol article h1, .piotr article h1, .kontakt article h1 {
+    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .piotr article h1, .kontakt article h1 {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
@@ -406,6 +406,9 @@ footer {
   background-color: white; }
 
 /*** TEAM PAGE ***/
+.zespol {
+  margin-top: 0; }
+
 .team-container {
   overflow: hidden; }
   .team-container a {
