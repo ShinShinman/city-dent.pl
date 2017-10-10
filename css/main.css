@@ -106,9 +106,9 @@ time, mark, audio, video {
 a {
   text-decoration: none;
   color: inherit;
-  border-bottom: 6px solid #55dca8; }
+  border-bottom: 6px solid #7a1b15; }
   a:hover {
-    color: #55dca8;
+    color: #7a1b15;
     border: none; }
 
 h1 {
@@ -182,8 +182,8 @@ body {
 .icon {
   font-family: 'Social'; }
 
-.green {
-  color: #55dca8; }
+.maroon {
+  color: #7a1b15; }
 
 .slogan, .banner .slogan-box p {
   font-family: 'Borgia', serif;
@@ -198,7 +198,7 @@ article {
     list-style: disc; }
 
 nav.breadcrumbs {
-  color: #55dca8;
+  color: #7a1b15;
   font-size: 14px;
   margin-bottom: 25px; }
   nav.breadcrumbs a {
@@ -276,7 +276,7 @@ nav.breadcrumbs {
 
 .main-menu:before {
   background: none;
-  border: 2px solid red;
+  border: 2px solid #7a1b15;
   content: "";
   display: block;
   position: absolute;
@@ -301,7 +301,7 @@ nav.main {
   nav.main a {
     border-bottom: none; }
     nav.main a:hover {
-      color: #55dca8; }
+      color: #7a1b15; }
   nav.main .logo {
     width: 384.1665px;
     margin-right: 30px; }
@@ -414,7 +414,7 @@ footer {
     .team-container a:hover {
       color: #262649; }
       .team-container a:hover h2 {
-        color: #55dca8; }
+        color: #7a1b15; }
 
 .team {
   width: 301.3332px; }
@@ -460,7 +460,7 @@ footer {
         border-bottom: none; }
         .equipment-list header h2 a:hover, .equipment-list article h2 a:hover {
           color: inherit;
-          border-bottom: 6px solid #55dca8; }
+          border-bottom: 6px solid #7a1b15; }
     .equipment-list header .description, .equipment-list article .description {
       display: none; }
       .equipment-list header .description img, .equipment-list article .description img {

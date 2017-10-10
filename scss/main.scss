@@ -22,8 +22,8 @@ body {
 	//@include hide-text;
 }
 
-.green {
-	color: $green;
+.maroon {
+	color: $maroon;
 }
 
 .slogan {
@@ -50,7 +50,7 @@ article {
 
 nav {
 	&.breadcrumbs {
-		color: $green;
+		color: $maroon;
 		font-size: 14px;
 		margin-bottom: 25px;
 		a {
