@@ -10,8 +10,8 @@
 					<div>
 						<ul class="inline-list social">
 							<li><a href="{//social-media/entry/facebook}" class="icon">f</a></li>
+							<li>•</li>
 							<li><a href="{//social-media/entry/instagram}" class="icon">i</a></li>
-							<li><a href="{//social-media/entry/linkedin}" class="icon">l</a></li>
 						</ul>
 					</div>
 					<div class="logo">

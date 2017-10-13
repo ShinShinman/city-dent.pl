@@ -44,6 +44,7 @@
 
 	<section class="zespol">
 		<article>
+			<a href="" id="zespol"></a>
 			<h1>Zespół</h1>
 		</article>
 	</section>
@@ -78,7 +79,7 @@
 
 <xsl:template match="zespol/entry">
 	
-	<section class="zespol"> <!-- zmineić klasę -->
+	<section class="team-single-view"> <!-- zmineić klasę -->
 		<article>
 			<img src="{$workspace}/{image/@path}/{image/filename}" alt="" />
 			<h2><xsl:value-of select="name/p" /></h2>

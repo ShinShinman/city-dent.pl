@@ -155,7 +155,7 @@ ul {
       margin-right: 16px; }
 
 /* LAYOUT */
-.row, .banner, .banner .slogan-box, .offer, .oferta, .equipment-list, .about-us, .zespol, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .team-container {
+.row, .banner, .banner .slogan-box, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
@@ -218,12 +218,12 @@ nav.breadcrumbs {
     margin-top: 45vh;
     overflow: visible; }
 
-.offer, .oferta, .equipment-list, .about-us, .zespol, .piotr, .kontakt {
+.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
   margin-top: 100px; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .piotr article, .kontakt article {
+  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .piotr article h1, .kontakt article h1 {
+    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1 {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
@@ -401,11 +401,18 @@ footer {
   margin-top: 70px; }
 
 .oferta {
-  margin-top: -60px;
+  margin-top: -80px;
   padding-top: 20px;
   background-color: white; }
 
 /*** TEAM PAGE ***/
+a#zespol {
+  content: " ";
+  display: block;
+  height: 75px;
+  margin-top: -75px;
+  visibility: hidden; }
+
 .zespol {
   margin-top: 0; }
 
@@ -431,7 +438,7 @@ footer {
         -webkit-border-radius: 218.4999px;
         -moz-border-radius: 218.4999px; }
 
-.zespol img {
+.team-single-view img {
   width: 218.4999px;
   border-radius: 218.4999px;
   -webkit-border-radius: 218.4999px;

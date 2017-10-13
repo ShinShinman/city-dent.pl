@@ -20,8 +20,8 @@
 					<xsl:apply-templates select="//menu-wyposazenie/entry" />
 				</ul>
 				<ul>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">zespół</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol">zespół</a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">kontakt</a></li>
 				</ul>
 			</div>
