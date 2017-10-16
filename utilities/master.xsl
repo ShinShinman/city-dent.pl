@@ -58,7 +58,7 @@
 				<!-- Place favicon.ico in the root directory -->
 
 				<!--<link rel="stylesheet" href="css/normalize.css" /> jest w main.min.css -->
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=0.0.2" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=0.0.3_beta" />
 			</head>
 
 			<body class="">

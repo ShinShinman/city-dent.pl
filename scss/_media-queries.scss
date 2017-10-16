@@ -10,125 +10,140 @@
 }
 */
 
-@media all and (max-width: 1079px) and (min-width: 720px) {
+@media all and (max-width: 1023px) and (min-width: 768px) {
 	.row {
-		width: columns-width(8);
+		width: column-width(9);
 	}
 	.text-column {
-		width: columns-width(8);
+		width: column-width(9);
 	}
+	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
+		article {
+			width: column-width(9);
+			margin-left: 0;
 
-	/* STICKY NAV */
-	.nav-stripes {
-		.first {
-			width: columns-width(6);
-		}
-	}
-	.sticky-nav {
-		nav {
-			form {
-				width: columns-width(5);
-
-				input[type = text] {
-					width: columns-width(5)-59;
-				}
-				input[type = submit] {
-					width: 48px;
-				}
+			h1 {
+				float: none;
+				margin-left: 0;
+				margin-bottom: $horizontal-margin;
 			}
 		}
 	}
 
-	/* FOOTER */
-	.main-footer {
+	///// STICKY NAV /////
+	nav.main {
+		font-size: 16px;
+
+		.logo {
+			width: column-width(2);
+
+			a {
+				background-image: url($css-images-path + 'logo_sml.png');
+				background-position: center;
+				width: 100%;
+				height: 36px;
+			}
+		}
+		.menu-trigger {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+
+	///// BANNER @HOME PAGE /////
+	.banner {
+		width: 100%;
+
+		.slogan-box {
+			margin-top: 55vh;
+
+			p {
+				font-size: 36px;
+			}
+		}
+	}
+	
+	///// FOOTER /////
+	footer {
 		.footer {
-			.first-column {
-				width: columns-width(3);
-
-				p {
-					margin-left: columns-width(1) + $gutter;
+			.footer-container {
+				div {
+					width: column-width(3);
 				}
 			}
-			.second-column {
-				width: columns-width(3);
+		}
+		.extended-footer {
+			.footer-container {
+				div {
+					width: column-width(3);
+				}
 			}
-			.third-column {
-				width: columns-width(2);
+		}
+	}
+
+	///// OFERTA /////
+
+	.bricks-container {
+		//width: column-width(8);
+	}
+
+	.oferta {
+		overflow: initial;
+		margin-bottom: 150px;
+
+		article {
+			h1 {
+				background-color: white;
+				margin: -20px 30px 0 -30px;
+				padding: 20px 0 30px 30px;
+			}
+		}
+	}
+
+	///// WYPOSAŻENIE /////
+	.equipment-list {
+		header, article {
+			margin-left: 0;
+
+			h1 {
+				float: none;
+				margin-left: 0;
+			}
+		}
+	}
+
+	///// ZESPÓŁ /////
+	.team-single-view {
+		img {
+			margin-left: 0;
+		}
+	}
+
+	///// KONTAKT /////
+	.kontakt {
+		overflow: initial;
+		margin-bottom: 150px;
+
+		article {
+			h1 {
+				background-color: white;
+				margin: -20px 30px -30px -30px;
+				padding: 20px 0 30px 30px;
 			}
 		}
 	}
 }
+
+
 
 
 @media all and (max-width: 719px) {
 	.row {
-		width: columns-width(4);
+		width: column-width(4);
 	}
 	.text-column {
-		width: columns-width(4);
+		width: column-width(4);
 	}
 
-	/* STICKY NAV */
-	.nav-stripes {
-		.first {
-			width: columns-width(4);
-		}
-		.second {
-			display: none;
-		}
-	}
-	.sticky-nav {
-		nav {
-			form {
-				display: none;
-				width: columns-width(5);
-
-				input[type = text] {
-					width: columns-width(5)-59;
-				}
-				input[type = submit] {
-					width: 48px;
-				}
-			}
-			
-			.trigger-buttons {
-				margin-left: columns-width(1) + $gutter;
-			}
-		}
-	}
-
-	/* HIGHLIGHT */
-	.highlight {
-
-		.owl-carousel {
-
-			.item {
-				
-				.text-box {
-					h1 {
-						width: columns-width(4);
-					}
-					p {
-						width: columns-width(4);
-						font-size: 21px;
-						font-weight: bold;
-					}
-					.icon {
-						font-size: inherit;
-					}
-				}
-			}
-		}
-	}
-
-	/* FOOTER */
-	.main-footer {
-		display: none;
-		.footer {
-			.first-column {}
-			.second-column {}
-			.third-column {}
-		}
-	}
+	
 }
-
