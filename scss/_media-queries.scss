@@ -11,6 +11,8 @@
 */
 
 @media all and (max-width: 1023px) and (min-width: 768px) {
+
+	///// LAYOUT /////
 	.row {
 		width: column-width(9);
 	}
@@ -44,25 +46,13 @@
 				height: 36px;
 			}
 		}
+
 		.menu-trigger {
 			font-size: 24px;
 			line-height: 36px;
 		}
 	}
 
-	///// BANNER @HOME PAGE /////
-	.banner {
-		width: 100%;
-
-		.slogan-box {
-			margin-top: 55vh;
-
-			p {
-				font-size: 36px;
-			}
-		}
-	}
-	
 	///// FOOTER /////
 	footer {
 		.footer {
@@ -77,6 +67,19 @@
 				div {
 					width: column-width(3);
 				}
+			}
+		}
+	}
+
+	///// BANNER @HOME PAGE /////
+	.banner {
+		width: 100%;
+
+		.slogan-box {
+			margin-top: 55vh;
+
+			p {
+				font-size: 36px;
 			}
 		}
 	}
@@ -135,15 +138,159 @@
 }
 
 
+@media all and (max-width: 767px) {
+	body {
+		//background-color: blue;
+	}
 
+	///// TYPO /////
+	h1 {
+		font-size: 30px;
+	}
 
-@media all and (max-width: 719px) {
+	///// LAYOUT /////
 	.row {
 		width: column-width(4);
 	}
 	.text-column {
 		width: column-width(4);
 	}
+	article {
+		margin-bottom: 0;
+	}
+	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
+		article {
+			width: column-width(4);
+			margin-left: 0;
 
-	
+			h1 {
+				float: none;
+				margin-left: 0;
+				margin-bottom: $horizontal-margin;
+			}
+		}
+	}
+
+	///// STICKY NAV /////
+	nav.main {
+		font-size: 16px;
+
+		.logo {
+			width: column-width(2);
+			margin-right: column-width(1) + (2 * $gutter);
+
+			a {
+				background-image: url($css-images-path + 'logo_sml.png');
+				background-position: center;
+				width: 100%;
+				height: 36px;
+			}
+		}
+
+		.menu-trigger {
+			font-size: 24px;
+			line-height: 36px;
+			text-align: right;
+		}
+
+		.contact {
+			display: none;
+		}
+	}
+
+	///// FOOTER /////
+	footer {
+		bottom: -100px;
+		background-color: transparent;
+
+		.footer {
+			.logo {
+				display: none;
+			}
+			.footer-container {
+				div {
+					//width: column-width(2);
+				}
+			}
+		}
+		.extended-footer {
+			display: none;
+		}
+	}
+
+	///// BANNER @HOME PAGE /////
+	.banner {
+		width: 100%;
+
+		.slogan-box {
+			margin-top: 65vh;
+
+			p {
+				font-size: 24px;
+				width: column-width(4);
+			}
+		}
+	}
+
+	///// OFERTA /////
+
+	.oferta {
+		margin-top: 0;
+
+		article {
+			h1 {
+				background-color: white;
+				margin: -20px 30px 0 -30px;
+				padding: 20px 0 30px 30px;
+			}
+		}
+	}
+
+	///// WYPOSAŻENIE /////
+	.equipment-list {
+		header, article {
+			width: column-width(4);
+			margin-left: 0;
+
+			h1 {
+				float: none;
+				margin-left: 0;
+			}
+		}
+	}
+
+	///// ZESPÓŁ /////
+	.team-single-view {
+		overflow-x: hidden;
+		
+		img {
+			float: none;
+			margin: 0 auto 24px;
+			display: block;
+			width: column-width(3);
+		}
+	}
+
+	///// KONTAKT /////
+	.kontakt {
+		margin-top: 0;
+
+		article {
+			table {
+				width: 100%;
+				margin-top: 0;
+				float: none;
+				margin-bottom: 50px;
+
+				&.details {
+					font-size: 18px;
+
+					tr {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+
 }
