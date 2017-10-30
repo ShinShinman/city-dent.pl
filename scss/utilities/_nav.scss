@@ -24,7 +24,7 @@ nav {
 		}
 
 		.logo {
-			width: column-width(5);
+			width: column-width(4);
 			margin-right: $gutter;
 			a {
 				@include hide-text;
@@ -45,6 +45,15 @@ nav {
 				line-height: 40px;
 				height: 40px;
 			}
+		}
+
+		.lang-btn {
+			width: column-width(1);
+			text-align: center;
+			line-height: 40px;
+			height: 40px;
+			font-size: 16px;
+			font-weight: bold;
 		}
 
 		.menu-trigger {

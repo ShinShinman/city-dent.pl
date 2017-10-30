@@ -18,8 +18,7 @@ class datasourcebricks_wyposazenie extends SectionDatasource
     
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'name: formatted',
-        'cover-image'
+        'name: formatted'
     );
     
 
@@ -38,7 +37,7 @@ class datasourcebricks_wyposazenie extends SectionDatasource
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-03T19:06:18+00:00'
+            'release-date' => '2017-10-30T18:29:18+00:00'
         );
     }
 

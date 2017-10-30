@@ -4,6 +4,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:include href="../utilities/_language-button.xsl" />
 
 <xsl:template match="data">
 
@@ -131,6 +132,13 @@
 
 <xsl:template match="data" mode="page-title">
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
+</xsl:template>
+
+<xsl:template name="lang-button">
+	<xsl:param name="lang" />
+	<xsl:call-template name="language-button">
+		<xsl:with-param name="language" select="//current-language/@handle" />
+	</xsl:call-template>
 </xsl:template>
 
 </xsl:stylesheet>

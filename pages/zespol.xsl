@@ -21,7 +21,8 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl" />
+<xsl:import href="../utilities/master.xsl" />
+<xsl:include href="../utilities/_language-button.xsl" />
 
 <xsl:template match="data">
 
@@ -95,6 +96,10 @@
 </xsl:template>
 
 <xsl:template match="data" mode="js">
+	<xsl:apply-templates select="bricks-zespol/entry[1]" mode="js" />
+</xsl:template>
+
+<xsl:template match="bricks-zespol/entry" mode="js">
 	<script>
 		window.onload = function () {
 			var msnry = new Masonry( '.team-container', {
@@ -103,6 +108,13 @@
 			});
 		}
 	</script>
+</xsl:template>
+
+<xsl:template name="lang-button">
+	<xsl:param name="lang" />
+	<xsl:call-template name="language-button">
+		<xsl:with-param name="language" select="//current-language/@handle" />
+	</xsl:call-template>
 </xsl:template>
 
 </xsl:stylesheet>

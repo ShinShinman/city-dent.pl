@@ -21,8 +21,9 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl" />
+<xsl:import href="../utilities/master.xsl" />
 <xsl:include href="../utilities/_brick.xsl" />
+<xsl:include href="../utilities/_language-button.xsl" />
 
 <xsl:template match="data">
 
@@ -88,6 +89,13 @@
 
 		}
 	</script>
+</xsl:template>
+
+<xsl:template name="lang-button">
+	<xsl:param name="lang" />
+	<xsl:call-template name="language-button">
+		<xsl:with-param name="language" select="//current-language/@handle" />
+	</xsl:call-template>
 </xsl:template>
 
 </xsl:stylesheet>

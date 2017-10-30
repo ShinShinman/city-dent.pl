@@ -5,6 +5,7 @@
 
 <xsl:import href="../utilities/master.xsl"/>
 <xsl:include href="../utilities/_brick.xsl" />
+<xsl:include href="../utilities/_language-button.xsl" />
 
 <xsl:template match="data">
 
@@ -56,7 +57,18 @@
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
 
+<xsl:template name="lang-button">
+	<xsl:param name="lang" />
+	<xsl:call-template name="language-button">
+		<xsl:with-param name="language" select="//current-language/@handle" />
+	</xsl:call-template>
+</xsl:template>
+
 <xsl:template match="data" mode="js">
+	<xsl:apply-templates select="bricks-oferta/entry[1]" mode="js" />
+</xsl:template>
+
+<xsl:template match="bricks-oferta/entry" mode="js">
 	<script>
 		window.onload = function () {
 			var msnry = new Masonry( '.bricks-container', {
@@ -64,7 +76,7 @@
 				gutter: 30
 			});
 		}
-	</script>
+	</script>	
 </xsl:template>
 
 </xsl:stylesheet>

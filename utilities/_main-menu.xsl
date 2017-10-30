@@ -32,10 +32,17 @@
 	<xsl:template name="breadcrumbs">
 		<xsl:choose>
 			<xsl:when test="//params/page != ''">
-				<nav class="breadcrumbs"><a href="{$root}">Strona główna</a> / <a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a><xsl:apply-templates select="//menu-oferta/entry/name[@handle = $page]" /><xsl:apply-templates select="//menu-wyposazenie/entry/name[@handle = $page]" /><xsl:apply-templates select="//zespol/entry/name[@handle = $page]" /> / Menu</nav>
+				<nav class="breadcrumbs">
+					<a href="{$root}">Strona główna</a> / <a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a><xsl:apply-templates select="//menu-oferta/entry/name[@handle = $page]" /><xsl:apply-templates select="//menu-wyposazenie/entry/name[@handle = $page]" /><xsl:apply-templates select="//zespol/entry/name[@handle = $page]" /> / Menu
+				</nav>
 			</xsl:when>
 			<xsl:otherwise>
-				<nav class="breadcrumbs"><a href="{$root}">Strona główna</a> / <a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a> / Menu</nav>
+				<nav class="breadcrumbs">
+					<xsl:if test="count(//page-types/item) = 0">
+						<a href="{$root}">Home</a> / 
+					</xsl:if>
+					<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a> / Menu
+				</nav>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
