@@ -8,7 +8,7 @@
 
 		<article class="brick">
 			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/">
-				<img src="{$workspace}/{cover-image/@path}/{cover-image/filename}" />
+				<img src="{$root}/image/4/301/201{cover-image/@path}/{cover-image/filename}" srcset="{$root}/image/4/301/201{cover-image/@path}/{cover-image/filename} 1x, {$root}/image/4/602/402{cover-image/@path}/{cover-image/filename} 2x, {$root}/image/4/903/603{cover-image/@path}/{cover-image/filename} 3x" />
 				<h4><xsl:value-of select="name/p" /></h4>
 			</a>
 		</article>

@@ -68,7 +68,7 @@
 		<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/">
 			<header>
 				<div class="avatar">
-					<img src="{$workspace}/{image/@path}/{image/filename}" alt="Piotrek" />
+					<img src="{$root}/image/4/0/219{image/@path}/{image/filename}" alt="" srcset="{$root}/image/4/0/219{image/@path}/{image/filename} 1x, {$root}/image/4/0/438{image/@path}/{image/filename} 2x, {$root}/image/4/0/657{image/@path}/{image/filename} 3x" />
 				</div>
 				<h2><xsl:value-of select="name/p" /></h2>
 				<h6><xsl:value-of select="position/p" /></h6>
@@ -82,7 +82,7 @@
 	
 	<section class="team-single-view"> <!-- zmineić klasę -->
 		<article>
-			<img src="{$workspace}/{image/@path}/{image/filename}" alt="" />
+			<img src="{$root}/image/4/0/219{image/@path}/{image/filename}" alt="" srcset="{$root}/image/4/0/219{image/@path}/{image/filename} 1x, {$root}/image/4/0/438{image/@path}/{image/filename} 2x, {$root}/image/4/0/657{image/@path}/{image/filename} 3x" />
 			<h2><xsl:value-of select="name/p" /></h2>
 			<h6><xsl:value-of select="position/p" /></h6>
 			<xsl:copy-of select="biography/node()" />

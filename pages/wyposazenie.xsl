@@ -59,7 +59,7 @@
 		<h2><a href="javascript:void(0);" data-anchor="{name/@handle}"><xsl:value-of select="name/p" /></a></h2>
 		<div class="description">
 			<xsl:copy-of select="description/node()" />
-			<img src="{$workspace}/{main-image/@path}/{main-image/filename}" />
+			<img src="{$root}/image/1/301/0{main-image/@path}/{main-image/filename}" srcset="{$root}/image/1/301/0{main-image/@path}/{main-image/filename} 1x, {$root}/image/1/602/0{main-image/@path}/{main-image/filename} 2x, {$root}/image/1/903/0{main-image/@path}/{main-image/filename} 3x" />
 		</div>
 	</article>
 </xsl:template>

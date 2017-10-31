@@ -37,7 +37,7 @@ class datasourceo_nas extends SectionDatasource
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-10T12:21:40+00:00'
+            'release-date' => '2017-10-31T12:58:40+00:00'
         );
     }
 
