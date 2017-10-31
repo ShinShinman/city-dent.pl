@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, article:after, .equipment-list header:after {
+.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, footer .mobile-footer:after, article:after, .equipment-list header:after {
   clear: left;
   content: "";
   display: table; }
@@ -181,17 +181,17 @@ ul {
       margin-right: 16px; }
 
 /* LAYOUT */
-.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
   overflow: auto; }
 
-.floater > *, .main-menu .navnav > *, nav.main > *, nav.main .contact > *, footer .footer-container > * {
+.floater > *, .main-menu .navnav > *, nav.main > *, nav.main .contact > *, footer .footer-container > *, footer .mobile-footer > * {
   float: left;
   margin-right: 30px; }
-  .floater > *:last-child, .main-menu .navnav > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, footer .footer-container > *:last-child {
+  .floater > *:last-child, .main-menu .navnav > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, footer .footer-container > *:last-child, footer .mobile-footer > *:last-child {
     margin-right: 0; }
 
 html {
@@ -353,6 +353,10 @@ footer {
   z-index: 10; }
   footer a {
     border-bottom: none; }
+  footer .mobile-footer {
+    display: none; }
+    footer .mobile-footer ul.social {
+      float: right; }
   footer .footer {
     background-color: white;
     line-height: 50px; }
@@ -429,6 +433,7 @@ footer {
 .main-image {
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 500px;
   margin-top: 70px; }
@@ -736,18 +741,8 @@ a#zespol {
   width: 100%; }
 
 /*** MEDIA QUERIES ***/
-/*
-@media all and (min-width: 1080px) {
-	body {
-		background-color: lightgrey;
-	}
-	.row {
-	width: columns-width();
-	} 
-}
-*/
 @media all and (max-width: 1023px) and (min-width: 768px) {
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 715.4997px; }
   .text-column {
     width: 715.4997px; }
@@ -767,6 +762,11 @@ a#zespol {
         background-position: center;
         width: 100%;
         height: 36px; }
+    nav.main .contact {
+      width: 384.1665px; }
+      nav.main .contact li {
+        width: 50%;
+        margin-right: 0; }
     nav.main .menu-trigger {
       font-size: 24px;
       line-height: 36px; }
@@ -805,7 +805,7 @@ a#zespol {
 @media all and (max-width: 767px) {
   h1 {
     font-size: 30px; }
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 301.3332px; }
   .text-column {
     width: 301.3332px; }
@@ -822,23 +822,38 @@ a#zespol {
     font-size: 16px; }
     nav.main .logo {
       width: 135.6666px;
-      margin-right: 112.8333px; }
+      margin-right: 30px; }
       nav.main .logo a {
         background-image: url("../images/logo_sml.png");
         background-position: center;
         width: 100%;
         height: 36px; }
+    nav.main .lang-btn {
+      text-align: right; }
     nav.main .menu-trigger {
       font-size: 24px;
-      line-height: 36px;
-      text-align: right; }
+      line-height: 36px; }
     nav.main .contact {
       display: none; }
+  .main-menu {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 65%; }
+    .main-menu * {
+      margin-left: 0 !important; }
+    .main-menu ul {
+      margin-bottom: 24px; }
+      .main-menu ul.equipment li:not(.label) {
+        display: none; }
   footer {
     bottom: -100px;
     background-color: transparent; }
     footer .footer .logo {
       display: none; }
+    footer .footer .footer-container {
+      display: none; }
+    footer .footer .mobile-footer {
+      display: block; }
     footer .extended-footer {
       display: none; }
   .banner {
@@ -848,6 +863,8 @@ a#zespol {
       .banner .slogan-box p {
         font-size: 24px;
         width: 301.3332px; }
+  .main-image {
+    height: 200px; }
   .oferta {
     margin-top: 0; }
     .oferta article h1 {

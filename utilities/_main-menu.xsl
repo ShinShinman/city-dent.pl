@@ -15,7 +15,7 @@
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/">Oferta</a></li>
 					<xsl:apply-templates select="//menu-oferta/entry" />
 				</ul>
-				<ul>
+				<ul class="equipment">
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wposażenie</a></li>
 					<xsl:apply-templates select="//menu-wyposazenie/entry" />
 				</ul>

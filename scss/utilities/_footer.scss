@@ -18,6 +18,15 @@ footer {
 		@extend .row, .floater;
 	}
 
+	.mobile-footer {
+		@extend .row, .floater;
+		display: none;
+
+		ul.social {
+			float: right;
+		}
+	}
+
 	.footer {
 		background-color: white;
 		line-height: 50px;

@@ -25,6 +25,18 @@
 						</ul>
 					</div>
 				</div>
+				<div class="mobile-footer">
+					<ul class="inline-list links">
+						<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
+						<li>•</li>
+						<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></a></li>
+					</ul>
+					<ul class="inline-list social">
+						<li><a href="{//social-media/entry/facebook}" class="icon">f</a></li>
+						<li>•</li>
+						<li><a href="{//social-media/entry/instagram}" class="icon">i</a></li>
+					</ul>
+				</div>
 			</section>
 			<section class="extended-footer">
 				<div class="footer-container">

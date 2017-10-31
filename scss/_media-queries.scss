@@ -1,14 +1,4 @@
 /*** MEDIA QUERIES ***/
-/*
-@media all and (min-width: 1080px) {
-	body {
-		background-color: lightgrey;
-	}
-	.row {
-	width: columns-width();
-	} 
-}
-*/
 
 @media all and (max-width: 1023px) and (min-width: 768px) {
 
@@ -32,7 +22,7 @@
 		}
 	}
 
-	///// STICKY NAV /////
+	///// NAV /////
 	nav.main {
 		font-size: 16px;
 
@@ -44,6 +34,14 @@
 				background-position: center;
 				width: 100%;
 				height: 36px;
+			}
+		}
+
+		.contact {
+			width: column-width(5);
+			li {
+				width: 50%;
+				margin-right: 0;
 			}
 		}
 
@@ -139,9 +137,6 @@
 
 
 @media all and (max-width: 767px) {
-	body {
-		//background-color: blue;
-	}
 
 	///// TYPO /////
 	h1 {
@@ -171,13 +166,13 @@
 		}
 	}
 
-	///// STICKY NAV /////
+	///// NAV /////
 	nav.main {
 		font-size: 16px;
 
 		.logo {
 			width: column-width(2);
-			margin-right: column-width(1) + (2 * $gutter);
+			margin-right: $gutter;
 
 			a {
 				background-image: url($css-images-path + 'logo_sml.png');
@@ -187,14 +182,36 @@
 			}
 		}
 
+		.lang-btn {
+			text-align: right;
+		}
+
 		.menu-trigger {
 			font-size: 24px;
 			line-height: 36px;
-			text-align: right;
 		}
 
 		.contact {
 			display: none;
+		}
+	}
+
+	///// MAIN MENU /////
+	.main-menu {
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 65%;
+
+		* {
+			margin-left: 0 !important;
+		}
+
+		ul {
+			margin-bottom: $horizontal-margin;
+
+			&.equipment li:not(.label) {
+				display: none;
+			}
 		}
 	}
 
@@ -207,12 +224,16 @@
 			.logo {
 				display: none;
 			}
+
 			.footer-container {
-				div {
-					//width: column-width(2);
-				}
+				display: none;
+			}
+
+			.mobile-footer {
+				display: block;
 			}
 		}
+
 		.extended-footer {
 			display: none;
 		}
@@ -233,6 +254,10 @@
 	}
 
 	///// OFERTA /////
+
+	.main-image {
+		height: 200px;
+	}
 
 	.oferta {
 		margin-top: 0;
