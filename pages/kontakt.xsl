@@ -97,37 +97,34 @@
 			<td class="icon">&#xe801;</td>
 			<td colspan="2">Godziny przyjęć</td>
 		</tr>
-		<tr>
-			<td></td>
-			<td>poniedziałek</td>
-			<td><xsl:value-of select="monday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>wtorek</td>
-			<td><xsl:value-of select="tuesday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>środa</td>
-			<td><xsl:value-of select="wednesday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>czwartek</td>
-			<td><xsl:value-of select="thursday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>piątek</td>
-			<td><xsl:value-of select="friday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>sobota</td>
-			<td><xsl:value-of select="saturday" /></td>
-		</tr>
+		
+		<xsl:apply-templates select="*" />
+		
 	</table>
+</xsl:template>
+
+<xsl:template match="godziny-przyjec/entry/*">
+
+	<xsl:variable name="week-day">
+		<xsl:choose>
+			<xsl:when test="name(.) = 'monday'">poniedziałek</xsl:when>
+			<xsl:when test="name(.) = 'tuesday'">wtorek</xsl:when>
+			<xsl:when test="name(.) = 'wednesday'">środa</xsl:when>
+			<xsl:when test="name(.) = 'thursday'">czwartek</xsl:when>
+			<xsl:when test="name(.) = 'friday'">piątek</xsl:when>
+			<xsl:when test="name(.) = 'saturday'">sobota</xsl:when>
+			<xsl:when test="name(.) = 'sunday'">niedziela</xsl:when>
+		</xsl:choose>
+	</xsl:variable>
+
+	<xsl:if test=". != ''">
+		<tr>
+			<td></td>
+			<td><xsl:value-of select="$week-day" /></td>
+			<td><xsl:value-of select="." /></td>
+		</tr>
+	</xsl:if>
+
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">
