@@ -48,9 +48,14 @@
 		<article>
 			<h1><xsl:value-of select="name/p" /></h1>
 			<xsl:copy-of select="description/node()" />
+			<xsl:apply-templates select="inline-image" />
 		</article>
 	</section>
 
+</xsl:template>
+
+<xsl:template match="inline-image">
+	<img src="{$root}/image/1/467/0{@path}/{filename}" alt="" srcset="{$root}/image/1/467/0{@path}/{filename} 1x, {$root}/image/1/934/0{@path}/{filename} 2x, {$root}/image/1/1401/0{@path}/{filename} 3x" />
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">
