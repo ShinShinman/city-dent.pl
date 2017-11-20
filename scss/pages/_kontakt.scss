@@ -5,6 +5,10 @@
 	height: 500px;
 	margin-top: 0;
 	z-index: -100;
+
+	///// TEMP /////
+	display: none;
+	////////////////
 }
 
 //klasa sekcji .kontakt, bo .contact już jest w górnej belce → uporządkować
@@ -13,6 +17,10 @@
 	margin-bottom: 100px;
 	padding-top: 20px;
 	background-color: white;
+
+	///// TEMP /////
+	margin-top: 100px;
+	////////////////
 
 	article {
 		h1 {
