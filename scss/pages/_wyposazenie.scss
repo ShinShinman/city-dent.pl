@@ -44,7 +44,8 @@
 			img {
 				display: block;
 				width: column-width(4);
-				margin-right: $gutter;
+				margin-left: auto;
+				margin-right: auto;
 				margin-bottom: $horizontal-margin;
 			}
 		}

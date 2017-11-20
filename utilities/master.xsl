@@ -32,11 +32,6 @@
 	<xsl:include href="_nav.xsl" />
 	<xsl:include href="_footer.xsl" />
 
-<!--
-	<xsl:include href="_brick.xsl" />
-	<xsl:include href="_date-time.xsl" />
--->
-
 	<xsl:template match="/">
 		<html class="no-js" lang="{//current-language/@handle}">
 			<head>
@@ -57,7 +52,6 @@
 				<link rel="apple-touch-icon" href="icon.png"> -->
 				<!-- Place favicon.ico in the root directory -->
 
-				<!--<link rel="stylesheet" href="css/normalize.css" /> jest w main.min.css -->
 				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=0.0.4" />
 			</head>
 
@@ -120,8 +114,7 @@
 
 </xsl:template>
 
-<xsl:template match="data" mode="meta-tags">
-</xsl:template>
+<xsl:template match="data" mode="meta-tags" />
 
 <xsl:template match="data" mode="page-title">
 	<title><xsl:value-of select="$website-name"/></title>

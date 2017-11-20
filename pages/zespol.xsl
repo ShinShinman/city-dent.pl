@@ -117,4 +117,8 @@
 	</xsl:call-template>
 </xsl:template>
 
+	<xsl:template match="data" mode="meta-tags">
+		<meta name="description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
+	</xsl:template>
+
 </xsl:stylesheet>

@@ -68,6 +68,10 @@
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
 
+<xsl:template match="data" mode="meta-tags">
+		<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
+	</xsl:template>
+
 <xsl:template match="data" mode="js">
 	<script>
 		window.onload = function () {

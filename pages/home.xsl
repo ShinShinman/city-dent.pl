@@ -77,4 +77,8 @@
 		</xsl:choose>
 	</xsl:template>
 
+	<xsl:template match="data" mode="meta-tags">
+		<meta name="description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+	</xsl:template>
+
 </xsl:stylesheet>
