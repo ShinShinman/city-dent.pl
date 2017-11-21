@@ -410,7 +410,7 @@ footer {
       width: 100%; }
 
 /* Pages */
-.slogan, .banner .slogan-box p {
+.slogan, .banner .slogan-box > * {
   font-family: 'Borgia', serif;
   font-size: 48px;
   color: white;

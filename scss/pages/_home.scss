@@ -9,7 +9,7 @@
 
 .owl-carousel {
 }
-.banner { // --> przenieś do pages/home.scss
+.banner {
 	@extend .row;
 	background-color: lightgrey;
 	background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 		overflow: visible;
 		//dodać drop shadow
 
-		p {
+		& > * {
 			@extend .slogan;
 		}
 	}
