@@ -13,59 +13,47 @@
 	<script>
 		
 		function initMap() {
-			var uluru = {lat: 51.097717, lng: 17.013523};
+			var uluru = {lat: 51.097800, lng: 17.014623};
 			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 17,
-				center: uluru
+				center: uluru,
+				zoom: 17
 			});
-			var marker = new google.maps.Marker({
-				position: uluru,
-				map: map
-			});
-		}
 
-		function initInit() {
-			console.log("JEST");
-			console.log(result)
-		}
-		
-/*
-		function initMap() {
-			var map, service, infoWindow;
+			var noPoi = [
+				{
+						featureType: "poi",
+						stylers: [
+							{ visibility: "off" }
+						]
+					}
+				];
 
-			var mapOpt = {
-				zoom: 17,
-				center: {lat: 51.097717, lng: 17.013523}
-			};
+			map.setOptions({styles: noPoi});
 
-			map = new google.maps.Map(document.getElementById('map'), mapOpt);
+			var infoWindow = new google.maps.InfoWindow();
+			var service = new google.maps.places.PlacesService(map);
 
-			console.log(new google.maps.places.PlacesService(map));
-			service = new google.maps.places.PlacesService(map);
 			service.getDetails({
-				placeID: 'ChIJ26ACbBTCD0cRS__-CRgxX3o'
-			}, function (result, status) {
-				if (status != google.maps.places.PlacesServiceStatus.OK) {
-					console.log(status);
-					return;
+				placeId: 'ChIJ26ACbBTCD0cRS__-CRgxX3o' 
+			}, function(place, status) {
+				if (status === google.maps.places.PlacesServiceStatus.OK) {
+					var marker = new google.maps.Marker({
+						map: map,
+						position: place.geometry.location
+					});
+					google.maps.event.addListener(marker, 'click', function() {
+						console.log(place);
+						var adr = place.formatted_address.split(',');
+						infoWindow.setContent('<div class="infoWindow"><strong>City-Dent<br />Praktyka Stomatologiczna Piotr Ptak</strong><br />' + place.international_phone_number + '<br />' + adr[0] + '<br />' + adr[1] + '<br />' + adr[2] + '</div>');
+						infoWindow.open(map, this);
+					});
 				}
-				var marker = new google.maps.Marker({
-					position: result.geometry.location,
-					map: map
-				});
-				console.log(result);
 			})
 		}
-*/
-
 	</script>
 	
-	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initMap">
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHfmQcm4oFASzKQav1Z7zaFzTWWqXXWM0&amp;libraries=places&amp;callback=initMap">
 	</script>
-	<!--
-	<script async="" defer="" src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ26ACbBTCD0cRS__-CRgxX3o&amp;key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initInit">
-	</script>
-	-->
 
 	<section class="kontakt">
 		<article>

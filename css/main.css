@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, footer .mobile-footer:after, article:after, .equipment-list header:after {
   clear: left;
   content: "";
@@ -210,6 +209,9 @@ body {
 
 .maroon {
   color: #7a1b15; }
+
+strong {
+  font-weight: bold; }
 
 article {
   margin-bottom: 50px; }
@@ -528,57 +530,37 @@ a#zespol {
 #map {
   background-color: lightgrey;
   height: 500px;
-  margin-top: 0;
-  z-index: -100;
-  display: none; }
+  margin-top: 0; }
+  #map .infoWindow {
+    width: 170px; }
 
 .kontakt {
   margin-top: -60px;
   margin-bottom: 100px;
   padding-top: 20px;
   background-color: white;
-  margin-top: 100px; }
-  .kontakt article {
-    /* USUNĄĆ
-		ul {
-			float: left;
-			width: column-width(4);
-			margin-right: $gutter;
-			list-style: none;
-			&:last-of-type {
-				margin-right: 0;
-			}
-
-			li.address, li.label {
-				font-size: 24px;
-
-				.icon {
-					width: 20px;
-				}
-			}
-		}
-		*/ }
-    .kontakt article h1 {
-      float: none; }
-    .kontakt article table {
-      width: 50%;
-      margin-top: 50px;
-      float: left; }
-      .kontakt article table td.icon {
-        width: 50px;
-        font-size: 24px;
-        line-height: 1.5; }
-      .kontakt article table.details {
-        font-size: 24px;
-        line-height: 1.5; }
-        .kontakt article table.details tr {
-          height: 65px; }
-      .kontakt article table.hours tr.label {
-        font-size: 24px;
-        line-height: 1.5;
-        height: 50px; }
-      .kontakt article table.hours tr td:nth-of-type(2) {
-        width: 140px; }
+  position: relative; }
+  .kontakt article h1 {
+    float: none; }
+  .kontakt article table {
+    width: 50%;
+    margin-top: 50px;
+    float: left; }
+    .kontakt article table td.icon {
+      width: 50px;
+      font-size: 24px;
+      line-height: 1.5; }
+    .kontakt article table.details {
+      font-size: 24px;
+      line-height: 1.5; }
+      .kontakt article table.details tr {
+        height: 65px; }
+    .kontakt article table.hours tr.label {
+      font-size: 24px;
+      line-height: 1.5;
+      height: 50px; }
+    .kontakt article table.hours tr td:nth-of-type(2) {
+      width: 140px; }
 
 /*
  *  Owl Carousel - Core
