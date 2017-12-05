@@ -21,7 +21,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl" />
+<xsl:import href="../utilities/master.xsl" />
 
 <xsl:template match="data">
 	
@@ -49,11 +49,12 @@
 
 <xsl:template match="data" mode="js">
 	<script>
+		console.log('City Dent first run');
 		$(document).ready(function(){
 			$('.owl-carousel').owlCarousel({
 				loop: true,
 				items: 1,
-				dots: true,
+				dots: false,
 				smartSpeed: 1000,
 				autoplay: true,
 				autoplayTimeout: 7000,
@@ -63,5 +64,21 @@
 
 	</script>
 </xsl:template>
+
+<xsl:template name="lang-button">
+		<xsl:param name="lang" />
+		<xsl:choose>
+			<xsl:when test="$lang = 'pl'">
+				<a href="{$root}/en/">EN</a>
+			</xsl:when>
+			<xsl:otherwise>
+				<a href="{$root}/pl/">PL</a>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="data" mode="meta-tags">
+		<meta name="description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+	</xsl:template>
 
 </xsl:stylesheet>

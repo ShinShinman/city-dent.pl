@@ -310,7 +310,7 @@ nav.main {
     nav.main a:hover {
       color: #7a1b15; }
   nav.main .logo {
-    width: 384.1665px;
+    width: 301.3332px;
     margin-right: 30px; }
     nav.main .logo a {
       text-indent: 100%;
@@ -334,6 +334,13 @@ nav.main {
     line-height: 40px;
     height: 40px;
     font-size: 28px; }
+  nav.main .lang-btn {
+    width: 52.8333px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700; }
 
 /* FOOTER */
 footer {

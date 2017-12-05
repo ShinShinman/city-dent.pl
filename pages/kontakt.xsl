@@ -4,6 +4,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/master.xsl"/>
+<xsl:include href="../utilities/_language-button.xsl" />
 
 <xsl:template match="data">
 
@@ -12,59 +13,47 @@
 	<script>
 		
 		function initMap() {
-			var uluru = {lat: 51.097717, lng: 17.013523};
+			var uluru = {lat: 51.097800, lng: 17.014623};
 			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 17,
-				center: uluru
+				center: uluru,
+				zoom: 17
 			});
-			var marker = new google.maps.Marker({
-				position: uluru,
-				map: map
-			});
-		}
 
-		function initInit() {
-			console.log("JEST");
-			console.log(result)
-		}
-		
-/*
-		function initMap() {
-			var map, service, infoWindow;
+			var noPoi = [
+				{
+						featureType: "poi",
+						stylers: [
+							{ visibility: "off" }
+						]
+					}
+				];
 
-			var mapOpt = {
-				zoom: 17,
-				center: {lat: 51.097717, lng: 17.013523}
-			};
+			map.setOptions({styles: noPoi});
 
-			map = new google.maps.Map(document.getElementById('map'), mapOpt);
+			var infoWindow = new google.maps.InfoWindow();
+			var service = new google.maps.places.PlacesService(map);
 
-			console.log(new google.maps.places.PlacesService(map));
-			service = new google.maps.places.PlacesService(map);
 			service.getDetails({
-				placeID: 'ChIJ26ACbBTCD0cRS__-CRgxX3o'
-			}, function (result, status) {
-				if (status != google.maps.places.PlacesServiceStatus.OK) {
-					console.log(status);
-					return;
+				placeId: 'ChIJ26ACbBTCD0cRS__-CRgxX3o' 
+			}, function(place, status) {
+				if (status === google.maps.places.PlacesServiceStatus.OK) {
+					var marker = new google.maps.Marker({
+						map: map,
+						position: place.geometry.location
+					});
+					google.maps.event.addListener(marker, 'click', function() {
+						console.log(place);
+						var adr = place.formatted_address.split(',');
+						infoWindow.setContent('<div class="infoWindow"><strong>City-Dent<br />Praktyka Stomatologiczna Piotr Ptak</strong><br />' + place.international_phone_number + '<br />' + adr[0] + '<br />' + adr[1] + '<br />' + adr[2] + '</div>');
+						infoWindow.open(map, this);
+					});
 				}
-				var marker = new google.maps.Marker({
-					position: result.geometry.location,
-					map: map
-				});
-				console.log(result);
 			})
 		}
-*/
-
 	</script>
 	
-	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initMap">
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHfmQcm4oFASzKQav1Z7zaFzTWWqXXWM0&amp;libraries=places&amp;callback=initMap">
 	</script>
-	<!--
-	<script async="" defer="" src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ26ACbBTCD0cRS__-CRgxX3o&amp;key=AIzaSyB9pNLMAh02zRTzvU-l4dwHtLNwsIi4fG0&amp;callback=initInit">
-	</script>
-	-->
 
 	<section class="kontakt">
 		<article>
@@ -96,41 +85,49 @@
 			<td class="icon">&#xe801;</td>
 			<td colspan="2">Godziny przyjęć</td>
 		</tr>
-		<tr>
-			<td></td>
-			<td>poniedziałek</td>
-			<td><xsl:value-of select="monday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>wtorek</td>
-			<td><xsl:value-of select="tuesday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>środa</td>
-			<td><xsl:value-of select="wednesday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>czwartek</td>
-			<td><xsl:value-of select="thursday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>piątek</td>
-			<td><xsl:value-of select="friday" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>sobota</td>
-			<td><xsl:value-of select="saturday" /></td>
-		</tr>
+		
+		<xsl:apply-templates select="*" />
+		
 	</table>
+</xsl:template>
+
+<xsl:template match="godziny-przyjec/entry/*">
+
+	<xsl:variable name="week-day">
+		<xsl:choose>
+			<xsl:when test="name(.) = 'monday'">poniedziałek</xsl:when>
+			<xsl:when test="name(.) = 'tuesday'">wtorek</xsl:when>
+			<xsl:when test="name(.) = 'wednesday'">środa</xsl:when>
+			<xsl:when test="name(.) = 'thursday'">czwartek</xsl:when>
+			<xsl:when test="name(.) = 'friday'">piątek</xsl:when>
+			<xsl:when test="name(.) = 'saturday'">sobota</xsl:when>
+			<xsl:when test="name(.) = 'sunday'">niedziela</xsl:when>
+		</xsl:choose>
+	</xsl:variable>
+
+	<xsl:if test=". != ''">
+		<tr>
+			<td></td>
+			<td><xsl:value-of select="$week-day" /></td>
+			<td><xsl:value-of select="." /></td>
+		</tr>
+	</xsl:if>
+
 </xsl:template>
 
 <xsl:template match="data" mode="page-title">
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
+
+<xsl:template name="lang-button">
+	<xsl:param name="lang" />
+	<xsl:call-template name="language-button">
+		<xsl:with-param name="language" select="//current-language/@handle" />
+	</xsl:call-template>
+</xsl:template>
+
+	<xsl:template match="data" mode="meta-tags">
+		<meta name="description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
+	</xsl:template>
 
 </xsl:stylesheet>
