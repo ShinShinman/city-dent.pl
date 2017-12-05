@@ -49,7 +49,6 @@
 
 <xsl:template match="data" mode="js">
 	<script>
-		console.log('City Dent first run');
 		$(document).ready(function(){
 			$('.owl-carousel').owlCarousel({
 				loop: true,
