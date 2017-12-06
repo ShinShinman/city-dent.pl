@@ -22,7 +22,7 @@
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol">zespół</a></li>
-					<li class="label"><a href="{$workspace}/files/cennik-2017.pdf" target="_blank">Cennik</a></li>
+					<xsl:apply-templates select="//price-list/entry" />
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">kontakt</a></li>
 				</ul>
 			</div>
@@ -62,6 +62,10 @@
 
 	<xsl:template match="menu-wyposazenie/entry">
 		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/#{name/@handle}"><xsl:value-of select="name/p" /></a></li>
+	</xsl:template>
+
+	<xsl:template match="//price-list/entry">
+		<li class="label"><a href="{$workspace}{price-list/@path}/{price-list/filename}" target="_blank">Cennik</a></li>
 	</xsl:template>
 
 
