@@ -50,7 +50,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=0.0.4" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.0" />
 			</head>
 
 			<body class="">
