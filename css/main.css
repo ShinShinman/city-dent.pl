@@ -486,6 +486,9 @@ a#zespol {
   margin-bottom: 100px; }
   .equipment-list article {
     margin-bottom: 0; }
+  .equipment-list .list-anchor {
+    margin-top: -100px;
+    padding-top: 100px; }
   .equipment-list header {
     margin-bottom: 50px; }
   .equipment-list header, .equipment-list article {

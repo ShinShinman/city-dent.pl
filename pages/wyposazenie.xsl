@@ -55,7 +55,8 @@
 </xsl:template>
 
 <xsl:template match="wyposazenie/entry">
-	<article id="{name/@handle}">
+	<article>
+		<div id="{name/@handle}" class="list-anchor" />
 		<h2><a href="javascript:void(0);" data-anchor="{name/@handle}"><xsl:value-of select="name/p" /></a></h2>
 		<div class="description">
 			<xsl:copy-of select="description/node()" />
@@ -81,14 +82,14 @@
 				$(this).click(function(e) {
 					e.preventDefault();
 					var anchor = $(this).data('anchor');
-					$('article#' + anchor).find('.description').slideToggle();
+					$('div#' + anchor).parent().find('.description').slideToggle();
 					history.pushState('', '', '#' + anchor);
 				})
 			})
 
 			var hash = window.location.hash;
 			if (hash != '') {
-				$(hash).find('.description').slideDown();
+				$(hash).parent().find('.description').slideDown();
 			}
 
 		}
