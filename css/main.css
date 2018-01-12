@@ -266,20 +266,18 @@ nav.breadcrumbs {
     margin-left: 52.8333px; }
   .main-menu header h1 {
     margin-bottom: 2px; }
-  .main-menu .navnav {
-    height: 100%; }
-    .main-menu .navnav a {
-      border: none; }
-    .main-menu .navnav li.label {
-      text-transform: uppercase;
-      font-weight: bold; }
-    .main-menu .navnav ul:nth-of-type(1) {
-      width: 218.4999px;
-      margin-left: 135.6666px; }
-    .main-menu .navnav ul:nth-of-type(2) {
-      width: 301.3332px; }
-    .main-menu .navnav ul:nth-of-type(3) {
-      width: 135.6666px; }
+  .main-menu .navnav a {
+    border: none; }
+  .main-menu .navnav li.label {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .main-menu .navnav ul:nth-of-type(1) {
+    width: 218.4999px;
+    margin-left: 135.6666px; }
+  .main-menu .navnav ul:nth-of-type(2) {
+    width: 301.3332px; }
+  .main-menu .navnav ul:nth-of-type(3) {
+    width: 135.6666px; }
 
 .main-menu:before {
   background: none;
@@ -439,12 +437,18 @@ footer {
   background-color: white; }
 
 /*** TEAM PAGE ***/
+/*
 a#zespol {
-  content: " ";
-  display: block;
-  height: 75px;
-  margin-top: -75px;
-  visibility: hidden; }
+	content: " ";
+	display: block;
+	height: 75px;
+	margin-top: -75px;
+	visibility: hidden;
+}
+*/
+#zespol {
+  margin-top: -100px;
+  padding-top: 100px; }
 
 .zespol {
   margin-top: 0; }
@@ -770,9 +774,22 @@ a#zespol {
         background-position: center;
         width: 100%;
         height: 36px; }
+    nav.main .contact li {
+      width: 177.08325px; }
     nav.main .menu-trigger {
       font-size: 24px;
       line-height: 36px; }
+  .main-menu .navnav {
+    width: 100%; }
+    .main-menu .navnav ul:nth-of-type(1) {
+      width: 218.4999px;
+      margin-left: 52.8333px; }
+    .main-menu .navnav ul:nth-of-type(2) {
+      width: 301.3332px;
+      margin-right: 0; }
+    .main-menu .navnav ul:nth-of-type(3) {
+      width: 135.6666px;
+      margin-left: 52.8333px; }
   footer .footer .footer-container div {
     width: 218.4999px; }
   footer .extended-footer .footer-container div {

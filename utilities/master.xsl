@@ -50,7 +50,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.0" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.1" />
 			</head>
 
 			<body class="">
@@ -74,23 +74,31 @@
 						var menuTrigger = $('.menu-trigger a');
 						var mainMenu = $('.main-menu');
 						var mainMenuExtended = false;
+						var pageArea = $('section:not(.main-menu)');
+						var bodyLinks = $('section:not(.main-menu) a');
+						var menuLinks = $('section.main-menu a');
 
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
+								console.log('yszt');
 								mainMenuExtended = false;
 								menuTrigger.text('&#x4d;');
 								mainMenu.fadeOut();
-								$('body').off('click');
+								pageArea.off('click');
+								bodyLinks.css('pointer-events', 'auto');
 							} else {
 								mainMenuExtended = true;
+								bodyLinks.css('pointer-events', 'none');
 								menuTrigger.text('&#x58;');
 								mainMenu.fadeIn(function() {
-									$('body').click(function(e) {
-										if(!$(e.target).parents().hasClass('main-menu') <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> mainMenuExtended) {
+									pageArea.click(function(e) {
+										if(mainMenuExtended) {
+										console.log('Teraz!');
 											mainMenuExtended = false;
 											menuTrigger.text('&#x4d;');
 											mainMenu.fadeOut();
-											$('body').off('click');
+											pageArea.off('click');
+											bodyLinks.css('pointer-events', 'auto');
 										};
 									});
 								});
@@ -98,9 +106,14 @@
 							
 						}
 
+						menuLinks.click(function(e) {
+							mainMenuToggle();
+						});
+
 						menuTrigger.click(function(e) {
 							e.preventDefault();
 							mainMenuToggle();
+							console.log('Menu trigger');
 						})
 
 					})

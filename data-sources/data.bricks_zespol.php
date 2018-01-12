@@ -10,6 +10,7 @@ class datasourcebricks_zespol extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamNEGATEPARAM = '$page';
     public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -40,7 +41,7 @@ class datasourcebricks_zespol extends SectionDatasource
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-03T13:36:11+00:00'
+            'release-date' => '2018-01-12T15:16:03+00:00'
         );
     }
 

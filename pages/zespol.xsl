@@ -45,7 +45,7 @@
 
 	<section class="zespol">
 		<article>
-			<a href="" id="zespol"></a>
+			<div id="zespol" />
 			<h1>Zespół</h1>
 		</article>
 	</section>
@@ -111,7 +111,6 @@
 </xsl:template>
 
 <xsl:template name="lang-button">
-	<xsl:param name="lang" />
 	<xsl:call-template name="language-button">
 		<xsl:with-param name="language" select="//current-language/@handle" />
 	</xsl:call-template>
