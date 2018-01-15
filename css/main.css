@@ -249,6 +249,9 @@ nav.breadcrumbs {
       margin-bottom: 2px;
       max-width: 340px; }
 
+nav.main .lang-btn {
+  visibility: hidden; }
+
 /* Utilities */
 /*** MAIN MENU ***/
 .main-menu {

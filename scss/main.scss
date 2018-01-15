@@ -98,6 +98,15 @@ nav {
 	}
 }
 
+///// TMP /////
+nav {
+	&.main {
+		.lang-btn {
+			visibility: hidden;
+		}
+	}
+}
+
 
 
 
