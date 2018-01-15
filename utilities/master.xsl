@@ -50,7 +50,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.1" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.1a" />
 			</head>
 
 			<body class="">
@@ -67,20 +67,19 @@
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.0.1a" ></script>
 				<script>
 					$(function() {
 
 						var menuTrigger = $('.menu-trigger a');
 						var mainMenu = $('.main-menu');
 						var mainMenuExtended = false;
-						var pageArea = $('section:not(.main-menu)');
+						var pageArea = $('body');
 						var bodyLinks = $('section:not(.main-menu) a');
 						var menuLinks = $('section.main-menu a');
 
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
-								console.log('yszt');
 								mainMenuExtended = false;
 								menuTrigger.text('&#x4d;');
 								mainMenu.fadeOut();
@@ -92,8 +91,7 @@
 								menuTrigger.text('&#x58;');
 								mainMenu.fadeIn(function() {
 									pageArea.click(function(e) {
-										if(mainMenuExtended) {
-										console.log('Teraz!');
+										if(!$(e.target).parents().hasClass('main-menu')) {
 											mainMenuExtended = false;
 											menuTrigger.text('&#x4d;');
 											mainMenu.fadeOut();
@@ -113,7 +111,6 @@
 						menuTrigger.click(function(e) {
 							e.preventDefault();
 							mainMenuToggle();
-							console.log('Menu trigger');
 						})
 
 					})

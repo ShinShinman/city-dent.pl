@@ -10,9 +10,12 @@
 	z-index: 100;
 
 	margin: 10vh 10%;
-	padding-top: 50px;
 
 	display: none;
+
+	.menu-wraper {
+		height: 100%;
+	}
 
 	header {
 		@extend .row;
@@ -20,6 +23,7 @@
 			margin-left: column-width(1);
 		}
 		h1 {
+			margin-top: 50px;
 			margin-bottom: 2px;
 		}
 	}

@@ -5,26 +5,28 @@
 
 	<xsl:template name="main-menu">
 		<section class="main-menu">
-			<header>
-				<h1>Menu</h1>
-				<xsl:call-template name="breadcrumbs" />
-			</header>
-			
-			<div class="navnav">
-				<ul>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/">Oferta</a></li>
-					<xsl:apply-templates select="//menu-oferta/entry" />
-				</ul>
-				<ul>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wposażenie</a></li>
-					<xsl:apply-templates select="//menu-wyposazenie/entry" />
-				</ul>
-				<ul>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol">zespół</a></li>
-					<xsl:apply-templates select="//price-list/entry" />
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">kontakt</a></li>
-				</ul>
+			<div class="menu-wraper">
+				<header>
+					<h1>Menu</h1>
+					<xsl:call-template name="breadcrumbs" />
+				</header>
+				
+				<div class="navnav">
+					<ul>
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/">Oferta</a></li>
+						<xsl:apply-templates select="//menu-oferta/entry" />
+					</ul>
+					<ul>
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wposażenie</a></li>
+						<xsl:apply-templates select="//menu-wyposazenie/entry" />
+					</ul>
+					<ul>
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/">O nas</a></li>
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol">zespół</a></li>
+						<xsl:apply-templates select="//price-list/entry" />
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">kontakt</a></li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		
