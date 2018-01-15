@@ -249,6 +249,7 @@
 				width: calc(100% - 60px) !important;
 				margin-left: 30px !important;
 				text-align: center;
+				line-height: 2;
 				/*
 				&:nth-of-type(1) {
 					width: column-width(3);
@@ -318,9 +319,15 @@
 			}
 		}
 	}
+	.main-image {
+		height: 200px;
+	}
 
 	///// WYPOSAŻENIE /////
 	.equipment-list {
+		header {
+			margin-bottom: 24px;
+		}
 		header, article {
 			width: column-width(4);
 			margin-left: 0;
@@ -328,6 +335,10 @@
 			h1 {
 				float: none;
 				margin-left: 0;
+			}
+			h2 {
+				font-size: 21px;
+				line-height: 1.5;
 			}
 		}
 	}

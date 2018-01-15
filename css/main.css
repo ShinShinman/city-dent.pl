@@ -427,6 +427,7 @@ footer {
 .main-image {
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 500px;
   margin-top: 70px; }
@@ -871,6 +872,7 @@ a#zespol {
         width: calc(100% - 60px) !important;
         margin-left: 30px !important;
         text-align: center;
+        line-height: 2;
         /*
 				&:nth-of-type(1) {
 					width: column-width(3);
@@ -907,12 +909,19 @@ a#zespol {
       background-color: white;
       margin: -20px 30px 0 -30px;
       padding: 20px 0 30px 30px; }
+  .main-image {
+    height: 200px; }
+  .equipment-list header {
+    margin-bottom: 24px; }
   .equipment-list header, .equipment-list article {
     width: 301.3332px;
     margin-left: 0; }
     .equipment-list header h1, .equipment-list article h1 {
       float: none;
       margin-left: 0; }
+    .equipment-list header h2, .equipment-list article h2 {
+      font-size: 21px;
+      line-height: 1.5; }
   .team-single-view {
     overflow-x: hidden; }
     .team-single-view img {
