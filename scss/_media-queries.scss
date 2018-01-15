@@ -205,7 +205,8 @@
 
 		.logo {
 			width: column-width(2);
-			margin-right: column-width(1) + (2 * $gutter);
+			//margin-right: column-width(1) + (2 * $gutter);
+			margin-right: 2 * $gutter;
 
 			a {
 				background-image: url($css-images-path + 'logo_sml.png');
@@ -215,6 +216,10 @@
 			}
 		}
 
+		.lang-btn {
+			text-align: right;
+			margin-right: 0;
+		}
 		.menu-trigger {
 			font-size: 24px;
 			line-height: 36px;
@@ -225,6 +230,46 @@
 			display: none;
 		}
 	}
+
+	///// MAIN MENU /////
+	.main-menu {
+		width: 90%;
+		//height: auto;
+		height: 60vh;
+		margin: 25% 5%;
+		header {
+			margin-left: $gutter;
+			h1, nav {
+				margin-left: 0;
+			}
+		}
+		.navnav {
+			width: 100%;
+			ul {
+				width: calc(100% - 60px) !important;
+				margin-left: 30px !important;
+				text-align: center;
+				/*
+				&:nth-of-type(1) {
+					width: column-width(3);
+					margin-left: $gutter;
+				}
+				&:nth-of-type(2) {
+					width: column-width(4);
+					margin-left: $gutter;
+				}
+				&:nth-of-type(3) {
+					width: column-width(2);
+					margin-left: $gutter;
+				}
+				*/
+				li:not(.label) {
+					display: none;
+				}
+			}
+		}
+	}
+
 
 	///// FOOTER /////
 	footer {
