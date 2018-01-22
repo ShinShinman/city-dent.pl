@@ -24,7 +24,8 @@ class datasourceoferta extends SectionDatasource
     public $dsParamINCLUDEDELEMENTS = array(
         'name: formatted',
         'main-image',
-        'description: formatted'
+        'description: formatted',
+        'inline-image'
     );
     
 
@@ -43,7 +44,7 @@ class datasourceoferta extends SectionDatasource
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-03T19:57:44+00:00'
+            'release-date' => '2018-01-22T09:40:01+00:00'
         );
     }
 
