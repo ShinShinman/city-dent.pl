@@ -1,6 +1,6 @@
 {
   "name": "city-dent.pl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "City-Dent workspace for Symphony 2.7.0",
   "main": "index.js",
   "scripts": {
