@@ -917,6 +917,12 @@ a#zespol {
       background-color: white;
       margin: -20px 30px 0 -30px;
       padding: 20px 0 30px 30px; }
+    .oferta article ul {
+      margin-left: 15px; }
+    .oferta img {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; }
   .main-image {
     height: 200px; }
   .equipment-list header {
