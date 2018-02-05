@@ -17,7 +17,7 @@
 						<xsl:apply-templates select="//menu-oferta/entry" />
 					</ul>
 					<ul>
-						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wposażenie</a></li>
+						<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/">Wyposażenie</a></li>
 						<xsl:apply-templates select="//menu-wyposazenie/entry" />
 					</ul>
 					<ul>
