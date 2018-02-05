@@ -120,4 +120,25 @@
 		<meta name="description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
 	</xsl:template>
 
+	<xsl:template match="data" mode="og-tags">
+		<xsl:apply-templates select="//bricks-zespol/entry[1]" mode="og-tags" />
+		<xsl:apply-templates select="//zespol/entry[1]" mode="og-tags" />
+	</xsl:template>
+
+	<xsl:template match="bricks-zespol/entry" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • O nas" />
+		<meta property="og:description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
+		<meta property="og:image" content="{$workspace}/images/logo.png" />
+	</xsl:template>
+
+	<xsl:template match="zespol/entry" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • Zespół" />
+		<meta property="og:description" content="{name/p}" />
+		<meta property="og:image" content="{$workspace}/{image/@path}/{image/filename}" />
+	</xsl:template>
+
 </xsl:stylesheet>

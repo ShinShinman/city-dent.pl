@@ -130,4 +130,11 @@
 		<meta name="description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
 	</xsl:template>
 
+	<xsl:template match="data" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • Kontakt" />
+		<meta property="og:description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
+	</xsl:template>
+
 </xsl:stylesheet>

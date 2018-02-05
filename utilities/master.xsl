@@ -45,6 +45,7 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 				<xsl:apply-templates mode="meta-tags" />
+				<xsl:apply-templates mode="og-tags" />
 
 				<link rel="manifest" href="site.webmanifest" /> <!-- co to jest...? -->
 
@@ -122,11 +123,23 @@
 
 </xsl:template>
 
-<xsl:template match="data" mode="meta-tags" />
-
 <xsl:template match="data" mode="page-title">
 	<title><xsl:value-of select="$website-name"/></title>
 </xsl:template>
+
+<xsl:template match="data" mode="meta-tags" />
+
+<xsl:template match="data" mode="og-tags" />
+
+<!--
+<xsl:template match="data" mode="og-tags">
+	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="City-Dent" />
+	<meta property="og:description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+	<meta property="og:image" content="{$workspace}/images/logo.png" />
+</xsl:template>
+-->
 
 <xsl:template name="favicon">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
