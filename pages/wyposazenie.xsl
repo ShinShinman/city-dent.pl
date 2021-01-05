@@ -48,14 +48,15 @@
 		<header>
 			<h1>Wyposażenie</h1>
 		</header>
-		
+
 		<xsl:apply-templates select="wyposazenie/entry" />
 
 	</section>
 </xsl:template>
 
 <xsl:template match="wyposazenie/entry">
-	<article id="{name/@handle}">
+	<article>
+		<div id="{name/@handle}" class="list-anchor" />
 		<h2><a href="javascript:void(0);" data-anchor="{name/@handle}"><xsl:value-of select="name/p" /></a></h2>
 		<div class="description">
 			<xsl:copy-of select="description/node()" />
@@ -70,7 +71,19 @@
 
 <xsl:template match="data" mode="meta-tags">
 		<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
-	</xsl:template>
+</xsl:template>
+
+<xsl:template match="data" mode="og-tags">
+	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="City-Dent • Wyposażenie" />
+	<meta property="og:description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
+	<xsl:apply-templates select="wyposazenie/entry/main-image" mode="og-image" />
+</xsl:template>
+
+<xsl:template match="wyposazenie/entry/main-image" mode="og-image">
+	<meta property="og:image" content="{$workspace}/{@path}/{filename}" />
+</xsl:template>
 
 <xsl:template match="data" mode="js">
 	<script>
@@ -81,14 +94,14 @@
 				$(this).click(function(e) {
 					e.preventDefault();
 					var anchor = $(this).data('anchor');
-					$('article#' + anchor).find('.description').slideToggle();
+					$('div#' + anchor).parent().find('.description').slideToggle();
 					history.pushState('', '', '#' + anchor);
 				})
 			})
 
 			var hash = window.location.hash;
 			if (hash != '') {
-				$(hash).find('.description').slideDown();
+				$(hash).parent().find('.description').slideDown();
 			}
 
 		}

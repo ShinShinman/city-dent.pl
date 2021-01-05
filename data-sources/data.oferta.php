@@ -14,12 +14,12 @@ class datasourceoferta extends SectionDatasource
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-    
+
 
     public $dsParamFILTERS = array(
         '6' => 'handle:{$page}',
     );
-        
+
 
     public $dsParamINCLUDEDELEMENTS = array(
         'name: formatted',
@@ -27,7 +27,7 @@ class datasourceoferta extends SectionDatasource
         'description: formatted',
         'inline-image'
     );
-    
+
 
     public function __construct($env = null, $process_params = true)
     {
@@ -44,7 +44,7 @@ class datasourceoferta extends SectionDatasource
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-06T14:43:26+00:00'
+            'release-date' => '2018-01-22T09:40:01+00:00'
         );
     }
 

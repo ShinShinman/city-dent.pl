@@ -5,7 +5,7 @@ footer {
 	width:  100%;
 
 	position: absolute;
-	bottom: -300px; // wysokość .extended-footer
+	bottom: -400px; // wysokość .extended-footer
 	left: 0;
 	overflow: hidden;
 	z-index: 10;
@@ -16,15 +16,6 @@ footer {
 
 	.footer-container {
 		@extend .row, .floater;
-	}
-
-	.mobile-footer {
-		@extend .row, .floater;
-		display: none;
-
-		ul.social {
-			float: right;
-		}
 	}
 
 	.footer {
@@ -68,8 +59,8 @@ footer {
 	.extended-footer {
 		padding-top: $horizontal-margin;
 		margin-bottom: 0;
-		height: 250px;
-		
+		height: 350px;
+
 		.footer-container {
 			div {
 				width: column-width(4);

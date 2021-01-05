@@ -24,7 +24,7 @@
 <xsl:import href="../utilities/master.xsl" />
 
 <xsl:template match="data">
-	
+
 	<section class="owl-carousel">
 		<xsl:apply-templates select="baner/entry" />
 	</section>
@@ -32,7 +32,7 @@
 <!--
 	<xsl:apply-templates select="highlight/entry" />
 
-	<xsl:apply-templates select="info-banner/entry" />	
+	<xsl:apply-templates select="info-banner/entry" />
 
 	<xsl:call-template name="news" />
 -->
@@ -49,7 +49,6 @@
 
 <xsl:template match="data" mode="js">
 	<script>
-		console.log('City Dent first run');
 		$(document).ready(function(){
 			$('.owl-carousel').owlCarousel({
 				loop: true,
@@ -79,6 +78,18 @@
 
 	<xsl:template match="data" mode="meta-tags">
 		<meta name="description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+	</xsl:template>
+
+	<xsl:template match="data" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent" />
+		<meta property="og:description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+		<xsl:apply-templates select="baner/entry/image" mode="og-image" />
+	</xsl:template>
+
+	<xsl:template match="baner/entry/image" mode="og-image">
+		<meta property="og:image" content="{$workspace}/{@path}/{filename}" />
 	</xsl:template>
 
 </xsl:stylesheet>

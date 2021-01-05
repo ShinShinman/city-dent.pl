@@ -11,7 +11,7 @@
 	<section id="map"></section>
 
 	<script>
-		
+
 		function initMap() {
 			var uluru = {lat: 51.097800, lng: 17.014623};
 			var map = new google.maps.Map(document.getElementById('map'), {
@@ -34,7 +34,7 @@
 			var service = new google.maps.places.PlacesService(map);
 
 			service.getDetails({
-				placeId: 'ChIJ26ACbBTCD0cRS__-CRgxX3o' 
+				placeId: 'ChIJ26ACbBTCD0cRS__-CRgxX3o'
 			}, function(place, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK) {
 					var marker = new google.maps.Marker({
@@ -51,7 +51,7 @@
 			})
 		}
 	</script>
-	
+
 	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHfmQcm4oFASzKQav1Z7zaFzTWWqXXWM0&amp;libraries=places&amp;callback=initMap">
 	</script>
 
@@ -85,9 +85,9 @@
 			<td class="icon">&#xe801;</td>
 			<td colspan="2">Godziny przyjęć</td>
 		</tr>
-		
+
 		<xsl:apply-templates select="*" />
-		
+
 	</table>
 </xsl:template>
 
@@ -128,6 +128,13 @@
 
 	<xsl:template match="data" mode="meta-tags">
 		<meta name="description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
+	</xsl:template>
+
+	<xsl:template match="data" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • Kontakt" />
+		<meta property="og:description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -1,30 +1,26 @@
 <?php
 
-class datasourcebricks_zespol extends SectionDatasource
+class datasourceprice_list extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'bricks-zespol';
-    public $dsParamORDER = 'asc';
+    public $dsParamROOTELEMENT = 'price-list';
+    public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamNEGATEPARAM = '$page';
-    public $dsParamSORT = 'order';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    
 
-
-
+    
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'name: formatted',
-        'lead: formatted',
-        'position: formatted',
-        'image'
+        'price-list'
     );
-
+    
 
     public function __construct($env = null, $process_params = true)
     {
@@ -35,19 +31,19 @@ class datasourcebricks_zespol extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Bricks - zespół ',
+            'name' => 'Price List',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2018-01-12T15:16:03+00:00'
+            'release-date' => '2017-12-06T15:22:03+00:00'
         );
     }
 
     public function getSource()
     {
-        return '5';
+        return '11';
     }
 
     public function allowEditorToParse()

@@ -45,7 +45,7 @@
 
 	<section class="zespol">
 		<article>
-			<a href="" id="zespol"></a>
+			<div id="zespol" />
 			<h1>Zespół</h1>
 		</article>
 	</section>
@@ -79,7 +79,7 @@
 </xsl:template>
 
 <xsl:template match="zespol/entry">
-	
+
 	<section class="team-single-view"> <!-- zmineić klasę -->
 		<article>
 			<img src="{$root}/image/4/0/219{image/@path}/{image/filename}" alt="" srcset="{$root}/image/4/0/219{image/@path}/{image/filename} 1x, {$root}/image/4/0/438{image/@path}/{image/filename} 2x, {$root}/image/4/0/657{image/@path}/{image/filename} 3x" />
@@ -111,7 +111,6 @@
 </xsl:template>
 
 <xsl:template name="lang-button">
-	<xsl:param name="lang" />
 	<xsl:call-template name="language-button">
 		<xsl:with-param name="language" select="//current-language/@handle" />
 	</xsl:call-template>
@@ -119,6 +118,27 @@
 
 	<xsl:template match="data" mode="meta-tags">
 		<meta name="description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
+	</xsl:template>
+
+	<xsl:template match="data" mode="og-tags">
+		<xsl:apply-templates select="//bricks-zespol/entry[1]" mode="og-tags" />
+		<xsl:apply-templates select="//zespol/entry[1]" mode="og-tags" />
+	</xsl:template>
+
+	<xsl:template match="bricks-zespol/entry" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • O nas" />
+		<meta property="og:description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
+		<meta property="og:image" content="{$workspace}/images/logo.png" />
+	</xsl:template>
+
+	<xsl:template match="zespol/entry" mode="og-tags">
+		<meta property="og:url" content="{$current-url}" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="City-Dent • Zespół" />
+		<meta property="og:description" content="{name/p}" />
+		<meta property="og:image" content="{$workspace}/{image/@path}/{image/filename}" />
 	</xsl:template>
 
 </xsl:stylesheet>

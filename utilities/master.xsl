@@ -40,19 +40,18 @@
 				<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 				<xsl:apply-templates mode="page-title" />
-				
+
 				<meta name="description" content="" /> <!-- to chyba do mata-tags -->
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 				<xsl:apply-templates mode="meta-tags" />
+				<xsl:apply-templates mode="og-tags" />
 
 				<link rel="manifest" href="site.webmanifest" /> <!-- co to jest...? -->
-				<!--
-				<xsl:call-template name="favicon" />
-				<link rel="apple-touch-icon" href="icon.png"> -->
-				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=0.0.5" />
+				<xsl:call-template name="favicon" />
+
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.5" />
 			</head>
 
 			<body class="">
@@ -62,43 +61,53 @@
 
 				<xsl:call-template name="sticky-nav" />
 				<xsl:call-template name="main-menu" />
-	
+
 				<xsl:apply-templates />
 
 				<xsl:call-template name="footer">
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.0.5" ></script>
 				<script>
 					$(function() {
 
 						var menuTrigger = $('.menu-trigger a');
 						var mainMenu = $('.main-menu');
 						var mainMenuExtended = false;
+						var pageArea = $('body');
+						var bodyLinks = $('section:not(.main-menu) a');
+						var menuLinks = $('section.main-menu a');
 
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
 								mainMenuExtended = false;
 								menuTrigger.text('&#x4d;');
 								mainMenu.fadeOut();
-								$('body').off('click');
+								pageArea.off('click');
+								bodyLinks.css('pointer-events', 'auto');
 							} else {
 								mainMenuExtended = true;
+								bodyLinks.css('pointer-events', 'none');
 								menuTrigger.text('&#x58;');
 								mainMenu.fadeIn(function() {
-									$('body').click(function(e) {
-										if(!$(e.target).parents().hasClass('main-menu') <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> mainMenuExtended) {
+									pageArea.click(function(e) {
+										if(!$(e.target).parents().hasClass('main-menu')) {
 											mainMenuExtended = false;
 											menuTrigger.text('&#x4d;');
 											mainMenu.fadeOut();
-											$('body').off('click');
+											pageArea.off('click');
+											bodyLinks.css('pointer-events', 'auto');
 										};
 									});
 								});
 							}
-							
+
 						}
+
+						menuLinks.click(function(e) {
+							mainMenuToggle();
+						});
 
 						menuTrigger.click(function(e) {
 							e.preventDefault();
@@ -120,26 +129,26 @@
 	<title><xsl:value-of select="$website-name"/></title>
 </xsl:template>
 
+<xsl:template match="data" mode="meta-tags" />
+
+<xsl:template match="data" mode="og-tags" />
+
+<!--
+<xsl:template match="data" mode="og-tags">
+	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="City-Dent" />
+	<meta property="og:description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+	<meta property="og:image" content="{$workspace}/images/logo.png" />
+</xsl:template>
+-->
+
 <xsl:template name="favicon">
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=lkkJEWPqK3" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=lkkJEWPqK3" />
-	<link rel="icon" type="image/png" href="/favicon-32x32.png?v=lkkJEWPqK3" sizes="32x32" />
-	<link rel="icon" type="image/png" href="/favicon-194x194.png?v=lkkJEWPqK3" sizes="194x194" />
-	<link rel="icon" type="image/png" href="/favicon-96x96.png?v=lkkJEWPqK3" sizes="96x96" />
-	<link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=lkkJEWPqK3" sizes="192x192" />
-	<link rel="icon" type="image/png" href="/favicon-16x16.png?v=lkkJEWPqK3" sizes="16x16" />
-	<link rel="manifest" href="/manifest.json?v=lkkJEWPqK3" />
-	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=lkkJEWPqK3" color="#000000" />
-	<link rel="shortcut icon" href="/favicon.ico?v=lkkJEWPqK3" />
-	<meta name="msapplication-TileColor" content="#da532c" />
-	<meta name="msapplication-TileImage" content="/mstile-144x144.png?v=lkkJEWPqK3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/manifest.json" />
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 	<meta name="theme-color" content="#ffffff" />
 </xsl:template>
 
