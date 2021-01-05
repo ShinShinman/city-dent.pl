@@ -40,7 +40,7 @@
 				<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 				<xsl:apply-templates mode="page-title" />
-				
+
 				<meta name="description" content="" /> <!-- to chyba do mata-tags -->
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -51,7 +51,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.4" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.0.5" />
 			</head>
 
 			<body class="">
@@ -61,14 +61,14 @@
 
 				<xsl:call-template name="sticky-nav" />
 				<xsl:call-template name="main-menu" />
-	
+
 				<xsl:apply-templates />
 
 				<xsl:call-template name="footer">
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=1.0.4" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.0.5" ></script>
 				<script>
 					$(function() {
 
@@ -102,7 +102,7 @@
 									});
 								});
 							}
-							
+
 						}
 
 						menuLinks.click(function(e) {

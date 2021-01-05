@@ -98,19 +98,6 @@ nav {
 	}
 }
 
-///// TMP /////
-nav {
-	&.main {
-		.lang-btn {
-			visibility: hidden;
-		}
-	}
-}
-
-
-
-
-
 
 @import 'utilities';
 @import 'pages';
