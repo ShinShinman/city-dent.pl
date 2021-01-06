@@ -178,6 +178,8 @@ ul {
     ul.inline-list li {
       float: left;
       margin-right: 16px; }
+      ul.inline-list li:last-of-type {
+        margin-right: 0; }
 
 /* LAYOUT */
 .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {

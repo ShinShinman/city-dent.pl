@@ -11,6 +11,9 @@ ul {
 		li {
 			float: left;
 			margin-right: $global-font-size;
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 }
