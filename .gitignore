@@ -3,5 +3,6 @@ node_modules/
 static/
 fonts/
 images/*
+css/main.css.min.map
 *.sublime-workspace
 *.sublime-project

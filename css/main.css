@@ -1,11 +1,11 @@
-.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, footer .mobile-footer:after, article:after, .equipment-list header:after {
+.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, article:after, .equipment-list header:after {
   clear: left;
   content: "";
   display: table; }
 
 /* Typography */
 /* Typo reset */
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -180,17 +180,17 @@ ul {
       margin-right: 16px; }
 
 /* LAYOUT */
-.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
+.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
   overflow: auto; }
 
-.floater > *, .main-menu .navnav > *, nav.main > *, nav.main .contact > *, footer .footer-container > *, footer .mobile-footer > * {
+.floater > *, .main-menu .navnav > *, nav.main > *, nav.main .contact > *, footer .footer-container > * {
   float: left;
   margin-right: 30px; }
-  .floater > *:last-child, .main-menu .navnav > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, footer .footer-container > *:last-child, footer .mobile-footer > *:last-child {
+  .floater > *:last-child, .main-menu .navnav > *:last-child, nav.main > *:last-child, nav.main .contact > *:last-child, footer .footer-container > *:last-child {
     margin-right: 0; }
 
 html {
@@ -362,10 +362,6 @@ footer {
   z-index: 10; }
   footer a {
     border-bottom: none; }
-  footer .mobile-footer {
-    display: none; }
-    footer .mobile-footer ul.social {
-      float: right; }
   footer .footer {
     background-color: white;
     line-height: 50px; }
@@ -554,48 +550,29 @@ a#zespol {
   margin-top: -60px;
   margin-bottom: 100px;
   padding-top: 20px;
-  background-color: white; }
-  .kontakt article {
-    /* USUNĄĆ
-		ul {
-			float: left;
-			width: column-width(4);
-			margin-right: $gutter;
-			list-style: none;
-			&:last-of-type {
-				margin-right: 0;
-			}
-
-			li.address, li.label {
-				font-size: 24px;
-
-				.icon {
-					width: 20px;
-				}
-			}
-		}
-		*/ }
-    .kontakt article h1 {
-      float: none; }
-    .kontakt article table {
-      width: 50%;
-      margin-top: 50px;
-      float: left; }
-      .kontakt article table td.icon {
-        width: 50px;
-        font-size: 24px;
-        line-height: 1.5; }
-      .kontakt article table.details {
-        font-size: 24px;
-        line-height: 1.5; }
-        .kontakt article table.details tr {
-          height: 65px; }
-      .kontakt article table.hours tr.label {
-        font-size: 24px;
-        line-height: 1.5;
-        height: 50px; }
-      .kontakt article table.hours tr td:nth-of-type(2) {
-        width: 140px; }
+  background-color: white;
+  position: relative; }
+  .kontakt article h1 {
+    float: none; }
+  .kontakt article table {
+    width: 50%;
+    margin-top: 50px;
+    float: left; }
+    .kontakt article table td.icon {
+      width: 50px;
+      font-size: 24px;
+      line-height: 1.5; }
+    .kontakt article table.details {
+      font-size: 24px;
+      line-height: 1.5; }
+      .kontakt article table.details tr {
+        height: 65px; }
+    .kontakt article table.hours tr.label {
+      font-size: 24px;
+      line-height: 1.5;
+      height: 50px; }
+    .kontakt article table.hours tr td:nth-of-type(2) {
+      width: 140px; }
 
 /*
  *  Owl Carousel - Core
@@ -786,18 +763,8 @@ a#zespol {
   width: 100%; }
 
 /*** MEDIA QUERIES ***/
-/*
-@media all and (min-width: 1080px) {
-	body {
-		background-color: lightgrey;
-	}
-	.row {
-	width: columns-width();
-	}
-}
-*/
 @media all and (max-width: 1023px) and (min-width: 768px) {
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 715.4997px; }
   .text-column {
     width: 715.4997px; }
@@ -868,7 +835,7 @@ a#zespol {
 @media all and (max-width: 767px) {
   h1 {
     font-size: 30px; }
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, footer .mobile-footer, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 301.3332px; }
   .text-column {
     width: 301.3332px; }
