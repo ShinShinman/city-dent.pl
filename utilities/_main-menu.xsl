@@ -33,6 +33,7 @@
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="$about-us" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol"><xsl:value-of select="//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></a></li>
+					<li class="label"><a href="{$workspace}/files/cennik-2017.pdf" target="_blank">Cennik</a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
 				</ul>
 			</div>
