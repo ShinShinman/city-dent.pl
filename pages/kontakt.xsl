@@ -57,7 +57,7 @@
 
 	<section class="kontakt">
 		<article>
-			<h1>Kontakt</h1>
+			<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
 			<table class="details">
 				<tr>
 					<td class="icon">t</td>
