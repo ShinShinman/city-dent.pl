@@ -81,6 +81,12 @@ function watchFiles() {
 	gulp.watch(['./coffee/**/*.coffee'],
 		gulp.series(coffeeScript, scripts)
 	);
+	gulp.watch(['pages/*.xsl', 'utilities/*.xsl'],
+		gulp.series(function reloading(done) {
+			browserSync.reload();
+			done();
+		})
+	);
 }
 
 exports.hello = hello;
