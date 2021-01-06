@@ -4,16 +4,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template name="main-menu">
-		<xsl:variable name="about-us">
-			<xsl:choose>
-				<xsl:when test="//current-language/@handle = 'pl'">
-					<xsl:text>O nas</xsl:text>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:text>About us</xsl:text>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
+
 
 		<section class="main-menu">
 			<header>
@@ -33,7 +24,7 @@
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="$about-us" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol"><xsl:value-of select="//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></a></li>
-					<li class="label"><a href="{$workspace}/files/cennik-2017.pdf" target="_blank">Cennik</a></li>
+					<li class="label"><a href="{$workspace}/files/cennik-2017.pdf" target="_blank"><xsl:value-of select="$price-list" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
 				</ul>
 			</div>

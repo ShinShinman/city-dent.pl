@@ -32,6 +32,28 @@
 	<xsl:include href="_nav.xsl" />
 	<xsl:include href="_footer.xsl" />
 
+	<xsl:variable name="about-us">
+		<xsl:choose>
+			<xsl:when test="//current-language/@handle = 'pl'">
+				<xsl:text>O nas</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>About us</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
+	<xsl:variable name="price-list">
+		<xsl:choose>
+			<xsl:when test="//current-language/@handle = 'pl'">
+				<xsl:text>Cennik</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>Price list</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
 	<xsl:template match="/">
 		<html class="no-js" lang="{//current-language/@handle}">
 			<head>

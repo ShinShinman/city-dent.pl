@@ -46,7 +46,7 @@
 	<section class="zespol">
 		<article>
 			<div id="zespol" />
-			<h1>Zespół</h1>
+			<h1><xsl:value-of select="navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></h1>
 		</article>
 	</section>
 
@@ -58,7 +58,7 @@
 
 <xsl:template match="o-nas/entry">
 	<article>
-		<h1><xsl:value-of select="../section" /></h1>
+		<h1><xsl:value-of select="$about-us" /></h1>
 		<xsl:copy-of select="about-us" />
 	</article>
 </xsl:template>
