@@ -105,10 +105,17 @@
 		</xsl:choose>
 	</xsl:variable>
 
-	<xsl:if test=". != ''">
+	<xsl:if test=". != '' and //current-language/@handle = 'pl'">
 		<tr>
 			<td></td>
 			<td><xsl:value-of select="$week-day" /></td>
+			<td><xsl:value-of select="." /></td>
+		</tr>
+	</xsl:if>
+	<xsl:if test=". != '' and //current-language/@handle = 'en'">
+		<tr>
+			<td></td>
+			<td><xsl:value-of select="name(.)" /></td>
 			<td><xsl:value-of select="." /></td>
 		</tr>
 	</xsl:if>
