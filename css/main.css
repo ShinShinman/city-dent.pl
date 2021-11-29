@@ -182,7 +182,7 @@ ul {
         margin-right: 0; }
 
 /* LAYOUT */
-.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
@@ -229,12 +229,12 @@ nav.breadcrumbs {
     nav.breadcrumbs a:hover {
       color: #262649; }
 
-.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
+.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
   margin-top: 100px; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article {
+  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1 {
+    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
@@ -766,7 +766,7 @@ a#zespol {
 
 /*** MEDIA QUERIES ***/
 @media all and (max-width: 1023px) and (min-width: 768px) {
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 715.4997px; }
   .text-column {
     width: 715.4997px; }
@@ -837,7 +837,7 @@ a#zespol {
 @media all and (max-width: 767px) {
   h1 {
     font-size: 30px; }
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 301.3332px; }
   .text-column {
     width: 301.3332px; }
