@@ -576,6 +576,67 @@ a#zespol {
     .kontakt article table.hours tr td:nth-of-type(2) {
       width: 140px; }
 
+/*** PRICE LIST PAGE ***/
+.price-list {
+  overflow: visible;
+  margin-bottom: 120px; }
+  .price-list h2 {
+    font-family: Lato, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    position: relative; }
+    .price-list h2 span {
+      display: none;
+      position: absolute;
+      right: 0px;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background-image: url("../images/cennik_ikony_45.svg");
+      background-repeat: no-repeat;
+      background-position: 0px 0px; }
+  .price-list .cathegory-info {
+    font-size: 16px;
+    width: 466.9998px;
+    margin-bottom: 5px;
+    color: #9898a9; }
+  .price-list aside {
+    position: sticky;
+    top: 100px;
+    width: 135.6666px;
+    margin-top: 320px;
+    margin-bottom: -320px; }
+    .price-list aside ul.cennik-submenu {
+      list-style: none;
+      width: 135.6666px;
+      font-size: 14px; }
+      .price-list aside ul.cennik-submenu li {
+        line-height: 1;
+        margin-bottom: 6px; }
+      .price-list aside ul.cennik-submenu a {
+        border-bottom: none; }
+  .price-list ul:not(.cennik-submenu) {
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 25px; }
+    .price-list ul:not(.cennik-submenu) li {
+      display: flex;
+      padding: 5px 25px 5px 25px;
+      transition: 0.3s; }
+      .price-list ul:not(.cennik-submenu) li:hover {
+        background-color: #F6F6FA; }
+    .price-list ul:not(.cennik-submenu) p {
+      margin-bottom: 0; }
+      .price-list ul:not(.cennik-submenu) p.service-name {
+        width: 466.9998px; }
+      .price-list ul:not(.cennik-submenu) p.price {
+        width: 135.6666px;
+        text-align: right; }
+
 /*
  *  Owl Carousel - Core
  */
@@ -770,10 +831,12 @@ a#zespol {
     width: 715.4997px; }
   .text-column {
     width: 715.4997px; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article {
+  .offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
+    display: none; }
+  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 715.4997px;
     margin-left: 0; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1 {
+    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: none;
       margin-left: 0;
       margin-bottom: 24px; }
@@ -834,7 +897,7 @@ a#zespol {
       margin: -20px 30px -30px -30px;
       padding: 20px 0 30px 30px; } }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   h1 {
     font-size: 30px; }
   .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
@@ -843,10 +906,35 @@ a#zespol {
     width: 301.3332px; }
   article {
     margin-bottom: 0; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article {
+  .price-list article .pricelist-header-wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #F0F0F0; }
+  .price-list article h2 {
+    width: 301.3332px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 45px;
+    margin-bottom: 2px; }
+    .price-list article h2 span {
+      display: inline-block; }
+  .price-list article ul {
+    display: none; }
+  .price-list article ul:not(.cennik-submenu) li {
+    font-size: 14px;
+    padding-left: 0;
+    padding-right: 0; }
+  .offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
+    display: none; }
+  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 301.3332px;
     margin-left: 0; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1 {
+    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: none;
       margin-left: 0;
       margin-bottom: 24px; }

@@ -1,0 +1,90 @@
+/*** PRICE LIST PAGE ***/
+
+.price-list {
+  overflow: visible;
+  margin-bottom: 120px;
+
+  h2 {
+    font-family: Lato, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    position: relative;
+
+    span {
+      display: none;
+      position: absolute;
+      right: 0px;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      @include hide-text;
+      background-image: url('../images/cennik_ikony_45.svg');
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+    }
+  }
+
+  .cathegory-info {
+    font-size: 16px;
+    width: column-width(6);
+    // margin-top: -10px;
+    margin-bottom: 5px;
+    color: #9898a9;
+
+  }
+  aside {
+      position: sticky;
+      top: 100px;
+      width: column-width(2);
+      margin-top: 320px;
+      margin-bottom: -320px;
+
+    ul.cennik-submenu {
+      list-style: none;
+      width: column-width(2);
+      font-size: 14px;
+
+      li {
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      a {
+        border-bottom: none;
+
+        &:hover {
+          // font-weight: bold;
+        }
+      }
+    }
+  }
+
+  ul:not(.cennik-submenu) {
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 25px;
+
+    li {
+      display: flex;
+      padding: 5px 25px 5px 25px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #F6F6FA;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+
+      &.service-name {
+        width: column-width(6);
+      }
+      &.price {
+        width: column-width(2);
+        text-align: right;
+      }
+    }
+  }
+}

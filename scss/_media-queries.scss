@@ -9,7 +9,11 @@
 	.text-column {
 		width: column-width(9);
 	}
-	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
+	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
+		aside {
+			display: none;
+		}
+
 		article {
 			width: column-width(9);
 			margin-left: 0;
@@ -156,7 +160,7 @@
 }
 
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
 
 	///// TYPO /////
 	h1 {
@@ -173,7 +177,44 @@
 	article {
 		margin-bottom: 0;
 	}
-	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt {
+	.price-list article {
+		.pricelist-header-wrapper {
+			position: relative;
+			width: 100vw;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+			background-color: #F0F0F0;
+		}
+		h2 {
+			width: column-width(4);
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 18px;
+			line-height: 45px;
+			margin-bottom: 2px;
+
+			span {
+				display: inline-block;
+			}
+
+		}
+		ul {
+			display: none;
+		}
+
+		ul:not(.cennik-submenu) li {
+			font-size: 14px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
+		aside {
+			display: none;
+		}
+
 		article {
 			width: column-width(4);
 			margin-left: 0;
@@ -183,6 +224,7 @@
 				margin-left: 0;
 				margin-bottom: $horizontal-margin;
 			}
+
 		}
 	}
 
