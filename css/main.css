@@ -608,6 +608,7 @@ a#zespol {
     margin-bottom: 5px;
     color: #9898a9; }
   .price-list aside {
+    position: -webkit-sticky;
     position: sticky;
     top: 100px;
     width: 135.6666px;

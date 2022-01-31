@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var cleanCss = require('gulp-clean-css');
@@ -66,7 +66,7 @@ function cacheBust() {
 
 function bs() {
 	browserSync.init({
-		proxy: 'localhost/city-dent/'
+		proxy: 'localhost/city-dent.pl/'
 	});
 }
 
