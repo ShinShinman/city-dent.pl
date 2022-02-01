@@ -15,19 +15,16 @@
 			<div class="navnav">
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></a></li>
-					<xsl:apply-templates select="//menu-oferta/entry" mode="menu"/>
+					<xsl:apply-templates select="//menu-oferta/entry" />
 				</ul>
 				<ul class="equipment">
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]" /></a></li>
-					<xsl:apply-templates select="//menu-wyposazenie/entry" mode="menu"/>
+					<xsl:apply-templates select="//menu-wyposazenie/entry" />
 				</ul>
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="$about-us" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol"><xsl:value-of select="//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></a></li>
-					<!-- <li class="label"><a href="{$workspace}/{//price-list/@path}/{//price-list/filename}" target="_blank"><xsl:value-of select="$price-list" /></a></li> -->
-
-					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]" /></a></li>
-
+					<li class="label"><a href="{$workspace}/{//price-list/@path}/{//price-list/filename}" target="_blank"><xsl:value-of select="$price-list" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
 				</ul>
 			</div>
@@ -68,11 +65,11 @@
 		<a href=""><xsl:value-of select="." /></a>
 	</xsl:template>
 
-	<xsl:template match="menu-oferta/entry" mode="menu">
+	<xsl:template match="menu-oferta/entry">
 		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]/@handle}/{name/@handle}/"><xsl:value-of select="name/p" /></a></li>
 	</xsl:template>
 
-	<xsl:template match="menu-wyposazenie/entry" mode="menu">
+	<xsl:template match="menu-wyposazenie/entry">
 		<li><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'wyposazenie']/item[@lang = //current-language/@handle]/@handle}/#{name/@handle}"><xsl:value-of select="name/p" /></a></li>
 	</xsl:template>
 
