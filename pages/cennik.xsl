@@ -26,14 +26,14 @@
 					<h2 id="ogolne">Ogólne<span>↓</span></h2>
 				</div>
 					<ul class="ogolne-price-list">
-					<xsl:apply-templates select="cennik-ogolne/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-ogolne/entry" />
 				</ul>
 
 				<div class="pricelist-header-wrapper">
 					<h2 id="stomatologia-zachowawcza">Stomatologia zachowawcza<span>↓</span></h2>
 				</div>
 				<ul class="stomatologia-zachowawcza-price-list">
-					<xsl:apply-templates select="cennik-stomatologia-zachowawcza/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-stomatologia-zachowawcza/entry" />
 				</ul>
 
 				<div class="pricelist-header-wrapper">
@@ -42,35 +42,35 @@
 				<!-- <p class="cathegory-info"><xsl:copy-of select="cennik-endodoncja-opis/entry/endodoncja-opis/p/node()" /></p> -->
 				<ul class="endodoncja-price-list">
 					<xsl:apply-templates select="cennik-endodoncja-opis/entry" />
-					<xsl:apply-templates select="cennik-endodoncja/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-endodoncja/entry" />
 				</ul>
 
 				<div class="pricelist-header-wrapper">
 					<h2 id="chirurgia">Chirurgia<span>↓</span></h2>
 				</div>
 				<ul class="chirurgia-price-list">
-					<xsl:apply-templates select="cennik-chirurgia/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-chirurgia/entry" />
 				</ul>
 
 				<div class="pricelist-header-wrapper">
 					<h2 id="protetyka">Protetyka<span>↓</span></h2>
 				</div>
 				<ul class="protetyka-price-list">
-					<xsl:apply-templates select="cennik-protetyka/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-protetyka/entry" />
 				</ul>
 
 				<div class="pricelist-header-wrapper">
 					<h2 id="stomatologia-dziecieca">Stomatologia dziecięca<span>↓</span></h2>
 				</div>
 				<ul class="stomatologia-dziecieca-price-list">
-					<xsl:apply-templates select="cennik-stomatologia-dziecieca/entry" mode="price-list" />
+					<xsl:apply-templates select="cennik-stomatologia-dziecieca/entry" />
 				</ul>
 
 			</article>
 		</section>
 	</xsl:template>
 
-	<xsl:template match="entry" mode="price-list">
+	<xsl:template match="entry">
 		<li>
 			<p class="service-name"><xsl:value-of select="nazwa-uslugi" /></p>
 			<p class="price"><xsl:value-of select="cena" /></p>
@@ -79,12 +79,6 @@
 
 	<xsl:template match="cennik-endodoncja-opis/entry">
 		<li class="cathegory-info"><xsl:copy-of select="endodoncja-opis/p/node()" /></li>
-	</xsl:template>
-
-	<xsl:template name="lang-button">
-		<xsl:call-template name="language-button">
-			<xsl:with-param name="language" select="//current-language/@handle" />
-		</xsl:call-template>
 	</xsl:template>
 
 	<xsl:template match="data" mode="js">
