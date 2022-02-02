@@ -38,7 +38,7 @@
     color: #9898a9;
 
   }
-  aside {
+  .pricelist-nav {
       position: sticky;
       top: 100px;
       width: column-width(2);
@@ -62,6 +62,15 @@
           // font-weight: bold;
         }
       }
+    }
+  }
+
+  .footnotes {
+    font-size: 14px;
+    margin-top: 60px;
+
+    p {
+      margin-bottom: 12px;
     }
   }
 

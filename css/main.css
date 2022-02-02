@@ -607,22 +607,27 @@ a#zespol {
     width: 466.9998px;
     margin-bottom: 5px;
     color: #9898a9; }
-  .price-list aside {
+  .price-list .pricelist-nav {
     position: -webkit-sticky;
     position: sticky;
     top: 100px;
     width: 135.6666px;
     margin-top: 320px;
     margin-bottom: -320px; }
-    .price-list aside ul.cennik-submenu {
+    .price-list .pricelist-nav ul.cennik-submenu {
       list-style: none;
       width: 135.6666px;
       font-size: 14px; }
-      .price-list aside ul.cennik-submenu li {
+      .price-list .pricelist-nav ul.cennik-submenu li {
         line-height: 1;
         margin-bottom: 6px; }
-      .price-list aside ul.cennik-submenu a {
+      .price-list .pricelist-nav ul.cennik-submenu a {
         border-bottom: none; }
+  .price-list .footnotes {
+    font-size: 14px;
+    margin-top: 60px; }
+    .price-list .footnotes p {
+      margin-bottom: 12px; }
   .price-list ul:not(.cennik-submenu) {
     list-style: none;
     font-size: 16px;
