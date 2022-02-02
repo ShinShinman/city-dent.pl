@@ -1,7 +1,7 @@
 {
   "name": "city-dent.pl",
-  "version": "1.1.0",
-  "description": "Cennik",
+  "version": "1.1.1",
+  "description": "Cennik. Przypisy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
