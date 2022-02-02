@@ -7,7 +7,7 @@
 
 	<xsl:template match="data">
 		<section class="price-list">
-			<aside>
+			<nav class="pricelist-nav">
 				<ul class="cennik-submenu">
 					<li><a href="#ogolne">Ogólne</a></li>
 					<li><a href="#stomatologia-zachowawcza">Stomatologia zachowawcza</a></li>
@@ -17,7 +17,7 @@
 					<li><a href="#stomatologia-dziecieca">Stomatologia dziecięca</a></li>
 				</ul>
 
-			</aside>
+			</nav>
 			<article>
 				<h1><xsl:value-of select="plh-page/page/item[@lang = //current-language/@handle]"/></h1>
 				<!-- <xsl:copy-of select="cennik-opis/entry/opis-cennika/node()" /> -->
@@ -65,7 +65,9 @@
 				<ul class="stomatologia-dziecieca-price-list">
 					<xsl:apply-templates select="cennik-stomatologia-dziecieca/entry" mode="price-list" />
 				</ul>
-
+				<section class="footnotes">
+					<xsl:apply-templates select="cennik-przypisy/entry/footnote" />
+				</section>
 			</article>
 		</section>
 	</xsl:template>
@@ -79,6 +81,10 @@
 
 	<xsl:template match="cennik-endodoncja-opis/entry">
 		<li class="cathegory-info"><xsl:copy-of select="endodoncja-opis/p/node()" /></li>
+	</xsl:template>
+
+	<xsl:template match="cennik-przypisy/entry/footnote">
+		<p><xsl:value-of select="." /></p>
 	</xsl:template>
 
 	<xsl:template name="lang-button">
