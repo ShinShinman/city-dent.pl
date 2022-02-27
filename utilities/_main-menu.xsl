@@ -24,7 +24,7 @@
 				<ul>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="$about-us" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol"><xsl:value-of select="//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></a></li>
-					<li class="label"><a href="{$workspace}/{//price-list/@path}/{//price-list/filename}" target="_blank"><xsl:value-of select="$price-list" /></a></li>
+					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
 				</ul>
 			</div>
