@@ -1,7 +1,7 @@
 /*** PRICE LIST PAGE ***/
 
 .price-list {
-  overflow: visible;
+  // overflow: visible;
   margin-bottom: 120px;
 
   article h1 {
@@ -42,8 +42,9 @@
       position: sticky;
       top: 100px;
       width: column-width(2);
-      margin-top: 320px;
-      margin-bottom: -320px;
+      height: 0;
+      margin-top: 180px;
+      margin-bottom: -180px;
 
     ul.cennik-submenu {
       list-style: none;
