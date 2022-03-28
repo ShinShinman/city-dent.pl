@@ -215,6 +215,7 @@
 			font-size: 14px;
 			padding-left: 0;
 			padding-right: 0;
+			width: 100%;
 		}
 	}
 	.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
@@ -411,7 +412,7 @@
 	///// CENNIK /////
 	.price-list {
 		overflow: visible;
-		
+
 		.pricelist-nav {
 			display: none;
 		}
