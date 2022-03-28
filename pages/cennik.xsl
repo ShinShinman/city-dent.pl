@@ -6,7 +6,9 @@
 	<xsl:include href="../utilities/_language-button.xsl" />
 
 	<xsl:template match="data">
+
 		<section class="price-list">
+
 			<nav class="pricelist-nav">
 				<ul class="cennik-submenu">
 					<li><a href="#ogolne">Ogólne</a></li>
@@ -16,12 +18,10 @@
 					<li><a href="#protetyka">Protetyka</a></li>
 					<li><a href="#stomatologia-dziecieca">Stomatologia dziecięca</a></li>
 				</ul>
-
 			</nav>
+
 			<article>
 				<h1><xsl:value-of select="plh-page/page/item[@lang = //current-language/@handle]"/></h1>
-				<!-- <xsl:copy-of select="cennik-opis/entry/opis-cennika/node()" /> -->
-
 				<div class="pricelist-header-wrapper">
 					<h2 id="ogolne">Ogólne<span>↓</span></h2>
 				</div>

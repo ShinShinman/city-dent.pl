@@ -144,6 +144,13 @@
 		}
 	}
 
+	///// CENNIK /////
+	.price-list {
+		.cennik-submenu {
+			display: none;
+		}
+	}
+
 	///// KONTAKT /////
 	.kontakt {
 		overflow: initial;
@@ -397,6 +404,16 @@
 			margin: 0 auto 24px;
 			display: block;
 			width: column-width(3);
+		}
+	}
+
+
+	///// CENNIK /////
+	.price-list {
+		overflow: visible;
+		
+		.pricelist-nav {
+			display: none;
 		}
 	}
 
