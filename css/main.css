@@ -939,7 +939,8 @@ a#zespol {
   .price-list article ul:not(.cennik-submenu) li {
     font-size: 14px;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    width: 100%; }
   .offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
     display: none; }
   .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
