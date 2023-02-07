@@ -12,8 +12,6 @@ html {
 body {
 	background-color: transparent;
 	color: $text-color;
-	font-family: $font-stack;
-	line-height: $global-line-height;
 	margin-bottom: 50px; // wysokość małego footera
 }
 
@@ -76,7 +74,7 @@ nav {
 			float: left;
 			margin-left: -(column-width(1) + $gutter);
 			margin-right: 30px;
-			margin-bottom: 2px;
+			// margin-bottom: 2px;
 			max-width: 340px;
 		}
 	}
@@ -95,7 +93,7 @@ nav {
 			float: left;
 			margin-left: -(column-width(1) + $gutter);
 			margin-right: 30px;
-			margin-bottom: 2px;
+			// margin-bottom: 2px;
 			max-width: 340px;
 		}
 	}
