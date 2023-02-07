@@ -1,10 +1,11 @@
 {
   "name": "city-dent.pl",
-  "version": "1.1.2",
-  "description": "Cennik. Poprawka wyświetlania na tel.",
+  "version": "1.2.0",
+  "description": "Nowe logo i fonty",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
   },
   "author": "Olaf Schindler",
   "license": "ISC",

@@ -73,7 +73,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.1.2" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.2.0" />
 			</head>
 
 			<body class="">
@@ -90,11 +90,11 @@
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=1.1.2" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.2.0" ></script>
 				<script>
 					$(function() {
 
-						var menuTrigger = $('.menu-trigger a');
+						var menuTrigger = $('.menu-trigger');
 						var mainMenu = $('.main-menu');
 						var mainMenuExtended = false;
 						var pageArea = $('body');
@@ -104,19 +104,19 @@
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
 								mainMenuExtended = false;
-								menuTrigger.text('&#x4d;');
+								menuTrigger.removeClass('is-active');
 								mainMenu.fadeOut();
 								pageArea.off('click');
 								bodyLinks.css('pointer-events', 'auto');
 							} else {
 								mainMenuExtended = true;
 								bodyLinks.css('pointer-events', 'none');
-								menuTrigger.text('&#x58;');
+								menuTrigger.addClass('is-active');
 								mainMenu.fadeIn(function() {
 									pageArea.click(function(e) {
 										if(!$(e.target).parents().hasClass('main-menu')) {
 											mainMenuExtended = false;
-											menuTrigger.text('&#x4d;');
+											menuTrigger.removeClass('is-active');
 											mainMenu.fadeOut();
 											pageArea.off('click');
 											bodyLinks.css('pointer-events', 'auto');

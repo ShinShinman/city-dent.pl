@@ -13,6 +13,7 @@ nav {
 		@extend .floater;
 
 		font-size: 18px;
+		font-weight: 700;
 		margin-top: 12px;
 		margin-bottom: 12px;
 
@@ -29,10 +30,17 @@ nav {
 			a {
 				@include hide-text;
 				display: inline-block;
-				width: 216px;
+				width: 150px;
 				height: 40px;
-				background-image: url($css-images-path + 'logo.png');
+				background-image: url($css-images-path + 'logo2.svg');
+				background-size: contain;
+				background-position-y: center;
 				background-repeat: no-repeat;
+			}
+
+			svg {
+				width: 100%;
+				height: auto;
 			}
 		}
 
@@ -58,10 +66,38 @@ nav {
 
 		.menu-trigger {
 			width: column-width(1);
-			text-align: center;
-			line-height: 40px;
 			height: 40px;
-			font-size: 28px;
+			margin-top: 7px;
+			cursor: pointer;
+
+			.line {
+				width: 28px;
+				height: 3px;
+				background-color: $navy;
+				display: block;
+				margin: 4px auto;
+				-webkit-transition: all 0.3s ease-in-out;
+				-o-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+			}
+			
+			&:hover {
+				.line:nth-child(2) {
+					width: 36px;
+				}
+			}
+
+			&.is-active {
+				.line:nth-child(2) {
+					opacity: 0;
+				}
+				.line:nth-child(1) {
+					transform: translateY(7px) rotate(45deg);
+				}
+				.line:nth-child(3) {
+					transform: translateY(-7px) rotate(-45deg);
+				}
+			}
 		}
 
 		.lang-btn {
