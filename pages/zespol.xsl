@@ -95,21 +95,6 @@
 	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 </xsl:template>
 
-<xsl:template match="data" mode="js">
-	<xsl:apply-templates select="bricks-zespol/entry[1]" mode="js" />
-</xsl:template>
-
-<xsl:template match="bricks-zespol/entry" mode="js">
-	<script>
-		window.onload = function () {
-			var msnry = new Masonry( '.team-container', {
-				itemSelector: '.team',
-				gutter: 30
-			});
-		}
-	</script>
-</xsl:template>
-
 <xsl:template name="lang-button">
 	<xsl:call-template name="language-button">
 		<xsl:with-param name="language" select="//current-language/@handle" />

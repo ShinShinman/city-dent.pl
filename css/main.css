@@ -31,6 +31,111 @@ time, mark, audio, video {
 
 /* Fonts */
 @font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-Regular.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-Regular.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-Italic.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-Italic.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-Medium.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-Medium.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-MediumItalic.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-MediumItalic.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-Bold.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-Bold.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif/BespokeSerif-BoldItalic.woff2") format("woff2"), url("../fonts/BespokeSerif/BespokeSerif-BoldItalic.woff") format("woff"), url("../fonts/BespokeSerif/BespokeSerif-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'BespokeSerif';
+  src: url("../fonts/BespokeSerif-Extrabold.woff2") format("woff2"), url("../fonts/BespokeSerif-Extrabold.woff") format("woff"), url("../fonts/BespokeSerif-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Supreme-Regular';
+  src: url("../fonts/Supreme/Supreme-Regular.woff2") format("woff2"), url("../fonts/Supreme/Supreme-Regular.woff") format("woff"), url("../fonts/Supreme/Supreme-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Supreme-Italic';
+  src: url("../fonts/Supreme/Supreme-Italic.woff2") format("woff2"), url("../fonts/Supreme/Supreme-Italic.woff") format("woff"), url("../fonts/Supreme/Supreme-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Supreme-Medium';
+  src: url("../fonts/Supreme/Supreme-Medium.woff2") format("woff2"), url("../fonts/Supreme/Supreme-Medium.woff") format("woff"), url("../fonts/Supreme/Supreme-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Supreme-MediumItalic';
+  src: url("../fonts/Supreme/Supreme-MediumItalic.woff2") format("woff2"), url("../fonts/Supreme/Supreme-MediumItalic.woff") format("woff"), url("../fonts/Supreme/Supreme-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Supreme-Bold';
+  src: url("../fonts/Supreme/Supreme-Bold.woff2") format("woff2"), url("../fonts/Supreme/Supreme-Bold.woff") format("woff"), url("../fonts/Supreme/Supreme-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Supreme-BoldItalic';
+  src: url("../fonts/Supreme/Supreme-BoldItalic.woff2") format("woff2"), url("../fonts/Supreme/Supreme-BoldItalic.woff") format("woff"), url("../fonts/Supreme/Supreme-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Supreme-Extrabold';
+  src: url("../fonts/Supreme/Supreme-Extrabold.woff2") format("woff2"), url("../fonts/Supreme/Supreme-Extrabold.woff") format("woff"), url("../fonts/Supreme/Supreme-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Supreme-ExtraboldItalic';
+  src: url("../fonts/Supreme/Supreme-ExtraboldItalic.woff2") format("woff2"), url("../fonts/Supreme/Supreme-ExtraboldItalic.woff") format("woff"), url("../fonts/Supreme/Supreme-ExtraboldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic; }
+
+@font-face {
   font-family: 'Borgia';
   src: url("../fonts/borgiapro-regular.eot");
   src: url("../fonts/borgiapro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/borgiapro-regular.woff") format("woff"), url("../fonts/borgiapro-regular.ttf") format("truetype"), url("../fonts/borgiapro-regular.svg#borgiapro-regular") format("svg");
@@ -128,6 +233,11 @@ time, mark, audio, video {
   text-rendering: optimizeLegibility; }
 
 /*** BASIC TYPOGRAPHY ***/
+body {
+  font-family: "Supreme", sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -137,30 +247,33 @@ a {
     border: none; }
 
 h1 {
-  font-family: 'Borgia', serif;
-  font-weight: bold;
+  font-family: 'BespokeSerif', serif;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 1; }
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 24px; }
 
 h2 {
-  font-family: 'Borgia', serif;
-  font-weight: bold;
+  font-family: 'BespokeSerif', serif;
+  font-weight: 500;
   font-size: 30px;
+  letter-spacing: -0.02em;
   line-height: 36px; }
 
 h4 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Supreme', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 25px;
   margin-bottom: 25px; }
 
 h5 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Supreme', sans-serif;
   text-transform: uppercase; }
 
 h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Supreme', sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -202,8 +315,6 @@ html {
 body {
   background-color: transparent;
   color: #262649;
-  font-family: "Lato", sans-serif;
-  line-height: 1.5;
   margin-bottom: 50px; }
 
 .icon {
@@ -238,7 +349,6 @@ nav.breadcrumbs {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
-      margin-bottom: 2px;
       max-width: 340px; }
 
 .stomatologia-zachowawcza {
@@ -250,7 +360,6 @@ nav.breadcrumbs {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
-      margin-bottom: 2px;
       max-width: 340px; }
 
 /* Utilities */
@@ -307,6 +416,7 @@ nav.breadcrumbs {
 
 nav.main {
   font-size: 18px;
+  font-weight: 700;
   margin-top: 12px;
   margin-bottom: 12px; }
   nav.main a {
@@ -321,10 +431,15 @@ nav.main {
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      width: 216px;
+      width: 150px;
       height: 40px;
-      background-image: url("../images/logo.png");
+      background-image: url("../images/logo2.svg");
+      background-size: contain;
+      background-position-y: center;
       background-repeat: no-repeat; }
+    nav.main .logo svg {
+      width: 100%;
+      height: auto; }
   nav.main .contact {
     text-align: center; }
     nav.main .contact li {
@@ -341,10 +456,24 @@ nav.main {
     font-weight: bold; }
   nav.main .menu-trigger {
     width: 52.8333px;
-    text-align: center;
-    line-height: 40px;
     height: 40px;
-    font-size: 28px; }
+    margin-top: 7px;
+    cursor: pointer; }
+    nav.main .menu-trigger .line {
+      width: 28px;
+      height: 3px;
+      background-color: #262649;
+      display: block;
+      margin: 4px auto;
+      transition: all 0.3s ease-in-out; }
+    nav.main .menu-trigger:hover .line:nth-child(2) {
+      width: 36px; }
+    nav.main .menu-trigger.is-active .line:nth-child(2) {
+      opacity: 0; }
+    nav.main .menu-trigger.is-active .line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg); }
+    nav.main .menu-trigger.is-active .line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg); }
   nav.main .lang-btn {
     width: 52.8333px;
     text-align: center;
@@ -418,7 +547,7 @@ footer {
 
 /* Pages */
 .slogan, .banner .slogan-box > * {
-  font-family: 'Borgia', serif;
+  font-family: 'BespokeSerif', serif;
   font-size: 48px;
   color: white;
   width: 632.6664px;
@@ -474,7 +603,11 @@ a#zespol {
   margin-top: 0; }
 
 .team-container {
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px; }
   .team-container a {
     display: block;
     border-bottom: none; }
@@ -583,7 +716,7 @@ a#zespol {
     float: none;
     margin-bottom: 25px; }
   .price-list h2 {
-    font-family: Lato, sans-serif;
+    font-family: 'Supreme', sans-serif;
     font-weight: normal;
     font-size: 24px;
     line-height: 25px;
@@ -607,9 +740,8 @@ a#zespol {
     margin-bottom: 5px;
     color: #9898a9; }
   .price-list .pricelist-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 100px;
+    position: fixed;
+    top: 40px;
     width: 135.6666px;
     height: 0;
     margin-top: 180px;
