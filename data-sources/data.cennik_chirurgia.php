@@ -10,7 +10,7 @@ class datasourcecennik_chirurgia extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
@@ -35,10 +35,10 @@ class datasourcecennik_chirurgia extends SectionDatasource
             'name' => 'Cennik. Chirurgia',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://localhost/city-dent',
+                'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2021-11-29T14:48:09+00:00'
+            'release-date' => '2023-03-06T13:05:07+00:00'
         );
     }
 
