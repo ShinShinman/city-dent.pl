@@ -20,7 +20,14 @@
 						</xsl:call-template>
 					</a>
 				</div>
-				<div class="menu-trigger"><a href="#" class="icon">&#x4d;</a></div>
+				<!-- <div class="menu-trigger"><a href="#" class="icon">&#x4d;</a></div> -->
+				<div class="menu-trigger">
+					<!-- <a href="#"> -->
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					<!-- </a> -->
+				</div>
 			</nav>
 		</section>
 	</xsl:template>

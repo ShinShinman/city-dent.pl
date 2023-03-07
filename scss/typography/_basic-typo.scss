@@ -1,6 +1,12 @@
 /*** BASIC TYPOGRAPHY ***/
 
 
+body {
+	font-family: $font-stack;
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -13,21 +19,24 @@ a {
 
 
 h1 {
-	font-family: 'Borgia', serif;
-	font-weight:  bold;
+	font-family: 'BespokeSerif', serif;
+	font-weight:  400;
 	font-size: 48px;
+	letter-spacing: -0.02em;
 	line-height: 1;
+	margin-bottom: $global-line-height * $global-font-size;
 }
 
 h2 {
-	font-family: 'Borgia', serif;
-	font-weight: bold;
+	font-family: 'BespokeSerif', serif;
+	font-weight: 500;
 	font-size: 30px;
+	letter-spacing: -0.02em;
 	line-height: 36px;
 }
 
 h4 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Supreme', sans-serif;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 25px;
@@ -35,15 +44,15 @@ h4 {
 }
 
 h5 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Supreme', sans-serif;
 	text-transform: uppercase;
 }
 
 h6 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Supreme', sans-serif;
 	font-weight: bold;
 	font-size: 16px;
-	line-height: 24px; //lub 25px, USTALIĆ!
+	line-height: 24px;
 	margin-bottom: 25px; //powtarza się w article header
 }
 

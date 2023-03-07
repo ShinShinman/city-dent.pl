@@ -10,7 +10,7 @@ class datasourcecennik_endodoncja extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
@@ -35,10 +35,10 @@ class datasourcecennik_endodoncja extends SectionDatasource
             'name' => 'Cennik. Endodoncja',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://localhost/city-dent',
+                'website' => 'http://localhost/city-dent.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2021-11-29T14:48:19+00:00'
+            'release-date' => '2023-03-06T13:04:45+00:00'
         );
     }
 

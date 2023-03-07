@@ -1,5 +1,173 @@
 /* Fonts */
 
+// Bespoke Serif. 24.01.2023 //
+
+@font-face {
+	font-family: 'BespokeSerif';
+	src: url('../fonts/BespokeSerif/BespokeSerif-Regular.woff2') format('woff2'),
+		url('../fonts/BespokeSerif/BespokeSerif-Regular.woff') format('woff'),
+		url('../fonts/BespokeSerif/BespokeSerif-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'BespokeSerif';
+	src: url('../fonts/BespokeSerif/BespokeSerif-Italic.woff2') format('woff2'),
+		url('../fonts/BespokeSerif/BespokeSerif-Italic.woff') format('woff'),
+		url('../fonts/BespokeSerif/BespokeSerif-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BespokeSerif';
+	src: url('../fonts/BespokeSerif/BespokeSerif-Medium.woff2') format('woff2'),
+	  url('../fonts/BespokeSerif/BespokeSerif-Medium.woff') format('woff'),
+	  url('../fonts/BespokeSerif/BespokeSerif-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+  }
+  
+@font-face {
+font-family: 'BespokeSerif';
+src: url('../fonts/BespokeSerif/BespokeSerif-MediumItalic.woff2') format('woff2'),
+	url('../fonts/BespokeSerif/BespokeSerif-MediumItalic.woff') format('woff'),
+	url('../fonts/BespokeSerif/BespokeSerif-MediumItalic.ttf') format('truetype');
+font-weight: 500;
+font-display: swap;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'BespokeSerif';
+src: url('../fonts/BespokeSerif/BespokeSerif-Bold.woff2') format('woff2'),
+	url('../fonts/BespokeSerif/BespokeSerif-Bold.woff') format('woff'),
+	url('../fonts/BespokeSerif/BespokeSerif-Bold.ttf') format('truetype');
+font-weight: 700;
+font-display: swap;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'BespokeSerif';
+src: url('../fonts/BespokeSerif/BespokeSerif-BoldItalic.woff2') format('woff2'),
+	url('../fonts/BespokeSerif/BespokeSerif-BoldItalic.woff') format('woff'),
+	url('../fonts/BespokeSerif/BespokeSerif-BoldItalic.ttf') format('truetype');
+font-weight: 700;
+font-display: swap;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'BespokeSerif';
+src: url('../fonts/BespokeSerif-Extrabold.woff2') format('woff2'),
+	url('../fonts/BespokeSerif-Extrabold.woff') format('woff'),
+	url('../fonts/BespokeSerif-Extrabold.ttf') format('truetype');
+font-weight: 800;
+font-display: swap;
+font-style: normal;
+}
+
+// Supreme 26.01.2023
+
+@font-face {
+	font-family: 'Supreme-Regular';
+	src: url('../fonts/Supreme/Supreme-Regular.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-Regular.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-Regular.ttf') format('truetype');
+		 font-weight: 400;
+		 font-display: swap;
+		 font-style: normal;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-Italic';
+	src: url('../fonts/Supreme/Supreme-Italic.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-Italic.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-Italic.ttf') format('truetype');
+		 font-weight: 400;
+		 font-display: swap;
+		 font-style: italic;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-Medium';
+	src: url('../fonts/Supreme/Supreme-Medium.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-Medium.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-Medium.ttf') format('truetype');
+		 font-weight: 500;
+		 font-display: swap;
+		 font-style: normal;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-MediumItalic';
+	src: url('../fonts/Supreme/Supreme-MediumItalic.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-MediumItalic.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-MediumItalic.ttf') format('truetype');
+		 font-weight: 500;
+		 font-display: swap;
+		 font-style: italic;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-Bold';
+	src: url('../fonts/Supreme/Supreme-Bold.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-Bold.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-Bold.ttf') format('truetype');
+		 font-weight: 700;
+		 font-display: swap;
+		 font-style: normal;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-BoldItalic';
+	src: url('../fonts/Supreme/Supreme-BoldItalic.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-BoldItalic.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-BoldItalic.ttf') format('truetype');
+		 font-weight: 700;
+		 font-display: swap;
+		 font-style: italic;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-Extrabold';
+	src: url('../fonts/Supreme/Supreme-Extrabold.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-Extrabold.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-Extrabold.ttf') format('truetype');
+		 font-weight: 800;
+		 font-display: swap;
+		 font-style: normal;
+  }
+  
+  
+  @font-face {
+	font-family: 'Supreme-ExtraboldItalic';
+	src: url('../fonts/Supreme/Supreme-ExtraboldItalic.woff2') format('woff2'),
+		 url('../fonts/Supreme/Supreme-ExtraboldItalic.woff') format('woff'),
+		 url('../fonts/Supreme/Supreme-ExtraboldItalic.ttf') format('truetype');
+		 font-weight: 800;
+		 font-display: swap;
+		 font-style: italic;
+  }
+
+
+////////////////////////////////////////
+
 @font-face {
 	font-family: 'Borgia';
 	src: url('../fonts/borgiapro-regular.eot');
