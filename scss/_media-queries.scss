@@ -34,7 +34,7 @@
 			width: column-width(2);
 
 			a {
-				background-image: url($css-images-path + 'logo_sml.png');
+				background-image: url($css-images-path + 'logo_sml.svg');
 				background-position: center;
 				width: 100%;
 				height: 36px;
@@ -108,9 +108,9 @@
 
 	///// OFERTA /////
 
-	.bricks-container {
-		//width: column-width(8);
-	}
+	// .bricks-container {
+	// 	width: column-width(8);
+	// }
 
 	.oferta {
 		overflow: initial;
@@ -246,7 +246,7 @@
 			margin-right: 2 * $gutter;
 
 			a {
-				background-image: url($css-images-path + 'logo_sml.png');
+				background-image: url($css-images-path + 'logo_sml.svg');
 				background-position: center;
 				width: 100%;
 				height: 36px;
