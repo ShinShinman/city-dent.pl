@@ -986,7 +986,7 @@ a#zespol {
     nav.main .logo {
       width: 135.6666px; }
       nav.main .logo a {
-        background-image: url("../images/logo_sml.png");
+        background-image: url("../images/logo_sml.svg");
         background-position: center;
         width: 100%;
         height: 36px; }
@@ -1088,7 +1088,7 @@ a#zespol {
       width: 135.6666px;
       margin-right: 60px; }
       nav.main .logo a {
-        background-image: url("../images/logo_sml.png");
+        background-image: url("../images/logo_sml.svg");
         background-position: center;
         width: 100%;
         height: 36px; }
