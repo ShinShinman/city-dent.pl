@@ -73,7 +73,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.2.0" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.2.1" />
 			</head>
 
 			<body class="">
@@ -90,7 +90,7 @@
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=1.2.0" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.2.1" ></script>
 				<script>
 					$(function() {
 
