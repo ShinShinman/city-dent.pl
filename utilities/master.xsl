@@ -74,12 +74,20 @@
 				<xsl:call-template name="favicon" />
 
 				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.2.1" />
+
+				<!-- Google Tag Manager -->
+				<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WMJXXJKN');</script>
+				<!-- End Google Tag Manager -->
 			</head>
 
 			<body class="">
 				<!--[if lt IE 7]>
 					<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 				<![endif]-->
+
+				<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMJXXJKN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+				<!-- End Google Tag Manager (noscript) -->
 
 				<xsl:call-template name="sticky-nav" />
 				<xsl:call-template name="main-menu" />

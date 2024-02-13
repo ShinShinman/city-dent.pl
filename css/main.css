@@ -584,6 +584,8 @@ footer {
   .oferta img {
     width: 466.9998px;
     margin: 24px 82.8333px; }
+  .oferta article ul {
+    margin-bottom: 24px; }
 
 /*** TEAM PAGE ***/
 /*
