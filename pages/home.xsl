@@ -29,6 +29,10 @@
 		<xsl:apply-templates select="baner/entry" />
 	</section>
 
+	<section class="info">
+		<xsl:call-template name="landing" />
+	</section>
+
 <!--
 	<xsl:apply-templates select="highlight/entry" />
 
@@ -43,6 +47,26 @@
 	<div class="banner" style="background-image: url('{$workspace}/{image/@path}/{image/filename}');">
 		<div class="slogan-box">
 			<xsl:copy-of select="slogan/node()" />
+		</div>
+	</div>
+</xsl:template>
+
+<xsl:template name="landing">
+	<div class="intro">
+		<h1>Stomatologia City-Dent Piotr Ptak</h1>
+		<div class="slides">
+			<div class="slide">
+				<h2>We Wrocławiu od 2012 roku</h2>
+				<p>Co to dziś znaczy dobry stomatolog? Czy dobry dentysta może być tym lekarzem, do którego chodzimy najchętniej? <strong>Dobry stomatolog</strong> to na pewno taki, któremu od lat ufamy, powierzamy zęby zarówno swoje, jak i swoich bliskich, oraz którego bez chwili wahania polecimy naszym znajomym. City-Dent Praktyka Stomatologiczna Piotr Ptak jako marka istnieje na rynku wrocławskich usług dentystycznych od 2012 roku, a doświadczenie zawodowe założyciela naszej kliniki stomatologicznej sięga 2004 roku.</p>
+			</div>
+			<div class="slide">
+				<h2>Najwyższy poziom usług i sprzętu</h2>
+				<p>Bezboleśnie przeprowadzimy Cię przez cały proces leczenia, z dbałością o każdy jego aspekt, przygotowując dla Ciebie na wstępie przejrzysty plan postępowania terapeutycznego. Wizyty w gabinecie we Wrocławiu przebiegają bezstresowo, w komfortowych dla pacjenta warunkach. Pracujemy na najwyższej jakości sprzęcie stomatologicznym z gwarancją usługi wykonanej na najwyższym poziomie. Interesuje Cię dobry endodonta? Licówki kompozytowe - bonding? Zapoznaj się z naszą ofertą.</p>
+			</div>
+			<div class="slide">
+				<h2>Stomatologia estetyczna, leczenie kanałowe, protetyka, implanty</h2>
+				<p>Czy to stomatologia estetyczna, leczenie kanałowe, czy to protetyka bądź implanty, tworzymy zgrany zespół specjalistów, mający rzesze oddanych pacjentów, ceniących zaangażowanie, szybkość i sprawność, z jaką dbamy o ich piękne uśmiechy. Interesuje Cię chirurgiczne usuwanie ósemek ? Nie mamy sobie równych! Dołącz do licznego grona naszych wiernych pacjentów i przekonaj się, że City-Dent leczy z sercem. Zadzwoń i umów się na wizytę <a href="tel:+48516 925 690">516 925 690</a>.</p>
+			</div>
 		</div>
 	</div>
 </xsl:template>

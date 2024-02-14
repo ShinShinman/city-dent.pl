@@ -106,6 +106,20 @@
 		}
 	}
 
+	///// INTRO @HOME PAGE /////
+	.intro {
+		h2 {
+			min-height: initial;
+			margin-bottom: 24px;
+		}
+		.slides {
+			.slide {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+
+
 	///// OFERTA /////
 
 	// .bricks-container {
@@ -342,6 +356,19 @@
 			p {
 				font-size: 24px;
 				width: column-width(4);
+			}
+		}
+	}
+
+	///// INTRO @HOME PAGE /////
+	.intro {
+		h2 {
+			min-height: initial;
+			margin-bottom: 24px;
+		}
+		.slides {
+			.slide {
+				grid-column: 1 / -1;
 			}
 		}
 	}

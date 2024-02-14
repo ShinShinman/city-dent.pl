@@ -31,3 +31,40 @@
 		}
 	}
 }
+
+.info {
+	display: none;
+
+}
+.intro {
+	@extend .row;
+
+	margin-top: 124px;
+	margin-bottom: 172px;
+
+	h1 {
+		font-size: 36px;
+		margin-bottom: 72px;
+	}
+
+	h2 {
+		font-size: 21px;
+		line-height: 24px;
+		min-height: 100px;
+	}
+
+	a {
+		border: none;
+	}
+
+	.slides {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		column-gap: 30px;
+
+		// .slide {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// }
+	}
+}
