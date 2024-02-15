@@ -40,6 +40,14 @@
 			font-weight: bold;
 		}
 
+		li.phone-no {
+			display: none;
+
+			.icon {
+				margin-right: 5px;
+			}
+		}
+
 		//height: 100%;
 
 		ul {

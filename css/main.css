@@ -386,6 +386,10 @@ nav.breadcrumbs {
   .main-menu .navnav li.label {
     text-transform: uppercase;
     font-weight: bold; }
+  .main-menu .navnav li.phone-no {
+    display: none; }
+    .main-menu .navnav li.phone-no .icon {
+      margin-right: 5px; }
   .main-menu .navnav ul:nth-of-type(1) {
     width: 218.4999px;
     margin-left: 135.6666px; }
@@ -1175,6 +1179,8 @@ a#zespol {
 				*/ }
         .main-menu .navnav ul li:not(.label) {
           display: none; }
+        .main-menu .navnav ul li.phone-no {
+          display: block; }
   footer {
     position: relative;
     bottom: 0; }
