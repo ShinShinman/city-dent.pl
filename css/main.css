@@ -531,6 +531,17 @@ footer {
       text-align: center; }
       footer .extended-footer .footer-container ul li.label {
         font-weight: bold; }
+    footer .extended-footer .footer-container a.button {
+      -webkit-appearance: button;
+         -moz-appearance: button;
+              appearance: button;
+      font-size: inherit;
+      color: white;
+      padding: 8px 30px;
+      margin: 30px 0 10px;
+      background-color: #262649;
+      border-radius: 6px;
+      border: none; }
 
 /*** BRICK & BRICKS-CONTAINER ***/
 .bricks-container {
@@ -1069,6 +1080,8 @@ a#zespol {
       padding: 20px 0 30px 30px; } }
 
 @media all and (max-width: 768px) {
+  body {
+    margin-bottom: 0; }
   h1 {
     font-size: 30px; }
   .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .intro, .team-container {
@@ -1160,16 +1173,25 @@ a#zespol {
         .main-menu .navnav ul li:not(.label) {
           display: none; }
   footer {
-    bottom: -100px;
-    background-color: transparent; }
-    footer .footer .logo {
-      display: none; }
-    footer .footer .footer-container {
-      display: none; }
-    footer .footer .mobile-footer {
-      display: block; }
+    position: relative;
+    bottom: 0; }
+    footer .footer {
+      margin-top: 48px; }
+      footer .footer .logo {
+        display: none; }
+      footer .footer .footer-container {
+        display: none; }
+      footer .footer .mobile-footer {
+        display: block; }
     footer .extended-footer {
-      display: none; }
+      padding: 0;
+      height: initial; }
+      footer .extended-footer .footer-container > * {
+        margin-right: 0; }
+        footer .extended-footer .footer-container > * ul {
+          margin-bottom: 12px; }
+        footer .extended-footer .footer-container > * ul li.label {
+          margin-bottom: 6px; }
   .banner {
     width: 100%; }
     .banner .slogan-box {

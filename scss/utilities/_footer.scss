@@ -75,6 +75,17 @@ footer {
 					}
 				}
 			}
+
+			a.button {
+				appearance: button;
+				font-size: inherit;
+				color: white;
+				padding: 8px 30px;
+				margin: 30px 0 10px;
+				background-color: #262649;
+				border-radius: 6px;
+				border: none;
+			}
 		}
 	}
 }

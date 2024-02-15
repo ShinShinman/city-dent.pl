@@ -56,10 +56,11 @@
 					<div>
 						<ul>
 							<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
-							<li><span class="icon">t </span><xsl:value-of select="//kontakt/entry/phone" /></li>
+							<li><span class="icon">t </span><a href="tel:{//kontakt/entry/phone}"><xsl:value-of select="//kontakt/entry/phone" /></a></li>
 							<li><span class="icon"> </span> <a href="mailto:kontakt@city-dent.pl"><xsl:value-of select="//kontakt/entry/e-mail" /></a></li>
 							<li><span class="icon">p </span><xsl:value-of select="//kontakt/entry/street-no" /></li>
 							<li><xsl:value-of select="//kontakt/entry/postal-code" /></li>
+							<li><a class="button" href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/">Mamy wolne terminy</a></li>
 						</ul>
 					</div>
 				</div>

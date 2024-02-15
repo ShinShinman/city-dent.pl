@@ -183,6 +183,10 @@
 
 @media all and (max-width: 768px) {
 
+	body {
+		margin-bottom: 0;
+	}
+
 	///// TYPO /////
 	h1 {
 		font-size: 30px;
@@ -324,10 +328,15 @@
 
 	///// FOOTER /////
 	footer {
-		bottom: -100px;
-		background-color: transparent;
+		// bottom: -100px;
+		// background-color: transparent;
+		position: relative;
+		bottom: 0;;
 
 		.footer {
+			margin-top: 48px;
+
+			
 			.logo {
 				display: none;
 			}
@@ -342,7 +351,21 @@
 		}
 
 		.extended-footer {
-			display: none;
+			// display: none;
+			padding: 0;
+			height: initial;
+
+			.footer-container > * {
+				margin-right: 0;
+
+				ul{
+					margin-bottom: 12px;;
+				}
+
+				ul li.label {
+					margin-bottom: 6px;
+				}
+			}
 		}
 	}
 
