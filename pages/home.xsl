@@ -22,6 +22,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/master.xsl" />
+<xsl:include href="../utilities/_brick.xsl" />
 
 <xsl:template match="data">
 
@@ -30,8 +31,11 @@
 	</section>
 
 	<section class="info">
-		<xsl:call-template name="landing" />
+		<!-- <xsl:call-template name="landing" /> -->
+		<xsl:apply-templates select="intro/entry" />
 	</section>
+
+	<xsl:call-template name="offer" />
 
 <!--
 	<xsl:apply-templates select="highlight/entry" />
@@ -51,7 +55,24 @@
 	</div>
 </xsl:template>
 
-<xsl:template name="landing">
+<xsl:template match="intro/entry">
+	<div class="intro">
+		<h1><xsl:value-of select="header/p" /></h1>
+		<div class="slides">
+			<div class="slide">
+				<xsl:copy-of select="first-column/node()" />
+			</div>
+			<div class="slide">
+				<xsl:copy-of select="second-column/node()" />
+			</div>
+			<div class="slide">
+				<xsl:copy-of select="third-column/node()" />
+			</div>
+		</div>
+	</div>
+</xsl:template>
+
+<!-- <xsl:template name="landing">
 	<div class="intro">
 		<h1>Stomatologia City-Dent Piotr Ptak</h1>
 		<div class="slides">
@@ -69,6 +90,21 @@
 			</div>
 		</div>
 	</div>
+</xsl:template> -->
+
+<xsl:template name="offer">
+	<section class="home-offer">
+		<article>
+			<h2><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></h2>
+		</article>
+	</section>
+	<section class="home-bricks-container">
+		<xsl:apply-templates select="bricks-oferta/entry" />
+	</section>
+</xsl:template>
+
+<xsl:template match="bricks-oferta/entry">
+	<xsl:call-template name="brick" />
 </xsl:template>
 
 <xsl:template match="data" mode="js">
@@ -84,6 +120,13 @@
 				smartSpeed: 800
 			})
 		});
+
+		window.onload = function () {
+			var msnry = new Masonry( '.home-bricks-container', {
+				itemSelector: '.brick',
+				gutter: 30
+			});
+		}
 
 	</script>
 </xsl:template>
