@@ -531,6 +531,8 @@ footer {
       text-align: center; }
       footer .extended-footer .footer-container ul li.label {
         font-weight: bold; }
+    footer .extended-footer .footer-container ul.business-hours {
+      display: none; }
     footer .extended-footer .footer-container a.button {
       -webkit-appearance: button;
          -moz-appearance: button;
@@ -1193,6 +1195,8 @@ a#zespol {
           margin-bottom: 12px; }
         footer .extended-footer .footer-container > * ul li.label {
           margin-bottom: 6px; }
+        footer .extended-footer .footer-container > * ul.business-hours {
+          display: block; }
   .banner {
     width: 100%; }
     .banner .slogan-box {
@@ -1200,11 +1204,18 @@ a#zespol {
       .banner .slogan-box p {
         font-size: 24px;
         width: 301.3332px; }
+  .intro h1 {
+    margin-bottom: 48px; }
   .intro h2 {
     min-height: initial;
     margin-bottom: 24px; }
   .intro .slides .slide {
     grid-column: 1 / -1; }
+  .home-offer {
+    margin-top: 0; }
+    .home-offer h2 {
+      margin-left: 0;
+      margin-bottom: 24px; }
   .main-image {
     height: 200px; }
   .oferta {

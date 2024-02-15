@@ -7,8 +7,6 @@
 	line-height: 1;
 }
 
-.owl-carousel {
-}
 .banner {
 	@extend .row;
 	background-color: lightgrey;
@@ -78,15 +76,4 @@
 	.home-bricks-container {
 		@extend .bricks-container;
 	}
-	
-
-
-	// .info {
-	// 	display: none;
-	// }
-	
-	
-	// .home-offer, .home-bricks-container {
-		// 	display: none;
-		// }
 	
