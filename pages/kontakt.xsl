@@ -61,11 +61,11 @@
 			<table class="details">
 				<tr>
 					<td class="icon">t</td>
-					<td><xsl:value-of select="//kontakt/entry/phone" /></td>
+					<td><a href="tel:{//kontakt/entry/phone}"><xsl:value-of select="//kontakt/entry/phone" /></a></td>
 				</tr>
 				<tr>
 					<td class="icon">&#xf0e0;</td>
-					<td><xsl:value-of select="//kontakt/entry/e-mail" /></td>
+					<td><a href="mailto:{//kontakt/entry/e-mail}"><xsl:value-of select="//kontakt/entry/e-mail" /></a></td>
 				</tr>
 				<tr>
 					<td class="icon">&#x0070;</td>

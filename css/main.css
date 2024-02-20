@@ -734,6 +734,8 @@ a#zespol {
     width: 50%;
     margin-top: 50px;
     float: left; }
+    .kontakt article table a {
+      border: none; }
     .kontakt article table td.icon {
       width: 50px;
       font-size: 24px;
