@@ -71,9 +71,17 @@
 			<title>Gabinet stomatologiczny City Dent</title>
 			<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
 		</xsl:when>
-		<xsl:when test="$current-page-id = '3'">
+		<xsl:when test="substring($page,0,9) = 'tomograf'">
 			<title>Tomografia zębów Wrocław  | Gabinet stomatologiczny City Dent</title>
 			<meta name="description" content="Tomografia zębów - w tym zdjęcie 360 stopni. Gabinet we Wrocławiu. Dbamy o estetykę, leczymy z sercem!" />
+		</xsl:when>
+		<xsl:when test="$page = 'unit-a-dec-500-new'">
+			<title>Gabinet stomatologiczny City Dent</title>
+			<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
+		</xsl:when>
+		<xsl:when test="$page = 'mikroskop-zabiegowy-zeiss'">
+			<title>Gabinet stomatologiczny City Dent</title>
+			<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
 		</xsl:when>
 	</xsl:choose>
 </xsl:template>

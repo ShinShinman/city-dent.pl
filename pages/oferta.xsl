@@ -79,6 +79,7 @@
 			</xsl:when>
 
 			<xsl:when test="$page = 'stomatologia-zachowawcza'">
+				<title>Oferta | Gabinet stomatologiczny City Dent</title>
 				<meta name="description" content="Darmowe wizyty kontrolne, leczenie zębów i dziąseł, profilaktyka stomatologiczna, usuwanie kamienia i płytki nazębnej, scaling, polerowanie, fluoryzacja, lakowanie bruzd." />
 			</xsl:when>
 
@@ -98,6 +99,7 @@
 			</xsl:when>
 
 			<xsl:when test="$page = 'periodontologia'">
+				<title>Oferta | Gabinet stomatologiczny City Dent</title>
 				<meta name="description" content="Profilaktyka i leczenie chorób przyzębia i błony śluzowej jamy ustnej. Zdrowe dziąsła to zdrowe zęby!" />
 			</xsl:when>
 
@@ -107,6 +109,7 @@
 			</xsl:when>
 
 			<xsl:when test="$page = 'stomatologia-dziecieca'">
+				<title>Oferta | Gabinet stomatologiczny City Dent</title>
 				<meta name="description" content="Dentysta dla dzieci, Wrocław. Wizyty adaptacyjne, porady i profilaktyka chorób zębów mlecznych. Kolorwe plomby Twinky Star." />
 			</xsl:when>
 
