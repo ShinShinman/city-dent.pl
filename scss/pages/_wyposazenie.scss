@@ -1,6 +1,6 @@
 /*** EQUIPMENT PAGE ***/
 
-.equipment-list {
+.equipment-list, .equipment-page {
 	@extend .row;
 
 	margin-bottom: 100px;
@@ -23,11 +23,11 @@
 		width: column-width(8);
 		margin-left: column-width(2) + $gutter;
 		h1 {
-			float: left;
-			margin-left: -(column-width(1) + $gutter);
+			float: none;
+			margin-left: 0;
 			margin-right: 30px;
-			margin-bottom: 2px;
-			max-width: 340px;
+			margin-bottom: 24px;
+			max-width: initial;
 		}
 
 		h2 {
