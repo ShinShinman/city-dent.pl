@@ -144,14 +144,15 @@
 	</xsl:template>
 
 	<xsl:template match="data" mode="meta-tags">
-		<meta name="description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+		<title>Dentysta stomatolog Wrocław - Gabinet stomatologiczny City Dent</title>
+		<meta name="description" content="W City Dent Leczymy z sercem! Dentysta Piotr Ptak i zespół stomatologów oraz asystentek. Wrocław. Bezboleśnie" />
 	</xsl:template>
 
 	<xsl:template match="data" mode="og-tags">
 		<meta property="og:url" content="{$current-url}" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="City-Dent" />
-		<meta property="og:description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+		<meta property="og:title" content="Dentysta stomatolog Wrocław - Gabinet stomatologiczny City Dent" />
+		<meta property="og:description" content="W City Dent Leczymy z sercem! Dentysta Piotr Ptak i zespół stomatologów oraz asystentek. Wrocław. Bezboleśnie" />
 		<xsl:apply-templates select="baner/entry/image" mode="og-image" />
 	</xsl:template>
 

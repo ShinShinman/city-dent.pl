@@ -65,12 +65,17 @@
 	<img src="{$root}/image/1/467/0{@path}/{filename}" alt="" srcset="{$root}/image/1/467/0{@path}/{filename} 1x, {$root}/image/1/934/0{@path}/{filename} 2x, {$root}/image/1/1401/0{@path}/{filename} 3x" />
 </xsl:template>
 
-<xsl:template match="data" mode="page-title">
-	<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
-</xsl:template>
-
 <xsl:template match="data" mode="meta-tags">
-		<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
+	<xsl:choose>
+		<xsl:when test="$page = ''">
+			<title>Gabinet stomatologiczny City Dent</title>
+			<meta name="description" content="Najnowocześniejszy sprzęt stomatologiczny pozwalający na precyzyjne leczenie kanałowe, znieczulenie bezigłowe, RTG zębów, zdjęcia panoramiczne na miejscu, wygodę i komfort pacjenta." />
+		</xsl:when>
+		<xsl:when test="$current-page-id = '3'">
+			<title>Tomografia zębów Wrocław  | Gabinet stomatologiczny City Dent</title>
+			<meta name="description" content="Tomografia zębów - w tym zdjęcie 360 stopni. Gabinet we Wrocławiu. Dbamy o estetykę, leczymy z sercem!" />
+		</xsl:when>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template match="data" mode="og-tags">

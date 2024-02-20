@@ -61,9 +61,8 @@
 				<meta charset="utf-8"/>
 				<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-				<xsl:apply-templates mode="page-title" />
+				<!-- <xsl:apply-templates mode="page-title" /> -->
 
-				<meta name="description" content="" /> <!-- to chyba do mata-tags -->
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 				<xsl:apply-templates mode="meta-tags" />
