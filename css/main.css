@@ -1186,14 +1186,15 @@ a#zespol {
   footer {
     position: relative;
     bottom: 0; }
-    footer .footer {
-      margin-top: 48px; }
-      footer .footer .logo {
-        display: none; }
-      footer .footer .footer-container {
-        display: none; }
-      footer .footer .mobile-footer {
-        display: block; }
+    footer .footer .logo {
+      display: none; }
+    footer .footer .footer-container {
+      width: 100%; }
+      footer .footer .footer-container div {
+        width: 50%;
+        margin: 0; }
+    footer .footer .mobile-footer {
+      display: block; }
     footer .extended-footer {
       padding: 0;
       height: initial; }
