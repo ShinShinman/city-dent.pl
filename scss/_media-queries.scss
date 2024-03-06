@@ -338,15 +338,19 @@
 		bottom: 0;;
 
 		.footer {
-			margin-top: 48px;
-
 			
 			.logo {
 				display: none;
 			}
 
 			.footer-container {
-				display: none;
+				width: 100%;
+
+				div {
+					width: 50%;
+					margin: 0;;
+				}
+				
 			}
 
 			.mobile-footer {
