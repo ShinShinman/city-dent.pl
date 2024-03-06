@@ -1,6 +1,6 @@
 {
   "name": "city-dent.pl",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Kampania Google",
   "main": "index.js",
   "scripts": {

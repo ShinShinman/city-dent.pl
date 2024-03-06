@@ -72,7 +72,7 @@
 
 				<xsl:call-template name="favicon" />
 
-				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.3.0" />
+				<link rel="stylesheet" href="{$workspace}/css/main.min.css?v=1.3.1" />
 
 				<!-- Google Tag Manager -->
 				<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WMJXXJKN');</script>
@@ -97,7 +97,7 @@
 					<!--<xsl:with-param name="lang" select="//current-language/@handle" />-->
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=1.3.0" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.3.1" ></script>
 				<script>
 					$(function() {
 
