@@ -22,12 +22,20 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="../utilities/master.xsl" />
+<xsl:include href="../utilities/_brick.xsl" />
 
 <xsl:template match="data">
 
 	<section class="owl-carousel">
 		<xsl:apply-templates select="baner/entry" />
 	</section>
+
+	<section class="info">
+		<!-- <xsl:call-template name="landing" /> -->
+		<xsl:apply-templates select="intro/entry" />
+	</section>
+
+	<xsl:call-template name="offer" />
 
 <!--
 	<xsl:apply-templates select="highlight/entry" />
@@ -47,6 +55,58 @@
 	</div>
 </xsl:template>
 
+<xsl:template match="intro/entry">
+	<div class="intro">
+		<h1><xsl:value-of select="header/p" /></h1>
+		<div class="slides">
+			<div class="slide">
+				<xsl:copy-of select="first-column/node()" />
+			</div>
+			<div class="slide">
+				<xsl:copy-of select="second-column/node()" />
+			</div>
+			<div class="slide">
+				<xsl:copy-of select="third-column/node()" />
+			</div>
+		</div>
+	</div>
+</xsl:template>
+
+<!-- <xsl:template name="landing">
+	<div class="intro">
+		<h1>Stomatologia City-Dent Piotr Ptak</h1>
+		<div class="slides">
+			<div class="slide">
+				<h2>We Wrocławiu od 2012 roku</h2>
+				<p>Co to dziś znaczy dobry stomatolog? Czy dobry dentysta może być tym lekarzem, do którego chodzimy najchętniej? <strong>Dobry stomatolog</strong> to na pewno taki, któremu od lat ufamy, powierzamy zęby zarówno swoje, jak i swoich bliskich, oraz którego bez chwili wahania polecimy naszym znajomym. City-Dent Praktyka Stomatologiczna Piotr Ptak jako marka istnieje na rynku wrocławskich usług dentystycznych od 2012 roku, a doświadczenie zawodowe założyciela naszej kliniki stomatologicznej sięga 2004 roku.</p>
+			</div>
+			<div class="slide">
+				<h2>Najwyższy poziom usług i sprzętu</h2>
+				<p>Bezboleśnie przeprowadzimy Cię przez cały proces leczenia, z dbałością o każdy jego aspekt, przygotowując dla Ciebie na wstępie przejrzysty plan postępowania terapeutycznego. Wizyty w gabinecie we Wrocławiu przebiegają bezstresowo, w komfortowych dla pacjenta warunkach. Pracujemy na najwyższej jakości sprzęcie stomatologicznym z gwarancją usługi wykonanej na najwyższym poziomie. Interesuje Cię dobry endodonta? Licówki kompozytowe - bonding? Zapoznaj się z naszą ofertą.</p>
+			</div>
+			<div class="slide">
+				<h2>Stomatologia estetyczna, leczenie kanałowe, protetyka, implanty</h2>
+				<p>Czy to stomatologia estetyczna, leczenie kanałowe, czy to protetyka bądź implanty, tworzymy zgrany zespół specjalistów, mający rzesze oddanych pacjentów, ceniących zaangażowanie, szybkość i sprawność, z jaką dbamy o ich piękne uśmiechy. Interesuje Cię chirurgiczne usuwanie ósemek ? Nie mamy sobie równych! Dołącz do licznego grona naszych wiernych pacjentów i przekonaj się, że City-Dent leczy z sercem. Zadzwoń i umów się na wizytę <a href="tel:+48516 925 690">516 925 690</a>.</p>
+			</div>
+		</div>
+	</div>
+</xsl:template> -->
+
+<xsl:template name="offer">
+	<section class="home-offer">
+		<article>
+			<h2><xsl:value-of select="//navigation/page[@handle = 'oferta']/item[@lang = //current-language/@handle]" /></h2>
+		</article>
+	</section>
+	<section class="home-bricks-container">
+		<xsl:apply-templates select="bricks-oferta/entry" />
+	</section>
+</xsl:template>
+
+<xsl:template match="bricks-oferta/entry">
+	<xsl:call-template name="brick" />
+</xsl:template>
+
 <xsl:template match="data" mode="js">
 	<script>
 		$(document).ready(function(){
@@ -60,6 +120,13 @@
 				smartSpeed: 800
 			})
 		});
+
+		window.onload = function () {
+			var msnry = new Masonry( '.home-bricks-container', {
+				itemSelector: '.brick',
+				gutter: 30
+			});
+		}
 
 	</script>
 </xsl:template>
@@ -77,14 +144,15 @@
 	</xsl:template>
 
 	<xsl:template match="data" mode="meta-tags">
-		<meta name="description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+		<title>Dentysta stomatolog Wrocław - Gabinet stomatologiczny City Dent</title>
+		<meta name="description" content="W City Dent Leczymy z sercem! Dentysta Piotr Ptak i zespół stomatologów oraz asystentek. Wrocław. Bezboleśnie" />
 	</xsl:template>
 
 	<xsl:template match="data" mode="og-tags">
 		<meta property="og:url" content="{$current-url}" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="City-Dent" />
-		<meta property="og:description" content="Gabinet stomatologiczny Wrocław, ul. Zaporoska 39a zaprasza. Leczenie kanałowe, implanty zębowe, piaskowanie zębów, endodoncja, stomatolog dziecięcy, wybielanie zębów, stomatologia estetyczna, protetyka, chirurgia stomatologiczna, licówki, protezy." />
+		<meta property="og:title" content="Dentysta stomatolog Wrocław - Gabinet stomatologiczny City Dent" />
+		<meta property="og:description" content="W City Dent Leczymy z sercem! Dentysta Piotr Ptak i zespół stomatologów oraz asystentek. Wrocław. Bezboleśnie" />
 		<xsl:apply-templates select="baner/entry/image" mode="og-image" />
 	</xsl:template>
 

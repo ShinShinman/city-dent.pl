@@ -1,4 +1,4 @@
-.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, article:after, .equipment-list header:after {
+.floater:after, .main-menu .navnav:after, nav.main:after, nav.main .contact:after, footer .footer-container:after, article:after, .equipment-list header:after, .equipment-page header:after {
   clear: left;
   content: "";
   display: table; }
@@ -295,7 +295,7 @@ ul {
         margin-right: 0; }
 
 /* LAYOUT */
-.row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+.row, .intro, .offer, .home-offer, .oferta, .equipment-list, .equipment-page, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .home-bricks-container, .banner, .banner .slogan-box, .team-container {
   width: 963.9996px;
   margin-left: auto;
   margin-right: auto;
@@ -340,12 +340,12 @@ nav.breadcrumbs {
     nav.breadcrumbs a:hover {
       color: #262649; }
 
-.offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
+.intro, .offer, .home-offer, .oferta, .equipment-list, .equipment-page, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list {
   margin-top: 100px; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
+  .intro article, .offer article, .home-offer article, .oferta article, .equipment-list article, .equipment-page article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
+    .intro article h1, .offer article h1, .home-offer article h1, .oferta article h1, .equipment-list article h1, .equipment-page article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: left;
       margin-left: -82.8333px;
       margin-right: 30px;
@@ -386,6 +386,10 @@ nav.breadcrumbs {
   .main-menu .navnav li.label {
     text-transform: uppercase;
     font-weight: bold; }
+  .main-menu .navnav li.phone-no {
+    display: none; }
+    .main-menu .navnav li.phone-no .icon {
+      margin-right: 5px; }
   .main-menu .navnav ul:nth-of-type(1) {
     width: 218.4999px;
     margin-left: 135.6666px; }
@@ -531,18 +535,31 @@ footer {
       text-align: center; }
       footer .extended-footer .footer-container ul li.label {
         font-weight: bold; }
+    footer .extended-footer .footer-container ul.business-hours {
+      display: none; }
+    footer .extended-footer .footer-container a.button {
+      -webkit-appearance: button;
+         -moz-appearance: button;
+              appearance: button;
+      font-size: inherit;
+      color: white;
+      padding: 8px 30px;
+      margin: 30px 0 10px;
+      background-color: #262649;
+      border-radius: 6px;
+      border: none; }
 
 /*** BRICK & BRICKS-CONTAINER ***/
-.bricks-container {
+.bricks-container, .home-bricks-container, .home-bricks-container {
   overflow: hidden; }
-  .bricks-container .brick {
+  .bricks-container .brick, .home-bricks-container .brick, .home-bricks-container .brick {
     width: 301.3332px; }
-    .bricks-container .brick h4 {
+    .bricks-container .brick h4, .home-bricks-container .brick h4, .home-bricks-container .brick h4 {
       font-weight: normal; }
-    .bricks-container .brick a {
+    .bricks-container .brick a, .home-bricks-container .brick a, .home-bricks-container .brick a {
       display: block;
       border-bottom: none; }
-    .bricks-container .brick img {
+    .bricks-container .brick img, .home-bricks-container .brick img, .home-bricks-container .brick img {
       width: 100%; }
 
 /* Pages */
@@ -565,6 +582,28 @@ footer {
     margin-top: 45vh;
     overflow: visible; }
 
+.intro {
+  margin-top: 124px; }
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 72px; }
+  .intro h2 {
+    font-size: 21px;
+    line-height: 24px;
+    min-height: 100px; }
+  .intro a {
+    border: none; }
+  .intro .slides {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    -moz-column-gap: 30px;
+         column-gap: 30px; }
+
+.home-offer h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-left: -168px; }
+
 /*** OFFER PAGE ***/
 .main-image {
   background-position: top center;
@@ -574,7 +613,7 @@ footer {
   height: 500px;
   margin-top: 70px; }
 
-.offer {
+.offer, .home-offer {
   margin-bottom: 0; }
 
 .oferta {
@@ -584,6 +623,8 @@ footer {
   .oferta img {
     width: 466.9998px;
     margin: 24px 82.8333px; }
+  .oferta article ul {
+    margin-bottom: 24px; }
 
 /*** TEAM PAGE ***/
 /*
@@ -639,34 +680,34 @@ a#zespol {
   margin-bottom: 2px; }
 
 /*** EQUIPMENT PAGE ***/
-.equipment-list {
+.equipment-list, .equipment-page {
   margin-bottom: 100px; }
-  .equipment-list article {
+  .equipment-list article, .equipment-page article {
     margin-bottom: 0; }
-  .equipment-list .list-anchor {
+  .equipment-list .list-anchor, .equipment-page .list-anchor {
     margin-top: -100px;
     padding-top: 100px; }
-  .equipment-list header {
+  .equipment-list header, .equipment-page header {
     margin-bottom: 50px; }
-  .equipment-list header, .equipment-list article {
+  .equipment-list header, .equipment-list article, .equipment-page header, .equipment-page article {
     width: 632.6664px;
     margin-left: 165.6666px; }
-    .equipment-list header h1, .equipment-list article h1 {
-      float: left;
-      margin-left: -82.8333px;
+    .equipment-list header h1, .equipment-list article h1, .equipment-page header h1, .equipment-page article h1 {
+      float: none;
+      margin-left: 0;
       margin-right: 30px;
-      margin-bottom: 2px;
-      max-width: 340px; }
-    .equipment-list header h2, .equipment-list article h2 {
+      margin-bottom: 24px;
+      max-width: initial; }
+    .equipment-list header h2, .equipment-list article h2, .equipment-page header h2, .equipment-page article h2 {
       margin-bottom: 12px; }
-      .equipment-list header h2 a, .equipment-list article h2 a {
+      .equipment-list header h2 a, .equipment-list article h2 a, .equipment-page header h2 a, .equipment-page article h2 a {
         border-bottom: none; }
-        .equipment-list header h2 a:hover, .equipment-list article h2 a:hover {
+        .equipment-list header h2 a:hover, .equipment-list article h2 a:hover, .equipment-page header h2 a:hover, .equipment-page article h2 a:hover {
           color: inherit;
           border-bottom: 6px solid #7a1b15; }
-    .equipment-list header .description, .equipment-list article .description {
+    .equipment-list header .description, .equipment-list article .description, .equipment-page header .description, .equipment-page article .description {
       display: none; }
-      .equipment-list header .description img, .equipment-list article .description img {
+      .equipment-list header .description img, .equipment-list article .description img, .equipment-page header .description img, .equipment-page article .description img {
         display: block;
         width: 301.3332px;
         margin-left: auto;
@@ -693,6 +734,8 @@ a#zespol {
     width: 50%;
     margin-top: 50px;
     float: left; }
+    .kontakt article table a {
+      border: none; }
     .kontakt article table td.icon {
       width: 50px;
       font-size: 24px;
@@ -968,16 +1011,16 @@ a#zespol {
 
 /*** MEDIA QUERIES ***/
 @media all and (max-width: 1023px) and (min-width: 768px) {
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .intro, .offer, .home-offer, .oferta, .equipment-list, .equipment-page, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .home-bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 715.4997px; }
   .text-column {
     width: 715.4997px; }
-  .offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
+  .offer aside, .home-offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
     display: none; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
+  .offer article, .home-offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 715.4997px;
     margin-left: 0; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
+    .offer article h1, .home-offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: none;
       margin-left: 0;
       margin-bottom: 24px; }
@@ -1016,6 +1059,11 @@ a#zespol {
       margin-top: 55vh; }
       .banner .slogan-box p {
         font-size: 36px; }
+  .intro h2 {
+    min-height: initial;
+    margin-bottom: 24px; }
+  .intro .slides .slide {
+    grid-column: 1 / -1; }
   .oferta {
     overflow: initial;
     margin-bottom: 150px; }
@@ -1041,9 +1089,11 @@ a#zespol {
       padding: 20px 0 30px 30px; } }
 
 @media all and (max-width: 768px) {
+  body {
+    margin-bottom: 0; }
   h1 {
     font-size: 30px; }
-  .row, .offer, .oferta, .equipment-list, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .banner, .banner .slogan-box, .team-container {
+  .row, .intro, .offer, .home-offer, .oferta, .equipment-list, .equipment-page, .about-us, .zespol, .team-single-view, .piotr, .kontakt, .price-list, .stomatologia-zachowawcza, .main-menu header, .main-menu .navnav, nav.main, footer .footer-container, .bricks-container, .home-bricks-container, .banner, .banner .slogan-box, .team-container {
     width: 301.3332px; }
   .text-column {
     width: 301.3332px; }
@@ -1073,12 +1123,12 @@ a#zespol {
     padding-left: 0;
     padding-right: 0;
     width: 100%; }
-  .offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
+  .offer aside, .home-offer aside, .oferta aside, .equipment-list aside, .about-us aside, .zespol aside, .team-single-view aside, .piotr aside, .kontakt aside, .price-list aside {
     display: none; }
-  .offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
+  .offer article, .home-offer article, .oferta article, .equipment-list article, .about-us article, .zespol article, .team-single-view article, .piotr article, .kontakt article, .price-list article {
     width: 301.3332px;
     margin-left: 0; }
-    .offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
+    .offer article h1, .home-offer article h1, .oferta article h1, .equipment-list article h1, .about-us article h1, .zespol article h1, .team-single-view article h1, .piotr article h1, .kontakt article h1, .price-list article h1 {
       float: none;
       margin-left: 0;
       margin-bottom: 24px; }
@@ -1131,17 +1181,31 @@ a#zespol {
 				*/ }
         .main-menu .navnav ul li:not(.label) {
           display: none; }
+        .main-menu .navnav ul li.phone-no {
+          display: block; }
   footer {
-    bottom: -100px;
-    background-color: transparent; }
+    position: relative;
+    bottom: 0; }
     footer .footer .logo {
       display: none; }
     footer .footer .footer-container {
-      display: none; }
+      width: 100%; }
+      footer .footer .footer-container div {
+        width: 50%;
+        margin: 0; }
     footer .footer .mobile-footer {
       display: block; }
     footer .extended-footer {
-      display: none; }
+      padding: 0;
+      height: initial; }
+      footer .extended-footer .footer-container > * {
+        margin-right: 0; }
+        footer .extended-footer .footer-container > * ul {
+          margin-bottom: 12px; }
+        footer .extended-footer .footer-container > * ul li.label {
+          margin-bottom: 6px; }
+        footer .extended-footer .footer-container > * ul.business-hours {
+          display: block; }
   .banner {
     width: 100%; }
     .banner .slogan-box {
@@ -1149,6 +1213,18 @@ a#zespol {
       .banner .slogan-box p {
         font-size: 24px;
         width: 301.3332px; }
+  .intro h1 {
+    margin-bottom: 48px; }
+  .intro h2 {
+    min-height: initial;
+    margin-bottom: 24px; }
+  .intro .slides .slide {
+    grid-column: 1 / -1; }
+  .home-offer {
+    margin-top: 0; }
+    .home-offer h2 {
+      margin-left: 0;
+      margin-bottom: 24px; }
   .main-image {
     height: 200px; }
   .oferta {

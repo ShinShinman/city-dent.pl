@@ -106,6 +106,20 @@
 		}
 	}
 
+	///// INTRO @HOME PAGE /////
+	.intro {
+		h2 {
+			min-height: initial;
+			margin-bottom: 24px;
+		}
+		.slides {
+			.slide {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+
+
 	///// OFERTA /////
 
 	// .bricks-container {
@@ -168,6 +182,10 @@
 
 
 @media all and (max-width: 768px) {
+
+	body {
+		margin-bottom: 0;
+	}
 
 	///// TYPO /////
 	h1 {
@@ -303,6 +321,10 @@
 				li:not(.label) {
 					display: none;
 				}
+
+				li.phone-no {
+					display: block;
+				}
 			}
 		}
 	}
@@ -310,16 +332,25 @@
 
 	///// FOOTER /////
 	footer {
-		bottom: -100px;
-		background-color: transparent;
+		// bottom: -100px;
+		// background-color: transparent;
+		position: relative;
+		bottom: 0;;
 
 		.footer {
+			
 			.logo {
 				display: none;
 			}
 
 			.footer-container {
-				display: none;
+				width: 100%;
+
+				div {
+					width: 50%;
+					margin: 0;;
+				}
+				
 			}
 
 			.mobile-footer {
@@ -328,7 +359,25 @@
 		}
 
 		.extended-footer {
-			display: none;
+			// display: none;
+			padding: 0;
+			height: initial;
+
+			.footer-container > * {
+				margin-right: 0;
+
+				ul{
+					margin-bottom: 12px;;
+				}
+
+				ul li.label {
+					margin-bottom: 6px;
+				}
+
+				ul.business-hours {
+					display: block;
+				}
+			}
 		}
 	}
 
@@ -343,6 +392,31 @@
 				font-size: 24px;
 				width: column-width(4);
 			}
+		}
+	}
+
+	///// INTRO @HOME PAGE /////
+	.intro {
+		h1 {
+			margin-bottom: 48px;
+		}
+		h2 {
+			min-height: initial;
+			margin-bottom: 24px;
+		}
+		.slides {
+			.slide {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+
+	///// OFERTA @HOME PAGE /////
+	.home-offer {
+		margin-top: 0;
+		h2 {
+			margin-left: 0;
+			margin-bottom: 24px;
 		}
 	}
 

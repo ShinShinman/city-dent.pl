@@ -26,6 +26,7 @@
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]/@handle}/#zespol"><xsl:value-of select="//navigation/page[@handle = 'zespol']/item[@lang = //current-language/@handle]" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'cennik']/item[@lang = //current-language/@handle]" /></a></li>
 					<li class="label"><a href="{$root}/{//current-language/@handle}/{//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//navigation/page[@handle = 'kontakt']/item[@lang = //current-language/@handle]" /></a></li>
+					<li class="label phone-no"><span class="icon">t </span><a href="tel:{//kontakt/entry/phone}"><xsl:value-of select="//kontakt/entry/phone" /></a></li>
 				</ul>
 			</div>
 		</section>

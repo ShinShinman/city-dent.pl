@@ -7,8 +7,6 @@
 	line-height: 1;
 }
 
-.owl-carousel {
-}
 .banner {
 	@extend .row;
 	background-color: lightgrey;
@@ -31,3 +29,51 @@
 		}
 	}
 }
+
+.intro {
+	@extend .row;
+	
+	margin-top: 124px;
+	
+	h1 {
+		font-size: 36px;
+		// margin-left: 84px;
+		margin-bottom: 72px;
+	}
+	
+	h2 {
+		font-size: 21px;
+		line-height: 24px;
+		min-height: 100px;
+	}
+	
+	a {
+		border: none;
+	}
+	
+	.slides {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		column-gap: 30px;
+		
+		// .slide {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// }
+		}
+	}
+
+	.home-offer {
+		@extend .offer;
+
+		h2 {
+			font-size: 36px;
+			font-weight: 400;
+			margin-left: -168px;
+		}
+	}
+
+	.home-bricks-container {
+		@extend .bricks-container;
+	}
+	

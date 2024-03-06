@@ -93,6 +93,11 @@
 		</xsl:call-template>
 	</xsl:template>
 
+	<xsl:template match="data" mode="meta-tags">
+		<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
+		<meta name="description" content="Piotr Ptak, stomatolog, Wrocław. Znany lekarz z pasją i powołaniem, stale rozwijający swój gabinet." />
+	</xsl:template>
+
 	<xsl:template match="data" mode="js">
 		<script>
 			window.onload = function () {

@@ -22,4 +22,8 @@
 		width: column-width(6);
 		margin: $horizontal-margin column-width(1) + $gutter;
 	}
+
+	article ul {
+		margin-bottom: 24px;
+	}
 }

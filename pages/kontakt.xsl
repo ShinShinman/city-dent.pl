@@ -61,11 +61,11 @@
 			<table class="details">
 				<tr>
 					<td class="icon">t</td>
-					<td><xsl:value-of select="//kontakt/entry/phone" /></td>
+					<td><a href="tel:{//kontakt/entry/phone}"><xsl:value-of select="//kontakt/entry/phone" /></a></td>
 				</tr>
 				<tr>
 					<td class="icon">&#xf0e0;</td>
-					<td><xsl:value-of select="//kontakt/entry/e-mail" /></td>
+					<td><a href="mailto:{//kontakt/entry/e-mail}"><xsl:value-of select="//kontakt/entry/e-mail" /></a></td>
 				</tr>
 				<tr>
 					<td class="icon">&#x0070;</td>
@@ -134,6 +134,7 @@
 </xsl:template>
 
 	<xsl:template match="data" mode="meta-tags">
+		<title><xsl:value-of select="concat(plh-page/page/item[@lang = //current-language/@handle], ' • ', $website-name)"/></title>
 		<meta name="description" content="Godziny otwarcia: od poniedziałku do piątku, między godz. 9:00 a 21:00. Rejestracja: +48 516 925 690. Masz pytania? Napisz do nas: kontakt@city-dent.pl" />
 	</xsl:template>
 

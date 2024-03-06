@@ -1,6 +1,6 @@
 /*** BRICK & BRICKS-CONTAINER ***/
 
-.bricks-container {
+.bricks-container, .home-bricks-container {
 	@extend .row;//, .floater; // usunąć .floater po zainstalowaniu MASONRY
 	overflow: hidden;
 
